@@ -1211,7 +1211,7 @@ left:3em;
 
 .cdown{
 top:9em;
-right:13em;
+right:12.5em;
 }
 
 #fullscreen{
@@ -1316,14 +1316,14 @@ a:active { color: lime } /* active links */
 	</div> 
 
 </div>
-<button id="inscrip" style="padding: 1em 2em; background-color: red; color: #fff; text-align: center; font-size:2em; font-style: italic; display:none;"></button>
+<button id="inscrip" class="scrollable" style="padding: 1em 2em; background-color: red; color: #fff; text-align: center; font-size:2em; font-style: italic; display:none;"></button>
 </div>
 </div>
 
 <div id="item4" class="section" >
-    <div class="logout" onclick="window.location.href = '#item1'"><i class="fa fa-home fa-2x scrollable" class="logout scrollable" onclick="window.location.href = '#item1'"></i></div>
-	<div class="wrap-camera">
-	   <div id="camera"></div>
+    <div class="logout" id="logout" onclick="window.location.href = '#item1'"><i class="fa fa-home fa-2x scrollable" class="logout" onclick="window.location.href = '#item1'"></i></div>
+	<div class="wrap-camera" class="scrollabe" style="margin-top: 1.5em;">
+	   <div id="camera" class="scrollabe"></div>
 	    <div style="width:100%;" align="center"><p id="led"></p></div>
 	</div>
   <div id="instruction">Acerca el código de tu tarjeta a la camara</div>
@@ -1336,14 +1336,14 @@ a:active { color: lime } /* active links */
    <span class="chevrons cup scrollable"><i class="fa fa-chevron-up scrollable"></i></span>
       <div id="contenedor-promos">
          <? while($fila4 = mysqli_fetch_row($Res_Pro)){ ?>
-    <div class="slide-items"><div class="bkPro bkPro-pasive-item scrollable"><? printf($fila4[2])?><span class="bkPro-span"></span></div><input type="hidden" value="<? printf($fila4[0])  ?>" ><p class="puntaje"><? printf($fila4[1])?></p></div>
+    <div class="slide-items"><div class="bkPro bkPro-pasive-item scrollable"><? printf($fila4[2])?><span class="bkPro-span"></span></div><input type="hidden" value="<? printf($fila4[0])  ?>" ><p class="puntaje scrollable"><? printf($fila4[1])?></p></div>
            <? } ?>   
-    <div><div id="shokwave" class="scrollable">Acumula puntos <small>(Solo con boleta!)</small><span class="bkPro-span"></span></div></div>
+    <div class="scrollable"><div id="shokwave" class="scrollable">Acumula puntos <small class="scrollable">(Solo con boleta!)</small><span class="bkPro-span"></span></div></div>
 		</div>
     <span class="chevrons cdown scrollable"><i class="fa fa-chevron-down scrollable"></i></span>
 </div>
-<div id="item5"  class="section">
-<div style="float:left; width:auto;" class="scrollable"><a href="#item4" class="scrollable"><i class="fa fa-chevron-circle-left fa-4x" class="scrollable" style="color: white;"></i></a></div>
+<div id="item5" class="section">
+<div style="float:left; width:auto;" class="scrollable"><a href="#item4" class="scrollable" onclick="resetBeta();"><i class="fa fa-chevron-circle-left fa-4x scrollable" style="color: white;"></i></a></div>
 	<div id="calculationBox" align="center">
         <div class="cal-blocks pattern">
             <input type="hidden" id="garID">
@@ -1351,18 +1351,18 @@ a:active { color: lime } /* active links */
         	  <input type="password" id="password" name="password" class="patternlock" />
         </div>
         <div class="cal-blocks vari">
-        	<span class="blef"></span><input type="text" class="bloco2" placeholder="ingrese numero de boleta" id="ticketNumber"><span class="blri"></span>
+        	<span class="blef"></span><input type="text" class="bloco2 scrollable" placeholder="ingrese numero de boleta" id="ticketNumber"><span class="blri"></span>
         </div>
         <div align="center" class="cal-blocks vari">
-            <span class="blef"></span><input type="text" id="cant" class="bloco2" placeholder="Ingrese monto boleta"><span class="blri"></span>
+            <span class="blef"></span><input type="text" id="cant" class="bloco2 scrollable" placeholder="Ingrese monto boleta"><span class="blri"></span>
         </div>
         <div align="center" class="cal-blocks vari" id="wrap-score">
             <span class="pp vari" id="ppLeft"></span><div id="score-cal" class="vari"></div><span class="pp vari" id="ppRight"></span>
         </div>
         <p id="point" class="vari" style="color: gray; font-size:2.5em; font-style: italic; font-family:'eth_serifregular'; margin-top: 1.3em">Puntos<p>
          <div id="nonoYes" align="center" class="vari">
-            <div class="scrollable"><img src="image_icons/green.png" id="yes2"></div>
-            <div class="scrollable"><img src="image_icons/red.png" id="no2" ></div>
+            <div class="scrollable"><img class="scrollable" src="image_icons/green.png" id="yes2"></div>
+            <div class="scrollable"><img class="scrollable" src="image_icons/red.png" id="no2" ></div>
          </div>
    </div>
 </div>
@@ -1386,27 +1386,20 @@ $(document).bind('touchmove touchstart', function (event) {
            }
          });
 
-/*
-$(document).addEventListener('touchmove touchstart', function (event) {
-      if (!$(event.target).hasClass('scrollable')) {
-              event.preventDefault();
-           }
-         });
-*/
-$(window).bind('scroll', function (event){
-  event.preventDefault();
-});
-
-
-/*
-$(window).scroll( function (event){
-  event.preventDefault();
-});
-*/
-
 $("#highBar, highBar a, highBar img").bind('touchmove', function (event){
   event.preventDefault();
 });
+
+
+$(".bkPro , .puntaje, .chevrons ").bind('touchmove', function (event){
+    event.preventDefault();
+})
+
+
+$(".patternlocklineshorizontalcontainer div, .patternlocklinesverticalcontainer div, .patternlocklinesdiagonalcontainer div, .patternlockbutton, .patternlocklinevertical div ").bind('touchmove', function(){
+  event.preventDefault(); 
+}); 
+
 
 });
 
@@ -1435,7 +1428,6 @@ var Scrollable = ".scrollable";
 
 $(document).on('ready', function(){
 
-$(".sweet-alert button").css({ outline : "none"});
 
 getRules();
 
@@ -1473,7 +1465,7 @@ $('#contenedor-promos').slick({
     focusOnSelect: true,
     infinite: false,
     touchMove:false,
-    speed: 100,
+    speed: 50,
     touchThreshold: 40
   });
 
@@ -1521,14 +1513,14 @@ $("#logout").on('click', function(){
 
 
 var typingTimer;               
-var doneTypingInterval = 60000; 
+var doneTypingInterval = 600000; 
 
 $('#eUs').keyup( function() {
     clearTimeout(typingTimer);
 
 
 if ($(this).val().match(/\@+/g)){
-     doneTypingInterval = 2600;
+     doneTypingInterval = 3600;
 } 
 
   $('#inscrip').css({ display : "none"});
@@ -1624,7 +1616,7 @@ $("#nonoYes > div:first").on('click', function(){
 
 if($("#ticketNumber").val() == 0 || $("#ticketNumber").val() =='' ){
 
-swal({ title : "Deber Ingresar un numero de boleta" , text: "", type: "warning", timer: "3000", confirmButtonColor: "#fff"});
+swal({ title : "Deber Ingresar un numero de boleta" , text: "", type: "warning", timer: "4000", confirmButtonColor: "#fff"});
 
 } else {
 
@@ -1642,11 +1634,13 @@ swal({ title : "Deber Ingresar un numero de boleta" , text: "", type: "warning",
         var pass = $("#garID").val();
         var ticket = $("#ticketNumber").val();
         var cant = $("#cant").val();
-
      checkTicketNumber(ticket, function (callback){
-        if (parseInt(callback) === 0){
-      swal({ title: "Numero de boleta ya ingresado", text: "ingrese el numero correcto", type: "error", timer: "3000", confirmButtonColor: "#fff"});
+        if (parseInt(callback) == 0){
+
+      swal({ title: "Numero de boleta ya ingresado", text: "ingrese el numero correcto", type: "error", timer: "4000", confirmButtonColor: "#fff"});
+
         } else {
+
             upDownScoreStr(code, scoreV, "" , pass, ticket, cant);
              $("#score-user").html(parseInt($("#score-user").html()) + parseInt(scoreV));
         }
@@ -1658,8 +1652,6 @@ swal({ title : "Deber Ingresar un numero de boleta" , text: "", type: "warning",
 //checked
 
 $('.slide-items').on('click touchstart', function(){
-console.log('llega');
-
   takePromo($(this));
     clearInterval(univ_timer);
 });
@@ -1674,14 +1666,16 @@ univ_timer = "";
 
 
 $("#fullscreen").on('click', function (){
-$(".patternlocklineshorizontalcontainer div").addClass('scrollable');
 $(".sweet-alert button").addClass('scrollable');
+$(".patternlocklineshorizontalcontainer div").addClass('scrollable');
 $('.patternlocklinesverticalcontainer div').addClass('scrollable');
 $('.patternlocklinesdiagonalcontainer div').addClass('scrollable');
 $('.patternlockbutton').addClass('scrollable');
 $('.patternlocklinevertical div').addClass('scrollable');
+
  document.documentElement.mozRequestFullScreen();
-})
+
+});
 
 
 $("#mesa").on('focus', function (){
@@ -1718,27 +1712,26 @@ function upDownScoreStr(codigo, value, promo_code, gar, ticket, ta, table){
 
   $.ajax({
     type: "POST",
-    url : 'se.php?codigo=' + codigo + "&fac_code=" + fac +  "&promo_code=" + promo_code + "&ba_value=" + value + "&gar=" + gar + "&ticket=" + ticket + "&ta=" + ta + "&fech=" + fecha_or + "&tabla=" + table,
+    url : 'setConsume.php?codigo=' + codigo + "&fac_code=" + fac +  "&promo_code=" + promo_code + "&ba_value=" + value + "&gar=" + gar + "&ticket=" + ticket + "&ta=" + ta + "&fech=" + fecha_or + "&tabla=" + table,
     success : function (data){
-
-    var currentScore = parseInt(document.querySelector('#score-user').innerHTML);tConsume
-
-     if(data !== '' ){ var adding = 1;} else { var adding = 0;}
+    var currentScore = parseInt(document.querySelector('#score-user').innerHTML);
      
      if(promo_code === ""){
+        window.location.href= "#item1";
         var vtp  =  currentScore;
-        swal({ title: value + " Puntos añadidos con éxito", text : "a tu cuenta  " + data + ". Tienes ahora " + (parseInt(vtp) + parseInt(visit)) +  " puntos en total" , type:"success" , timer: "3500", confirmButtonColor: "#fff"}); 
+        swal({ title: value + " Puntos añadidos con éxito", text : "a tu cuenta  " + data + ". Tienes ahora " + (parseInt(vtp) + parseInt(visit)) +  " puntos en total" , type:"success" , timer: "4000", confirmButtonColor: "#fff"}); 
         window.location.href= "#item1";
         resetAlpha();
-        adding = 0;
+
 
    } else { 
 
     window.location.href= "#item1";
+
    	swal({ title : "Puntos descontados", text: "Disfruta tu Promo, te quedan " + $("#score-user").html() + " puntos" , type: "success", timer: "3500" , confirmButtonColor: "#fff"}); 
-       
          resetAlpha();
    }
+
     }, 
     error: function (error){
       alert("no se puede conectar con el servidor");
@@ -1791,17 +1784,17 @@ var inject = $.ajax({
 switch(parseInt(data)){
 
   case 0:
-      swal({ title: "Alerta", text: "Codigo Qr inválido",  type: "error", timer: "2500", confirmButtonColor: "#fff"});
+      swal({ title: "Alerta", text: "Codigo Qr inválido",  type: "error", timer: "4000", confirmButtonColor: "#fff"});
   break;
   case 403:
-      swal({ title: "QR ya inscrito... :(", text: "Utiliza tu tarjeta sin inscribirte nuevamente" , type: "error", timer: "2500", confirmButtonColor: "#fff"});
+      swal({ title: "QR ya inscrito... :(", text: "Utiliza tu tarjeta sin inscribirte nuevamente" , type: "error", timer: "4000", confirmButtonColor: "#fff"});
   break;
   case 1:
      IR_SWITCH = 0;
     document.querySelector('#led').style.backgroundColor = "#2DDB84";
     document.querySelector('#led').style.boxShadow = "0px 0px 20px 0px rgba(114, 255, 114, 0.75)";
 
-         swal({title: "Felicidades!", text : "Inscripción exitosa, ganaste 1 punto!", type:  "success", timer: "3000", confirmButtonColor: "#fff"});
+         swal({title: "Felicidades!", text : "Inscripción exitosa, ganaste 1 punto!", type:  "success", timer: "4000", confirmButtonColor: "#fff"});
 
     $('#item4').fadeTo('slow', 0.3, function(){
     $(this).css('background-image', 'url(images/fondo_puntaje.jpg)');
@@ -1878,13 +1871,12 @@ function getComensal(codigo, Nombre, email, argument){
            success : function(data){
 
 switch(parseInt(data)) {
-  
   case 404:
-    swal({ title: "Codigo QR no válido", text: "", type:"error", timer: "2000", confirmButtonColor: "#fff"});
+    swal({ title: "Codigo QR no válido", text: "", type:"error", timer: "4000", confirmButtonColor: "#fff"});
     IR_SWITCH = 2;
   break;
   case 2:
-  swal({ title: "Codigo QR no reconocido", text: "", type:"error", timer: "2000", confirmButtonColor: "#fff"});
+  swal({ title: "Codigo QR no reconocido", text: "", type:"error", timer: "4000", confirmButtonColor: "#fff"});
       IR_SWITCH = 2;
   break;
   case 0:
@@ -1967,7 +1959,7 @@ if(parseInt($("#score-user").html()) < parseInt(scorePro)) {
 
   console.info($("#score-user").html() + "/" + parseInt(scorePro));
 
-swal({ title: "No tienes puntos suficientes :(" , text: "Sigue Acumulando", type: "error", timer: "2000" , confirmButtonColor: "#fff"});
+swal({ title: "No tienes puntos suficientes :(" , text: "Sigue Acumulando", type: "error", timer: "4000" , confirmButtonColor: "#fff"});
 
 $(object).removeClass( 'slide-active-item');
 $(object).addClass('slide-pasive-item');
@@ -2017,7 +2009,7 @@ $.ajax({
     console.info(data);
        switch(data){
           case "Av" :
-           swal({ title : "Email ya inscrito!", text: "Prueba Con otro!", type:"warning", timer: "2500", confirmButtonColor: "#fff"});
+           swal({ title : "Email ya inscrito!", text: "Prueba Con otro!", type:"warning", timer: "4000", confirmButtonColor: "#fff"});
            $("#eUs").val('');
              break;
           case "x":
@@ -2037,6 +2029,7 @@ function checkTicketNumber(ticket , callback){
     type: "POST",
     url: "tiNumCheck.php?ticket=" + ticket + "&fac=" + fac, 
     success :  function (data){
+      console.log(data);
        callback(data);
     }
    });
@@ -2081,7 +2074,7 @@ function resetAlpha(){
 }).delay(20).fadeTo('fast', 1);
   setTimeout(function(){
    window.location.href = "#item1"}, 
-   2000);
+  500);
 
 }
 
@@ -2130,7 +2123,14 @@ $("#mesa").bind("tripleclick", function () {
 });
 
 
+function resetBeta(){
 
+  $(".cant").val('');
+  $("ticketNumber").val('');
+
+
+
+}
 
 
 
