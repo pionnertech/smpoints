@@ -86,14 +86,14 @@ $Res_Pro = mysqli_query($datos, $Query_Pro);
   height:100%;
 }
 body, html{
-  max-height: 100vh;
+  max-height: 100%;
   max-width:100%;
   overflow: hidden;
 }
 
 body {
   font-family: arial, helvetica;
-  background-size:cover;
+  background-size:100% 140%;
   background-image: url(images/fondo_nuevo.png);
   background-repeat: no-repeat;
 }
@@ -190,7 +190,7 @@ padding: 5em 2em;
   font-weight: bolder;
   font-size: 2.5em;
     text-shadow: 0px 0px 8px rgba(255, 255, 255, 1);
-    padding: 0em 0em .5em 0;
+    padding: 0em 0em 1em 0;
     margin:0;
     border:0;
 font-family: 'eth_serifblack';
@@ -234,11 +234,6 @@ position: relative;
  padding: 1em 1.5em;
 
 }
-
-#highBar a, #highBar a:active , #highBar a:focus{
-  outline: none;
-}
-
 
 #highBar, .wrap-buttons{
 
@@ -297,17 +292,16 @@ float: left;
 
 
  #item1{
-      height:109vh;
+      height:47em;
  }
-
   	#item2{
+    background-image: url(images/fondo_nuevo.png);
     background-size: cover;
     background-repeat: no-repeat;
 		text-align: center;
-		height:100vh;
+		height:44em;
     position: relative;
      z-index: 1;
-     display: none;
 	}
 
 
@@ -355,7 +349,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff3019', end
  background: linear-gradient(to bottom,  #ff3019 0%,#cf0404 100%);
  color: #fff;
  text-align: center;
- top:3em;
+ top:6em;
  padding: 1em 2em; /* Adjust to suit */
  margin: 2em auto 3em; /* Based on 24px vertical rhythm. 48px bottom margin - normally 24 but the ribbon 'graphics' take up 24px themselves so we double it. */
 }
@@ -405,14 +399,15 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff3019', end
 }
 
 
+
+
 /* ===== item3 ===== */
 
 #item3{
 	 background-image: url(images/fondo_nuevo.png);
    background-size: 100% 130%;
-	 height:100vh;
+	 height: 43em;
 	 padding-top: 2em;
-   display:none;
 }
 
 #nUs, #eUs{
@@ -521,15 +516,13 @@ img{
 
 
 #item4{
-
-height:100vh;
+height: 44em;
 width:100%;
-background-image: url(images/fondo_nuevo.png);
+background-image: url(images/fondo_puntaje.jpg);
 background-repeat: no-repeat;
 background-size: cover;
 overflow: hidden;
 padding-top:0em;
-display:none;
 
 }
 
@@ -577,7 +570,7 @@ box-shadow:         0px 0px 20px 0px rgba(255, 7, 7, 0.75);
 	position: relative;
 	top:-1200px;
 	width:26%;
-  max-height:3em !important;
+  max-height:3.5em;
   float:right;
   right:-200px;
     -webkit-transition: all 2500ms ease-in-out;
@@ -590,7 +583,7 @@ box-shadow:         0px 0px 20px 0px rgba(255, 7, 7, 0.75);
 .wrap-icon-facility img{
 max-width: 75%;
 min-width: 75%;
-max-height: 10em;
+min-height: 10em;
 border: 10px solid red;
 -webkit-box-shadow :1px 1px 30px 0px rgba(0, 0, 0, .5);
 -moz-box-shadow    :1px 1px 30px 0px rgba(0, 0, 0, .5);
@@ -619,16 +612,12 @@ border: 10px solid red;
 .catego:before{
 
   content: "Tienes";
-  color: white;
-  background-color: red;
+  color: darkred;
   position:relative;
-  font-size:30px;
+  font-size:24px;
   font-family: "eth_serifregular";
   font-weight: 800;
-  top:-45px;
-  right:35px;
-  padding: .2em 1em;
-  border-radius: 15px;
+  top:-30px;
 
 }
 
@@ -640,7 +629,6 @@ border: 10px solid red;
   top:6px;
   top:-87px;
   text-shadow: 0px 0px 5px rgba(150, 150, 150, 1);
-  font-family: "eth_serifregular";
 }
 
 .catego{
@@ -718,10 +706,13 @@ width:80%;
 z-index:5;
 font-family: 'eth_serifregular';
 box-shadow: 1px -5px 10px rgba(0,0,0, .7);
-font-weight: 800;
 }
 
-
+.bkPro:active, .puntaje:active{
+background: -moz-linear-gradient(top,  #fefcea 0%, #f1da36 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#fefcea), color-stop(100%,#f1da36)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  #fefcea 0%,#f1da36 100%); /* Chrome10+,Safari5.1+ */
+}
 
 .bkPro, .puntaje, .bkPro-span{
 display: inline-block;
@@ -748,7 +739,7 @@ cursor: pointer;
 #contenedor-promos{
 	width:52%;
   position: relative;
-  top:20px;
+  top:-150px;
   right: 1500px;
   display:inline-block;
   -webkit-transition: all 1s ease-in-out;
@@ -788,20 +779,17 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff3019', end
 
 
 #item5{
-	height:100vh;
+	height:45em;
 	background-image: url(images/fondo_nuevo.png);
-  background-size: cover;
-  display:none;
+
 }
 
  #calculationBox{
    width: 100%;
-    }
+   padding-top:7%;
+ }
 
-.pattern {
-  margin-top: 7%;
-}
-.cal-blocks {
+.cal-blocks{
 max-width: 70%;
 }
 
@@ -893,6 +881,8 @@ box-shadow:         0px 10px 5px 0px rgba(50, 50, 50, 0.75);
 
 
 
+
+
 /* ===  efecto cristal ==*/
 
 
@@ -903,7 +893,7 @@ box-shadow:         0px 10px 5px 0px rgba(50, 50, 50, 0.75);
 	 float:right; 
 	 font-size: 1.5em; 
 	 padding-right: 2em;
-	 color:white !important;
+	 color:white;
 	 text-shadow: 0px 0px 6px rgba(150, 150, 150, 1);
 }
 
@@ -932,7 +922,7 @@ border-radius: 15px;
   color: white; 
   font-weight: 800;
   width: 30em;
-  margin:  0 33% 0 28%;
+  margin:  0 27% 0 33%;
   background: #ff3019; /* Old browsers */
   background: -moz-linear-gradient(top,  #ff3019 0%, #cf0404 100%); /* FF3.6+ */
   background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ff3019), color-stop(100%,#cf0404)); /* Chrome,Safari4+ */
@@ -1021,10 +1011,9 @@ z-index: -2;
   cursor:pointer;
   font-size: 2.5em;
   color:#FFF; font-style: italic; font-size:1.5em; background-color: #003366; font-family: 'eth_serifregular';
-  font-weight:800;
 }
 
-#avice-points, .backto2, .bkPro:before{
+#avice-points, #backto2, .bkPro:before{
  background: -moz-linear-gradient(top,  #ff3019 0%, #cf0404 100%); 
  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ff3019), color-stop(100%,#cf0404)); 
  background: -webkit-linear-gradient(top,  #ff3019 0%,#cf0404 100%); 
@@ -1035,10 +1024,9 @@ z-index: -2;
 
 font-family: 'eth_serifregular';
 position:relative;
-font-weight:800;
 text-align: center;
 top:-800px;
-right:-50%;
+right:-51%;
 width:7%;
 font-size:1.3em;
 font-style:italic;
@@ -1171,7 +1159,6 @@ border-color: #FF3019 transparent #FF3019 #FF3019;
 right:-60%;
 bottom: 9.11em;
 }
-
 #ppLeft{
   border-color: #FF3019 #FF3019 #FF3019 transparent ;
 left:-61%;
@@ -1182,7 +1169,7 @@ top:1em;
   background-color: rgba(255, 255, 255, .6); 
   color: red; 
   max-width:2em; 
-  height:1em; position: relative; 
+  height:2em; position: relative; 
   float: right;
   opacity: 0;
   font-size:3em;
@@ -1194,69 +1181,14 @@ top:1em;
 
 }
 
-.chevrons{
-
-position: relative;
-right:0em;
-cursor: pointer;
-font-family: 'FontAwesome';
-font-size:3em;
-}
-
-.chevrons >i{
-  color: red !important;
-}
-.cup {
-top:-1em;
-left:3em;
-}
-
-.cdown{
-top:9em;
-right:12.5em;
-}
-
-#fullscreen{
-  z-index:99999; 
-  width: 130px; 
-  height: 50px; 
-  background-color: rgba(0, 0 ,0 , 0.4); 
-  position: relative; 
-  float: left;
-  cursor:pointer;
-}
-
-#errado{
-  color:#fff; 
-  font-style:italic; 
-  font-size: 2em; 
-  font-family:'eth_serifregular';
-  margin-bottom: 3em;
-background: -moz-linear-gradient(top,  #ff3019 0%, #cf0404 100%); /* FF3.6+ */
-background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ff3019), color-stop(100%,#cf0404)); /* Chrome,Safari4+ */
-background: -webkit-linear-gradient(top,  #ff3019 0%,#cf0404 100%); /* Chrome10+,Safari5.1+ */ 
-   border-radius: 15px;
-   padding: .5em 1.5em;
-}
-
-button::-moz-focus-inner {
-  border: 0;
-}
-
-.slick-prev, .slick-next{
-  opacity:0;
-}
-
-a:active { color: lime } /* active links */
-
 </style>	
 </head>
 <body>
 <input type="hidden" value="" id="secret">
 <div id="highest-wraper" >
 <div class="section active" id="item1">
-<input type="button" id="fullscreen"  />
-<input type="number" id="mesa"  />
+<input type="button" id="fullscreen" style="z-index:99999; width: 130px; height: 50px; background-color: rgba(0, 0 ,0 , 0.4); position: relative; float: left;cursor:pointer;" >
+<input type="number" id="mesa" />
   <div id="wrap-all" align="center" >
     <div id="central" align="center">Bienvenidos a <? printf($_GET['name']) ?></div>
   </div>
@@ -1290,42 +1222,41 @@ a:active { color: lime } /* active links */
       </section>
  </div>
 
-<div id="highBar" align="center" >
-    <a><img  src="images/entrar.png"></a>
+<div id="highBar" align="center">
+    <a href="#"><img src="images/entrar.png"></a>
 </div>
 </div>
 
-<div class="section" id="item2">
-<a style="width:4em; position: relative; float: left;"  id="backmain" ><div id="backmaindiv"  style=" width:4.5em;"><i class="fa fa-chevron-circle-left fa-3x" style="color: white;"></i></div></a>
-  <div class="wrap-item2" align="center" >
-  	    <div  id="to4" style="font-weight: bolder;">Quiero usar mis Smile Points</div>
+<div class="section" id="item2" data-anchor="item2-slide">
+  <div class="wrap-item2" align="center">
+  	    <div id="to4" style="font-weight: bolder;">Quiero usar mis Smile Points</div>
     </div>
     <div class="wrap-item2" align="center">
   	    <div id="to3" style="font-weight: bolder;">Quiero registrarme</div>
     </div>
 </div>
-<div class="section" id="item3" >
-<a style="width:4em;" onclick="IR_SWITCH = 0;" id="backto2"><div  style="width:4.5em;"><i class="fa fa-chevron-circle-left fa-3x" style="color: white;"></i></div></a>
+<div class="section" id="item3" data-anchor="item3-slide">
+<div id="backto2" style=" width:4.5em;"><i class="fa fa-chevron-circle-left fa-3x" style="color: white;"></i></div>
 	   <div class="grand-wrap" align="center">
             <div class="wrap" align="center">
 	            <div style="display: inline-block; vertical-align: top;" class="credentials">
-	                <input type="text" id="nUs"  placeholder="Ingresa tu nombre y apellido">
+	                <input type="text" id="nUs" placeholder="Ingresa tu nombre y apellido">
             </div>
            </div>
 <div class="wrap" align="center">
 	<div style="display: inline-block; vertical-align: top;" class="credentials">
-	    <input type="text" id="eUs"  placeholder="Ingresa tu E-mail">
+	    <input type="text" id="eUs" placeholder="Ingresa tu E-mail">
 	</div> 
 
 </div>
-<button id="inscrip"  style="padding: 1em 2em; background-color: red; color: #fff; text-align: center; font-size:2em; font-style: italic; display:none;"></button>
+<button id="inscrip" style="padding: 1em 2em; background-color: red; color: #fff; text-align: center; font-size:2em; font-style: italic; display:none;"></button>
 </div>
 </div>
 
-<div id="item4" class="section" >
-    <div class="logout"><i class="fa fa-home fa-2x " class="logout"></i></div>
-	<div class="wrap-camera" class="scrollabe" style="margin-top: 1.5em;">
-	   <div id="camera" class="scrollabe"></div>
+<div id="item4" class="section" data-anchor="item4-slide">
+    <div id="logout"><i class="fa fa-power-off fa-3x" onclick="window.location.href = '#item1'"></i></div>
+	<div class="wrap-camera">
+	   <div id="camera"></div>
 	    <div style="width:100%;" align="center"><p id="led"></p></div>
 	</div>
   <div id="instruction">Acerca el código de tu tarjeta a la camara</div>
@@ -1335,36 +1266,36 @@ a:active { color: lime } /* active links */
            <p class="cola">&ensp;</p>
         </div>
   <div id="avice-points">Puntos</div>
-   <span class="chevrons cup "><i class="fa fa-chevron-up "></i></span>
       <div id="contenedor-promos">
          <? while($fila4 = mysqli_fetch_row($Res_Pro)){ ?>
-    <div class="slide-items"><div class="bkPro bkPro-pasive-item "><? printf($fila4[2])?><span class="bkPro-span"></span></div><input type="hidden" value="<? printf($fila4[0])  ?>" ><p class="puntaje "><? printf($fila4[1])?></p></div>
+             <div class="slide-items"><div class="bkPro bkPro-pasive-item"><? printf($fila4[2])?><span class="bkPro-span"></span></div><input type="hidden" value="<? printf($fila4[0])  ?>" ><p class="puntaje"><? printf($fila4[1])?></p></div>
            <? } ?>   
-    <div id="wrap-shokwave" ><div id="shokwave" >Acumula puntos <small >(Solo con boleta!)</small><span class="bkPro-span"></span></div></div>
+            <div><div id="shokwave">Acumula puntos<span class="bkPro-span"></span></div></div>
 		</div>
-    <span class="chevrons cdown "><i class="fa fa-chevron-down "></i></span>
 </div>
-<div id="item5" class="section">
-<div style="float:left; width:auto;"  id="backto4"><a href="#item4" ><i class="fa fa-chevron-circle-left fa-4x" style="color: white;"></i></a></div>
+
+
+<div id="item5" data-anchor="item5-slide" class="section">
 	<div id="calculationBox" align="center">
         <div class="cal-blocks pattern">
             <input type="hidden" id="garID">
-            <p id="errado" style="color:#fff; font-style:italic; font-size: 2em; font-family:'eth_serifregular';margin-bottom: 3em; background-color: red; border-radius: 15px;">Favor llame al garzón</p>
+            <p id="errado" style="color: darkgreen; font-style: italic; font-size: 2em; font-family:'eth_serifregular';">Ingrese patrón de seguridad (uso Interno)</p>
         	  <input type="password" id="password" name="password" class="patternlock" />
         </div>
         <div class="cal-blocks vari">
-        	<span class="blef"></span><input type="number" class="bloco2" placeholder="ingrese numero de boleta" id="ticketNumber" maxlength="6"><span class="blri"></span>
+        	<span class="blef"></span><input type="text" class="bloco2" placeholder="ingrese numero de boleta" id="ticketNumber"><span class="blri"></span>
         </div>
         <div align="center" class="cal-blocks vari">
-            <span class="blef"></span><input type="number" id="cant" class="bloco2 " placeholder="Ingrese monto boleta" maxlength="7"><span class="blri"></span>
+            <span class="blef"></span><input type="text" id="cant" class="bloco2" placeholder="Ingrese monto boleta"><span class="blri"></span>
         </div>
+
         <div align="center" class="cal-blocks vari" id="wrap-score">
             <span class="pp vari" id="ppLeft"></span><div id="score-cal" class="vari"></div><span class="pp vari" id="ppRight"></span>
         </div>
         <p id="point" class="vari" style="color: gray; font-size:2.5em; font-style: italic; font-family:'eth_serifregular'; margin-top: 1.3em">Puntos<p>
          <div id="nonoYes" align="center" class="vari">
-            <div ><img  src="image_icons/green.png" id="yes2"></div>
-            <div ><img  src="image_icons/red.png" id="no2" ></div>
+            <div><img src="image_icons/green.png" id="yes2"></div>
+            <div><img src="image_icons/red.png" id="no2" ></div>
          </div>
    </div>
 </div>
@@ -1376,80 +1307,27 @@ a:active { color: lime } /* active links */
 <script type="text/javascript">
 
 
-        $(document).on('ready', function() {
+        $(function() {
           $('#dg-container').gallery({
-          autoplay : true,
-          interval : 3000
+          autoplay  : true,
+          interval    : 5000
         });
+      });
 
 
 
-
-});
-
-$(".chevrons").fadeOut('fast');
 
 
 </script>
 </body>
 </html>
 
+<script src="java/jquery.flipster.js"></script>
 <script src="js/sweet-alert.min.js"></script> 
 <script src="js/patternlock.js"></script>
-
+<script src="js/swipe.js"></script>
 <script type="text/javascript">
 
-
-
-var mem = "";
-var gB1 = "#item1";
-var gB2 = "#item2";
-var gB3 = "#item3";
-var gB4 = "#item4";
-var gB5 = "#item5";
-
-
-
-//barra de fechas
-
-//panel de control
-
-
-$("#backmain, #backmaindiv").on('click', function(){
-
-    $(gB2).css({ display: "none"});  
-    $(gB1).css({ display: "block"});      
-
-});
-
-
-$("#backto2").on('click', function(){
-
-    $(gB3).css({ display: "none" });
-    $(gB2).css({ display : "block"});    
-
-});
-
-$("#backto4").on('click', function(){
-
-    $(gB5).css({display : "none"});
-    $(gB4).css({display : "block"});
-    $('.slick-prev').trigger('click');
-
-});
-
-
-
-$(".logout").on('click', function(){
-
- $("#item1").css({display : "block"});
- $("#item4").css({display : "none"});
- resetAlpha();
-
-});
-
-
-var visit = 0; 
 var IR_SWITCH = 0;
 var fac_name = getQueryVariable("name");
 var fac = getQueryVariable('facility');
@@ -1457,20 +1335,25 @@ var rule = 0;
 var code = $("#secret").val();
 var univ_timer;
 
-
 // checkeado;
 
 $(document).on('ready', function(){
 
-$('#cant').on('keyup change input paste', function (e){
-    var $this = $(this);
-    var val = $this.val();
-    var valLength = val.length;
-    var maxCount = $this.attr('maxlength');
-    if(valLength>maxCount){
-        $this.val($this.val().substring(0,maxCount));
-    }
-}); 
+$("#contenedor-promos").swipe(function(direction, offset){
+
+  if(offset.x < 30 && direction.y === 'up'){
+
+   setTimeout( function (){
+    $(".slick-prev").trigger('click')}, 440);
+
+  } else if(offset.x < 30 && direction.y === 'down'){
+
+       setTimeout(function () {
+        $(".slick-next").trigger('click')}, 440);
+  } else {
+
+      }
+});
 
 
 getRules();
@@ -1481,16 +1364,13 @@ getRules();
 
     	var nom = document.getElementById('nUs').value;
     	var em = document.getElementById('eUs').value;
-
     	 insc(nom, em, data);
-        IR_SWITCH = 0;
+        window.location.href= "#item4";
 
     } else if (IR_SWITCH === 2){
-
      IR_SWITCH = 0;
          $("#secret").val(data);
              getComensal(data, "", "", "no" );
-
     } else {
 
     }
@@ -1505,12 +1385,9 @@ getRules();
 $('#contenedor-promos').slick({
     vertical: true,
     slidesToShow: 4,
-    slidesToScroll: 1,
-    focusOnSelect: true,
-    infinite: false,
-    touchMove:false,
-    speed: 20,
-    touchThreshold: 20
+    slidesToScroll: 3,
+    touchMove: true,
+    infinite: false
   });
 
 
@@ -1521,57 +1398,41 @@ $('#contenedor-promos').slick({
 
 /*=== EVENTS ===*/
 
-$(".cup").on('click', function(){
-$(".slick-prev").trigger('click');
-   });
-   
-   $(".cdown").on('click', function(){
-    console.info('llega after');
-         $(".slick-next").trigger('click');
-});
-
-
-
 $("#highBar").on('click' , function () {
   if ($("#mesa").val() === ''){
 
-  swal({ title : "Necesitas definir la mesa",  text: "para continuar con el proceso", type: "warning", timer: "3000", confirmButtonColor: "#fff" });
+  swal("Necesitas definir la mesa", "para continuar con el proceso", "warning");
 
 } else {
-
-   $("#item2").css({display : "block"});
-   $("#item1").css({display : "none"});
+  document.querySelector('#highBar > a').href = "#item2";
 
    }
 
 });
 
 $("#no2").on('click', function (){
-$("#item1").css({display : "block"});
-$("#item5").css({display : "none"});
-$(".dg-wrapper a").trigger('click');
-
+window.location.href = "#item1";
 resetAlpha();
-
 
 });
 
+$("#logout").on('click', function(){
+      resetAlpha();
+});
+
+
 var typingTimer;               
-var doneTypingInterval = 600000; 
+var doneTypingInterval = 2600; 
 
 $('#eUs').keyup( function() {
     clearTimeout(typingTimer);
 
 
-if ($(this).val().match(/\@+/g)){
-     doneTypingInterval = 3100;
-} 
 
   $('#inscrip').css({ display : "none"});
 
     typingTimer = setTimeout(function(){ 
-
-    var Bolenn = IsEmail($('#eUs').val());
+      var Bolenn = IsEmail($('#eUs').val());
       
       $('#eUs').blur();
 
@@ -1581,11 +1442,15 @@ if ($(this).val().match(/\@+/g)){
          $('#inscrip').text('email no valido').fadeIn('slow');
 
       } else {
-
+       
       $('#inscrip').css({ display : "none"});
       checkEmail($('#eUs').val());
+
       }
+     
     }, doneTypingInterval);
+
+
 
 });
 
@@ -1595,54 +1460,26 @@ $('#eUs').keydown(function(){
 });
 
 
-var tT;               
-var dTI = 1700; 
-
-$('#cant').keyup( function() {
-    clearTimeout(tT);
-
-    tT = setTimeout(function(){ 
-      $('#cant').blur();
-    }, dTI);
-});
-
-
-$('#cant').keydown(function(){
-    clearTimeout(tT);
-});
-
-
-
 $("#to4").on('click', function(){
-	$("#item4").css({display : "block"});
-  $("#item2").css({display : "none"});
-
+	window.location.href = "#item4";
 	IR_SWITCH = 2;
 	$('.wrap-camera').animate({ left: '30%' }, 1300, 'easeInOutCubic');
   document.querySelector('#instruction').style.top = "50px";
-
-        univ_timer = setTimeout(function(){
-            resetAlpha();
-                  }, 100000);
 	
 });
 
-
 $("#to3").on('click', function(){
-  $("#item3").css({display : "block"});
-  $("#item2").css({display : "none"});
+	window.location.href = "#item3";
 	IR_SWITCH = 1;
 });
 
-$("#inscrip").on('click', function(){
 
+$("#inscrip").on('click', function(){
   if ($(this).text() ===  "email no válido"){
 
   } else {
 
-  $("#item4").css({display : "block"});
-  $("#item3").css({display : "none"});
-
+   window.location.href = "#item4";
     $('.wrap-camera').animate({ left: '30%' }, 1300, 'easeInOutCubic');
       document.querySelector('#instruction').style.top = "50px"; 
   }
@@ -1650,6 +1487,10 @@ $("#inscrip").on('click', function(){
 });
 
 
+	$("#backto2, #backto2 > i").on('click mousedown', function(){
+    window.location.href = "#item2";
+    IR_SWITCH = 0;
+  });
 
 
 $("#cant").on("change keydown paste input keypress", function(){
@@ -1667,69 +1508,59 @@ $("#nonoYes > div:first").on('click', function(){
 
 if($("#ticketNumber").val() == 0 || $("#ticketNumber").val() =='' ){
 
-swal({ title : "Deber Ingresar un numero de boleta" , text: "", type: "warning", timer: "3000", confirmButtonColor: "#fff"});
+swal("Deber Ingresar un numero de boleta" , "", "warning");
 
 } else {
 
 
   swal({ title: "Estás Seguro?",   
-   text: "",  
+  text: "",  
    type: "warning",   
    showCancelButton: true,   
    confirmButtonColor: "#91D280",   
    confirmButtonText: "Añadir!",  
-   closeOnConfirm: false },
-    function (confirm){ 
-    if(confirm) {
+    closeOnConfirm: false },
+    function(){  
         var scoreV = $("#score-cal").html();
         var code = $("#secret").val();
         var pass = $("#garID").val();
         var ticket = $("#ticketNumber").val();
         var cant = $("#cant").val();
+
      checkTicketNumber(ticket, function (callback){
-        if (parseInt(callback) == 0){
-      swal({ title: "Numero de boleta ya ingresado", text: "ingrese el numero correcto", type: "error", timer: "3000", confirmButtonColor: "#fff"});
+        if (parseInt(callback) === 0){
+      swal("Numero de boleta ya ingresado", "ingrese el numero correcto", "error");
         } else {
             upDownScoreStr(code, scoreV, "" , pass, ticket, cant);
              $("#score-user").html(parseInt($("#score-user").html()) + parseInt(scoreV));
         }
+
+
      })
-
-    }
-
     });
 }
 });
 
 //checked
 
-$('.slide-items').on('click touchstart', function (){
+$('.slide-items').on('click', function(){
   takePromo($(this));
-  clearInterval(univ_timer);
-        univ_timer = setTimeout(function(){
-            resetAlpha();
-                  }, 100000);
+    clearInterval(univ_timer);
+});
+
+
+$("#shokwave").on('click', function(){
+window.location.href= '#item5';
+clearInterval(univ_timer);
+univ_timer = "";
 });
 
 
 
-$("#shokwave").on('click tap touchstart', function(){
-  $("#item5").css({display : "block"});
-  $("#item4").css({display : "none"});
-
-  clearInterval(univ_timer);
-        univ_timer = setTimeout(function(){
-            resetAlpha();
-                  }, 100000);
-
-});
-
-
-$("#fullscreen").on('click', function (){
-  
- document.documentElement.mozRequestFullScreen();
-
-});
+//$("#fullscreen").on('click', function (){
+//  alert('hola');
+//  requestFullScreen(document.body);
+//})
 
 
 $("#mesa").on('focus', function (){
@@ -1740,16 +1571,12 @@ setTimeout(function(){
 
 });
 
-$("#backto4, #backto4 *").on('click', function(){
-
- resetBeta();
-
-});
 
 
 
-
-
+document.getElementById('fullscreen').addEventListener('click', function(){
+     document.documentElement.mozRequestFullScreen();
+})
 /*===============*/
 
 /* === funciones ===*/
@@ -1759,11 +1586,7 @@ $.ajax({
         type:"POST",
         url: "getRules.php?fac=" + fac,
         success : function (data) {
-          console.info(data);
-           data = data.split("|");
-
-          rule = data[0];
-          visit = data[1];
+          rule = data;
         }
      });
 }
@@ -1777,36 +1600,24 @@ function upDownScoreStr(codigo, value, promo_code, gar, ticket, ta, table){
     type: "POST",
     url : 'setConsume.php?codigo=' + codigo + "&fac_code=" + fac +  "&promo_code=" + promo_code + "&ba_value=" + value + "&gar=" + gar + "&ticket=" + ticket + "&ta=" + ta + "&fech=" + fecha_or + "&tabla=" + table,
     success : function (data){
-    
-    var delta = 0;
 
-     if(data == " "){ delta = 0 } else { delta = 1}
-
-       console.info(data);
     var currentScore = parseInt(document.querySelector('#score-user').innerHTML);
-
+     if(data !== '' ){ var adding = 1;} else { var adding = 0;}
+     
      if(promo_code === ""){
-         
-          $("#item1").css({display : "block"});
-          $("#item5").css({display : "none"});
-
         var vtp  =  currentScore;
 
-        swal({ title: value + " Puntos añadidos con éxito", text : "a tu cuenta  " + data + ". Tienes ahora " + (parseInt(vtp) + (parseInt(visit)*delta))+  " puntos en total" , type:"success" , timer: "3800", confirmButtonColor: "#fff"}); 
-      
+        swal( value + " Puntos añadidos con éxito", "a tu cuenta  " + data + " / tienes ahora " + vtp +  " puntos en total" , 'success'); 
+        window.location.href= "#item1";
         resetAlpha();
+        adding = 0;
 
    } else { 
-
-  $("#item1").css({display : "block"});
-  $("#item4").css({display : "none"});
-
-   	swal({ title : "Puntos descontados", text: "Disfruta tu Promo, te quedan " + $("#score-user").html() + " puntos" , type: "success", timer: "3800" , confirmButtonColor: "#fff"}); 
-
+   	swal("Puntos descontados", "Disfruta tu Promo, te quedan " + $("#score-user").html() + " puntos" , 'success'); 
+      console.info('setConsume.php?codigo=' + codigo + "&fac_code=" + fac +  "&promo_code=" + promo_code + "&ba_value=" + value + "&gar=" + gar + "&ticket=" + ticket + "&ta=" + ta + "&fech=" + fecha_or);
+       window.location.href = "#item1";
          resetAlpha();
-
-        }
-
+   }
     }, 
     error: function (error){
       alert("no se puede conectar con el servidor");
@@ -1851,65 +1662,50 @@ function insc(Nu , El, cod) {
 
 var inject = $.ajax({
 	      type:"POST",
-	      url: "inscription.php?name=" + Nu + "&email=" + El +  "&codigo=" + cod + "&fac=" + fac,
-        success : function (data){
+	      url: "inscription.php?name=" + Nu + "&email=" + El +  "&codigo=" + cod + "&fac=" + fac
+});
 
-   
+
+inject.done(function (data){
+
 switch(parseInt(data)){
-
   case 0:
-      swal({ title: "Alerta", text: "Codigo Qr inválido",  type: "error", timer: "3000", confirmButtonColor: "#fff"});
+      swal( "Alerta", "Codigo Qr no válido",  "error");
   break;
   case 403:
-      swal({ title: "QR ya inscrito... :(", text: "Utiliza tu tarjeta sin inscribirte nuevamente" , type: "error", timer: "3000", confirmButtonColor: "#fff"});
+      swal({ title: "QR ya inscrito... :(", text: "Utiliza tu tarjeta sin inscribirte nuevamente" , timer: "2500"});
   break;
   case 1:
      IR_SWITCH = 0;
+
     document.querySelector('#led').style.backgroundColor = "#2DDB84";
     document.querySelector('#led').style.boxShadow = "0px 0px 20px 0px rgba(114, 255, 114, 0.75)";
 
-         swal({title: "Felicidades!", text : "Inscripción exitosa, ganaste 1 punto!", type:  "success", timer: "3000", confirmButtonColor: "#fff"});
-
-    $('#item4').fadeTo('slow', 0.3, function(){
-    $(this).css('background-image', 'url(images/fondo_puntaje.jpg)');
-}).delay(20).fadeTo('slow', 1);
-
-
+         swal({title: "Felicidades!", text : "Inscripción exitosa, ganaste 1 punto!", type:  "success", timer: "4000"});
     setTimeout(function(){
               IR_SWITCH = 0;
-              
                $('.wrap-camera').fadeOut(300, function(){
-
       var nom = document.getElementById('nUs').value = "";
       var em = document.getElementById('eUs').value ="";
                  document.querySelector('#score-user').innerHTML = '1';
-                 document.querySelector('#contenedor-promos').style.right= "-3.9%"; 
+                 document.querySelector('#contenedor-promos').style.right= "-8%"; 
                  document.querySelector('.wrap-icon-facility').style.top = "10px";
                  document.querySelector('.catego').style.top = "270px";
                  document.querySelector('#instruction').style.visibility = "hidden";
                  document.querySelector('#instruction').style.top = "550px";
-                 document.querySelector('#avice-points').style.top = "0px";
-                 $('.slick-prev').trigger('click');
-                 setTimeout(function(){
-                   $(".chevrons").fadeIn('slow');
-                  
-                 },600);
+                 document.querySelector('#avice-points').style.top = "30px";
                  $("#secret").val(cod); 
-                 
+                 window.location.href = "#item4";
            });
-    }, 3000);
+    }, 4000);
 
 
        IR_SWITCH = 0;
     break;
-    case 5:
-    console.info('filas no insertadas');
-    break;
 
  }
 
-}
-  });
+});
 }
 
 
@@ -1920,12 +1716,12 @@ function loginGar(pass){
            success : function(data){
            	if(parseInt(data) === 0){
                 $('#errado').html('Patrón no identificado');
-                $('#errado').css({ color : "#fff"});
+                $('#errado').css({ color : "darkred"});
             } else {
-               $('#errado').fadeOut('slow');
+               $('#errado').html('');
                $("#garID").val(data);
-               $('.patternlockcontainer').fadeOut('slow', function(){
-               $(".vari").css({ display : 'block'});
+                $('.patternlockcontainer').fadeOut('slow', function(){
+                   $(".vari").css({ display : 'block'});
                 });
             }
            },
@@ -1946,13 +1742,15 @@ function getComensal(codigo, Nombre, email, argument){
 		   type:"POST",
 		   url: "semantic.php?codigo=" + codigo + "&nombre=" + Nombre + "&email=" + email + "&fac=" + fac + "&io=" + argument + "&date=" + sdate,
            success : function(data){
+
 switch(parseInt(data)) {
+
   case 404:
-    swal({ title: "Codigo QR no válido", text: "", type:"error", timer: "3000", confirmButtonColor: "#fff"});
+    swal({ title: "Codigo QR no válido", type:"error", timer: "2000"});
     IR_SWITCH = 2;
   break;
   case 2:
-  swal({ title: "Codigo QR no reconocido", text: "", type:"error", timer: "3000", confirmButtonColor: "#fff"});
+  swal({ title: "Codigo QR no reconocido", type:"error", timer: "2000"});
       IR_SWITCH = 2;
   break;
   case 0:
@@ -1966,8 +1764,7 @@ switch(parseInt(data)) {
                     confirmButtonText: "Sí!",  
                     closeOnConfirm: true },
                     function(){  
-                      $("#item3").css({display : "block"});
-                      $("#item4").css({display : "none"});
+                      window.location.href = "#item3";
                       IR_SWITCH = 1;
                          });
                IR_SWITCH = 2;
@@ -1976,43 +1773,35 @@ switch(parseInt(data)) {
 
   var variables = data.split(',');
     $("#score-user").html(variables[1]);
-      swal({ title : "Bienvenido "  + variables[0], text: "Disfruta de tus puntos!",  type: "success", timer : "3000", confirmButtonColor: "#fff"});
+      swal({ title : "Bienvenido "  + variables[0], text: "Disfruta de tus puntos!", timer : '5500', confirmButtonText: "."});
         IR_SWITCH = 0;
-
-$('#item4').fadeTo('slow', 0.3, function(){
-    $(this).css('background-image', 'url(images/fondo_puntaje.jpg)');
-}).fadeTo('slow', 1);
-
         document.querySelector('#led').style.backgroundColor = "#2DDB84";
         document.querySelector('#led').style.boxShadow = "0px 0px 20px 0px rgba(114, 255, 114, 0.75)";
         setTimeout(function(){$('.wrap-camera').fadeOut(300, function(){
                  document.querySelector('.wrap-icon-facility').style.top = "10px";
-                 document.querySelector('#contenedor-promos').style.right= "-3.9%"; 
+                 document.querySelector('#contenedor-promos').style.right= "-8%"; 
                  document.querySelector('.catego').style.top = "270px";
-                 document.querySelector('#instruction').style.visibility = "hidden";
+                  document.querySelector('#instruction').style.visibility = "hidden";
                  document.querySelector('#instruction').style.top = "550px";
-                 document.querySelector('#avice-points').style.top = "0px";
-                  setTimeout(function(){
-                   $(".chevrons").fadeIn('slow');
-                   $('.slick-prev').trigger('click');
-                 },1200);
+                 document.querySelector('#avice-points').style.top = "30px";
            })
        }, 5000);
+          univ_timer = setTimeout(function(){
+            resetAlpha();
+                  }, 72000);
 
                }
             }
          });
 }
         
-
 function requestFullScreen(element) {
     // Supports most browsers and their versions.
-    var requestMethod = element.requestFullScreen  || element.mozRequestFullScreen() || element.msRequestFullscreen;
+    var requestMethod = element.requestFullScreen || element.webkitRequestFullScreen(element.ALLOW_KEYBOARD_INPUT) || element.mozRequestFullScreen || element.msRequestFullscreen;
 
     if (requestMethod) { // Native full screen.
 
         requestMethod.call(element);
-
     } else if (typeof window.ActiveXObject !== "undefined") { // Older IE.
         var wscript = new ActiveXObject("WScript.Shell");
         if (wscript !== null) {
@@ -2035,7 +1824,7 @@ if(parseInt($("#score-user").html()) < parseInt(scorePro)) {
 
   console.info($("#score-user").html() + "/" + parseInt(scorePro));
 
-swal({ title: "No tienes puntos suficientes :(" , text: "Sigue Acumulando", type: "error", timer: "3000" , confirmButtonColor: "#fff"});
+swal("No tienes puntos suficientes :(" ,"Sigue Acumulando", "error");
 
 $(object).removeClass( 'slide-active-item');
 $(object).addClass('slide-pasive-item');
@@ -2053,13 +1842,24 @@ $(object).addClass('slide-pasive-item');
 	   closeOnConfirm: false,
 	   closeOnCancel: true
 	    },
-	   function (){
-
+	   function (confirmed){
+         if(confirmed === true){
            upDownScoreStr($("#secret").val(), parseInt(scorePro)*-1 , promoCode, "", "", "", $("#mesa").val());
             $(object).removeClass('slide-active-item');
               $(object).addClass('slide-pasive-item');
-                document.getElementById('score-user').innerHTML =  parseInt(document.getElementById('score-user').innerHTML) - parseInt(scorePro)
-         });
+                document.getElementById('score-user').innerHTML =  parseInt(document.getElementById('score-user').innerHTML) - parseInt(scorePro);
+               
+         } else if(confirmed === false || confirmed === undefined) {
+
+
+         } else {
+
+        
+         }
+
+      
+	   
+	   });
 }
 }
 
@@ -2078,8 +1878,7 @@ $.ajax({
     console.info(data);
        switch(data){
           case "Av" :
-           swal({ title : "Email ya inscrito!", text: "Prueba Con otro!", type:"warning", timer: "3000", confirmButtonColor: "#fff"});
-           $("#eUs").val('');
+           swal({ title : "Email ya inscrito!", text: "Prueba Con otro!", type:"warning", timer: "2500" });
              break;
           case "x":
             $('#inscrip').css({ display : "block"});
@@ -2098,26 +1897,22 @@ function checkTicketNumber(ticket , callback){
     type: "POST",
     url: "tiNumCheck.php?ticket=" + ticket + "&fac=" + fac, 
     success :  function (data){
-      callback(data);
+       callback(data);
     }
    });
 
    
 }
 
-
-
 function resetAlpha(){
   IR_SWITCH = 0;
-  resetBeta();
   $("#garID").val('');
   $("#secret").val('');
-  $('#errado').fadeIn('fast');
+  $('#errado').html('');
   $('.vari').css({ display : "none"});
   $(".patternlockcontainer").fadeIn('fast');
   $('score-cal').html('');
   $("#mesa").val('');
-  $(".chevrons").fadeOut('fast');
   document.querySelector('#highBar > a').href = "#";
   document.querySelector('#instruction').style.visibility = "visible";
   document.querySelector('#instruction').style.top = "500px";
@@ -2136,16 +1931,11 @@ function resetAlpha(){
   document.getElementById('password').value= "";
   document.getElementById('ticketNumber').value= "";
   document.getElementById('cant').value= "";
-  $('#errado').html('Favor llame al garzón');
-  $('#errado').css({ color : "white"});
-  $('#item4').fadeTo('fast', 0.3, function(){
-    $(this).css('background-image', 'url(images/fondo_nuevo.png)');
-}).delay(20).fadeTo('fast', 1);
-
-$("#item4").css({display : "none"});
-$("#item1").css({display : "block"});
-$(".dg-wrapper > a").eq(1).trigger('click');
-
+  $('#errado').html('Diseña tu patrón de seguridad en el tablero');
+  $('#errado').css({ color : "darkgreen"});
+  setTimeout(function(){
+   window.location.href = "#item1"}, 
+   2000);
 
 }
 
@@ -2188,36 +1978,15 @@ $.event.special.tripleclick = {
     
 };
 
+
 $("#mesa").bind("tripleclick", function () {
+  console.info('llega tripleclick');
   $(this).css({ opacity: '1'});
-
 });
-
-
-function resetBeta(){
-
-  $("#cant").val('');
-  $("#ticketNumber").val('');
-  $("#score-cal").html('');
-  $('.vari').css({ display : "none"});
-  $(".patternlockcontainer").fadeIn('fast');
-  $('#errado').html('Favor llame al garzón');
-  $('#errado').fadeIn('fast');
-  $('#errado').css({ color : "white"});
-  $("#garID").val('');
-
-}
 
 
 
 </script>
-
-
-
-
- 
-
-
 
 
 

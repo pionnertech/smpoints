@@ -11,7 +11,7 @@ $Res_Pro = mysqli_query($datos, $Query_Pro);
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Qr Motion</title>
+  <title>Qr Motion</title>
   <meta name="viewport" content="width=device-width, user-scalable=no">
 <link rel="stylesheet" type="text/css" href="http://cdn.jsdelivr.net/jquery.slick/1.3.9/slick.css"/>
 <link rel="stylesheet" type="text/css" href="css/sweet-alert.css"/>
@@ -26,11 +26,11 @@ $Res_Pro = mysqli_query($datos, $Query_Pro);
 <script type="text/javascript" src="js/jquery.fullPage.min.js"></script>
 
 <style type="text/css">
-	
-		*{
-	border:0;
-	margin:0;
-	padding:0;
+  
+    *{
+  border:0;
+  margin:0;
+  padding:0;
 }
 
 
@@ -107,7 +107,7 @@ body {
 
 
 a {
-	text-decoration: none;
+  text-decoration: none;
 }
 
 .container{
@@ -138,7 +138,7 @@ height:75%;
 
 
 #il {
-	margin-top: 2em !important;
+  margin-top: 2em !important;
 }
 
   .score{
@@ -278,7 +278,7 @@ float: left;
 
 
 .flip-items{
-	padding-bottom: 0 !important;
+  padding-bottom: 0 !important;
 }
 
 
@@ -300,15 +300,15 @@ float: left;
       height:109vh;
  }
 
-  	#item2{
+    #item2{
     background-size: cover;
     background-repeat: no-repeat;
-		text-align: center;
-		height:100vh;
+    text-align: center;
+    height:100vh;
     position: relative;
      z-index: 1;
      display: none;
-	}
+  }
 
 
 
@@ -408,23 +408,23 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff3019', end
 /* ===== item3 ===== */
 
 #item3{
-	 background-image: url(images/fondo_nuevo.png);
+   background-image: url(images/fondo_nuevo.png);
    background-size: 100% 130%;
-	 height:100vh;
-	 padding-top: 2em;
+   height:100vh;
+   padding-top: 2em;
    display:none;
 }
 
 #nUs, #eUs{
   
-	height: 1em;
-	outline:none;
-	width: 90%;
-	padding: .5em 1em;
-	font-size: 2em;
-	color: #fff;
+  height: 1em;
+  outline:none;
+  width: 90%;
+  padding: .5em 1em;
+  font-size: 2em;
+  color: #fff;
   font-weight: 800;
-	background: #F40404; /* Old browsers */
+  background: #F40404; /* Old browsers */
   font-family: 'eth_serifregular';
  /* IE6-9 */
 
@@ -491,13 +491,13 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff3019', end
 
 
 #nUs::-webkit-input-placeholder, #eUs::-webkit-input-placeholder, .cal-blocks input::-webkit-input-placeholder{
-	color: #fff !important;
+  color: #fff !important;
   font-weight: 800;
 
 }
 
 #eUs::-moz-placeholder, #nUs::-moz-placeholder , .cal-blocks input::-moz-placeholder{
-	color: #fff !important;
+  color: #fff !important;
   font-weight: 800;
 
 }
@@ -535,17 +535,17 @@ display:none;
 
 
 #camera{
-	width:480px;
-	height:288px;
-	border: 0;
-	margin:0;
-	padding:0;
+  width:480px;
+  height:288px;
+  border: 0;
+  margin:0;
+  padding:0;
 }
 
 #led{
-	max-width       : 10px;
-	height          : 10px;
-	border-radius   : 50%;
+  max-width       : 10px;
+  height          : 10px;
+  border-radius   : 50%;
     background-color: #ff0000;
     text-align: center;
 
@@ -574,12 +574,12 @@ box-shadow:         0px 0px 20px 0px rgba(255, 7, 7, 0.75);
 
 
 .wrap-icon-facility{
-	position: relative;
-	top:-1200px;
-	width:26%;
+  position: relative;
+  top:-1200px;
+  width:26%;
   max-height:3em !important;
   float:right;
-  right:-200px;
+  right:-160px;
     -webkit-transition: all 2500ms ease-in-out;
     -moz-transition: all 2500ms ease-in-out;
     transition: all 2500ms ease-in-out;
@@ -599,8 +599,8 @@ border: 10px solid red;
 
 
 .wrap-image{
-	margin: 0;
-	background-image: url(images/al-bk.jpg);
+  margin: 0;
+  background-image: url(images/al-bk.jpg);
   width:43%;
   height:50em;
   position:relative;
@@ -653,7 +653,7 @@ background-color:#ff3019;
 text-align: center;
 position: relative;
 float: right;
-right:-405px;
+right: -360px;
 top:1600px;
 z-index:30;
 
@@ -665,8 +665,8 @@ transition: all 2500ms ease-in-out;
 
 #user-icon-trophy{
 
-	background-color: #4A4A4A;
-	-webkit-box-shadow: 0px 5px 6px 0px rgba(12, 12, 12, 0.75);
+  background-color: #4A4A4A;
+  -webkit-box-shadow: 0px 5px 6px 0px rgba(12, 12, 12, 0.75);
     -moz-box-shadow:    0px 5px 6px 0px rgba(12, 12, 12, 0.75);
     box-shadow:         0px 5px 6px 0px rgba(12, 12, 12, 0.75);
     border-radius: 50%;
@@ -676,8 +676,8 @@ transition: all 2500ms ease-in-out;
 }
 
 .titulo-cat , .metadatos, .metadatos p, .metados div{
-	display:inline-block;
-	vertical-align: top;
+  display:inline-block;
+  vertical-align: top;
 }
 
 .sum-user{
@@ -746,7 +746,7 @@ cursor: pointer;
 
 
 #contenedor-promos{
-	width:52%;
+  width:52%;
   position: relative;
   top:20px;
   right: 1500px;
@@ -757,18 +757,18 @@ cursor: pointer;
 }
 
 .wrap-image, #contenedor-promos{
-	vertical-align: top;
-	display:inline-block;
+  vertical-align: top;
+  display:inline-block;
 }
 
 .puntaje{
-	color: #fff;
-	font-style:italic;
-	width: 4%;
+  color: #fff;
+  font-style:italic;
+  width: 4%;
   border:4px dashed #F6E8CB;
-	display: inline-block;
-	vertical-align: top;
-	float:right;
+  display: inline-block;
+  vertical-align: top;
+  float:right;
   padding: .5em .7em;
   font-size:2em;
   text-align: center;
@@ -788,8 +788,8 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff3019', end
 
 
 #item5{
-	height:100vh;
-	background-image: url(images/fondo_nuevo.png);
+  height:100vh;
+  background-image: url(images/fondo_nuevo.png);
   background-size: cover;
   display:none;
 }
@@ -899,12 +899,12 @@ box-shadow:         0px 10px 5px 0px rgba(50, 50, 50, 0.75);
 /*===== =====*/
 
 #logout{
-	position: relative;
-	 float:right; 
-	 font-size: 1.5em; 
-	 padding-right: 2em;
-	 color:white !important;
-	 text-shadow: 0px 0px 6px rgba(150, 150, 150, 1);
+  position: relative;
+   float:right; 
+   font-size: 1.5em; 
+   padding-right: 2em;
+   color:white !important;
+   text-shadow: 0px 0px 6px rgba(150, 150, 150, 1);
 }
 
 .globalCaption{
@@ -1043,7 +1043,7 @@ width:7%;
 font-size:1.3em;
 font-style:italic;
 color:white;
-padding:.5em ;
+padding:.5em 1em ;
 border-radius: 15px;
   -webkit-transition: all 1s ease-in-out;
   -moz-transition: all 1s ease-in-out;
@@ -1213,7 +1213,7 @@ left:3em;
 
 .cdown{
 top:9em;
-right:12.5em;
+right:10.5em;
 }
 
 #fullscreen{
@@ -1249,7 +1249,7 @@ button::-moz-focus-inner {
 
 a:active { color: lime } /* active links */
 
-</style>	
+</style>  
 </head>
 <body>
 <input type="hidden" value="" id="secret">
@@ -1298,24 +1298,24 @@ a:active { color: lime } /* active links */
 <div class="section" id="item2">
 <a style="width:4em; position: relative; float: left;"  id="backmain" ><div id="backmaindiv"  style=" width:4.5em;"><i class="fa fa-chevron-circle-left fa-3x" style="color: white;"></i></div></a>
   <div class="wrap-item2" align="center" >
-  	    <div  id="to4" style="font-weight: bolder;">Quiero usar mis Smile Points</div>
+        <div  id="to4" style="font-weight: bolder;">Quiero usar mis Smile Points</div>
     </div>
     <div class="wrap-item2" align="center">
-  	    <div id="to3" style="font-weight: bolder;">Quiero registrarme</div>
+        <div id="to3" style="font-weight: bolder;">Quiero registrarme</div>
     </div>
 </div>
 <div class="section" id="item3" >
 <a style="width:4em;" onclick="IR_SWITCH = 0;" id="backto2"><div  style="width:4.5em;"><i class="fa fa-chevron-circle-left fa-3x" style="color: white;"></i></div></a>
-	   <div class="grand-wrap" align="center">
+     <div class="grand-wrap" align="center">
             <div class="wrap" align="center">
-	            <div style="display: inline-block; vertical-align: top;" class="credentials">
-	                <input type="text" id="nUs"  placeholder="Ingresa tu nombre y apellido">
+              <div style="display: inline-block; vertical-align: top;" class="credentials">
+                  <input type="text" id="nUs"  placeholder="Ingresa tu nombre y apellido">
             </div>
            </div>
 <div class="wrap" align="center">
-	<div style="display: inline-block; vertical-align: top;" class="credentials">
-	    <input type="text" id="eUs"  placeholder="Ingresa tu E-mail">
-	</div> 
+  <div style="display: inline-block; vertical-align: top;" class="credentials">
+      <input type="text" id="eUs"  placeholder="Ingresa tu E-mail">
+  </div> 
 
 </div>
 <button id="inscrip"  style="padding: 1em 2em; background-color: red; color: #fff; text-align: center; font-size:2em; font-style: italic; display:none;"></button>
@@ -1324,14 +1324,14 @@ a:active { color: lime } /* active links */
 
 <div id="item4" class="section" >
     <div class="logout"><i class="fa fa-home fa-2x " class="logout"></i></div>
-	<div class="wrap-camera" class="scrollabe" style="margin-top: 1.5em;">
-	   <div id="camera" class="scrollabe"></div>
-	    <div style="width:100%;" align="center"><p id="led"></p></div>
-	</div>
+  <div class="wrap-camera" class="scrollabe" style="margin-top: 1.5em;">
+     <div id="camera" class="scrollabe"></div>
+      <div style="width:100%;" align="center"><p id="led"></p></div>
+  </div>
   <div id="instruction">Acerca el código de tu tarjeta a la camara</div>
-	<div class="wrap-icon-facility"><img src="images/<? echo $result['FAC_NAME'] ?>/themes/background-client.png"></div>
+  <div class="wrap-icon-facility"><img src="images/<? echo $result['FAC_NAME'] ?>/themes/background-client.png"></div>
         <div class="catego" id="catego">
-	         <p class="sum-user" id="score-user"></p>
+           <p class="sum-user" id="score-user"></p>
            <p class="cola">&ensp;</p>
         </div>
   <div id="avice-points">Puntos</div>
@@ -1341,22 +1341,22 @@ a:active { color: lime } /* active links */
     <div class="slide-items"><div class="bkPro bkPro-pasive-item "><? printf($fila4[2])?><span class="bkPro-span"></span></div><input type="hidden" value="<? printf($fila4[0])  ?>" ><p class="puntaje "><? printf($fila4[1])?></p></div>
            <? } ?>   
     <div id="wrap-shokwave" ><div id="shokwave" >Acumula puntos <small >(Solo con boleta!)</small><span class="bkPro-span"></span></div></div>
-		</div>
+    </div>
     <span class="chevrons cdown "><i class="fa fa-chevron-down "></i></span>
 </div>
 <div id="item5" class="section">
 <div style="float:left; width:auto;"  id="backto4"><a href="#item4" ><i class="fa fa-chevron-circle-left fa-4x" style="color: white;"></i></a></div>
-	<div id="calculationBox" align="center">
+  <div id="calculationBox" align="center">
         <div class="cal-blocks pattern">
             <input type="hidden" id="garID">
             <p id="errado" style="color:#fff; font-style:italic; font-size: 2em; font-family:'eth_serifregular';margin-bottom: 3em; background-color: red; border-radius: 15px;">Favor llame al garzón</p>
-        	  <input type="password" id="password" name="password" class="patternlock" />
+            <input type="password" id="password" name="password" class="patternlock" />
         </div>
         <div class="cal-blocks vari">
-        	<span class="blef"></span><input type="number" class="bloco2" placeholder="ingrese numero de boleta" id="ticketNumber" maxlength="6"><span class="blri"></span>
+          <span class="blef"></span><input type="number" class="bloco2" placeholder="ingrese numero de boleta" id="ticketNumber" maxlength="6"><span class="blri"></span>
         </div>
         <div align="center" class="cal-blocks vari">
-            <span class="blef"></span><input type="number" id="cant" class="bloco2 " placeholder="Ingrese monto boleta" maxlength="7"><span class="blri"></span>
+            <span class="blef"></span><input type="number" id="cant" class="bloco2 " placeholder="Ingrese monto boleta" maxlength="6"><span class="blri"></span>
         </div>
         <div align="center" class="cal-blocks vari" id="wrap-score">
             <span class="pp vari" id="ppLeft"></span><div id="score-cal" class="vari"></div><span class="pp vari" id="ppRight"></span>
@@ -1382,8 +1382,15 @@ a:active { color: lime } /* active links */
           interval : 3000
         });
 
-
-
+$('#cant, #ticketNumber').unbind('keyup change input paste').bind('keyup change input paste',function (e){
+    var $this = $(this);
+    var val = $this.val();
+    var valLength = val.length;
+    var maxCount = $this.attr('maxlength');
+    if(valLength>maxCount){
+        $this.val($this.val().substring(0,maxCount));
+    }
+}); 
 
 });
 
@@ -1449,6 +1456,10 @@ $(".logout").on('click', function(){
 });
 
 
+
+
+
+
 var visit = 0; 
 var IR_SWITCH = 0;
 var fac_name = getQueryVariable("name");
@@ -1462,27 +1473,17 @@ var univ_timer;
 
 $(document).on('ready', function(){
 
-$('#cant').on('keyup change input paste', function (e){
-    var $this = $(this);
-    var val = $this.val();
-    var valLength = val.length;
-    var maxCount = $this.attr('maxlength');
-    if(valLength>maxCount){
-        $this.val($this.val().substring(0,maxCount));
-    }
-}); 
-
 
 getRules();
 
-	$('#camera').html5_qrcode( function (data){
+  $('#camera').html5_qrcode( function (data){
 
     if(IR_SWITCH === 1){
 
-    	var nom = document.getElementById('nUs').value;
-    	var em = document.getElementById('eUs').value;
+      var nom = document.getElementById('nUs').value;
+      var em = document.getElementById('eUs').value;
 
-    	 insc(nom, em, data);
+       insc(nom, em, data);
         IR_SWITCH = 0;
 
     } else if (IR_SWITCH === 2){
@@ -1495,12 +1496,12 @@ getRules();
 
     }
 
-	},
-	function (error){
-			$('#read_error').html(error);
-		}, function(videoError){
-			$('#vid_error').html(videoError);
-		});
+  },
+  function (error){
+      $('#read_error').html(error);
+    }, function(videoError){
+      $('#vid_error').html(videoError);
+    });
 
 $('#contenedor-promos').slick({
     vertical: true,
@@ -1614,24 +1615,24 @@ $('#cant').keydown(function(){
 
 
 $("#to4").on('click', function(){
-	$("#item4").css({display : "block"});
+  $("#item4").css({display : "block"});
   $("#item2").css({display : "none"});
 
-	IR_SWITCH = 2;
-	$('.wrap-camera').animate({ left: '30%' }, 1300, 'easeInOutCubic');
+  IR_SWITCH = 2;
+  $('.wrap-camera').animate({ left: '30%' }, 1300, 'easeInOutCubic');
   document.querySelector('#instruction').style.top = "50px";
 
         univ_timer = setTimeout(function(){
             resetAlpha();
-                  }, 100000);
-	
+                  }, 60000);
+  
 });
 
 
 $("#to3").on('click', function(){
   $("#item3").css({display : "block"});
   $("#item2").css({display : "none"});
-	IR_SWITCH = 1;
+  IR_SWITCH = 1;
 });
 
 $("#inscrip").on('click', function(){
@@ -1705,10 +1706,7 @@ swal({ title : "Deber Ingresar un numero de boleta" , text: "", type: "warning",
 
 $('.slide-items').on('click touchstart', function (){
   takePromo($(this));
-  clearInterval(univ_timer);
-        univ_timer = setTimeout(function(){
-            resetAlpha();
-                  }, 100000);
+    clearInterval(univ_timer);
 });
 
 
@@ -1717,11 +1715,8 @@ $("#shokwave").on('click tap touchstart', function(){
   $("#item5").css({display : "block"});
   $("#item4").css({display : "none"});
 
-  clearInterval(univ_timer);
-        univ_timer = setTimeout(function(){
-            resetAlpha();
-                  }, 100000);
-
+clearInterval(univ_timer);
+univ_timer = "";
 });
 
 
@@ -1792,7 +1787,7 @@ function upDownScoreStr(codigo, value, promo_code, gar, ticket, ta, table){
 
         var vtp  =  currentScore;
 
-        swal({ title: value + " Puntos añadidos con éxito", text : "a tu cuenta  " + data + ". Tienes ahora " + (parseInt(vtp) + (parseInt(visit)*delta))+  " puntos en total" , type:"success" , timer: "3800", confirmButtonColor: "#fff"}); 
+        swal({ title: value + " Puntos añadidos con éxito", text : "a tu cuenta  " + data + ". Tienes ahora " + (parseInt(vtp) + (parseInt(visit)*delta))+  " puntos en total" , type:"success" , timer: "3000", confirmButtonColor: "#fff"}); 
       
         resetAlpha();
 
@@ -1801,7 +1796,7 @@ function upDownScoreStr(codigo, value, promo_code, gar, ticket, ta, table){
   $("#item1").css({display : "block"});
   $("#item4").css({display : "none"});
 
-   	swal({ title : "Puntos descontados", text: "Disfruta tu Promo, te quedan " + $("#score-user").html() + " puntos" , type: "success", timer: "3800" , confirmButtonColor: "#fff"}); 
+    swal({ title : "Puntos descontados", text: "Disfruta tu Promo, te quedan " + $("#score-user").html() + " puntos" , type: "success", timer: "3000" , confirmButtonColor: "#fff"}); 
 
          resetAlpha();
 
@@ -1850,8 +1845,8 @@ function getQueryVariable(variable) {
 function insc(Nu , El, cod) {
 
 var inject = $.ajax({
-	      type:"POST",
-	      url: "inscription.php?name=" + Nu + "&email=" + El +  "&codigo=" + cod + "&fac=" + fac,
+        type:"POST",
+        url: "inscription.php?name=" + Nu + "&email=" + El +  "&codigo=" + cod + "&fac=" + fac,
         success : function (data){
 
    
@@ -1877,9 +1872,8 @@ switch(parseInt(data)){
 
     setTimeout(function(){
               IR_SWITCH = 0;
-              
-               $('.wrap-camera').fadeOut(300, function(){
 
+               $('.wrap-camera').fadeOut(300, function(){
       var nom = document.getElementById('nUs').value = "";
       var em = document.getElementById('eUs').value ="";
                  document.querySelector('#score-user').innerHTML = '1';
@@ -1889,10 +1883,9 @@ switch(parseInt(data)){
                  document.querySelector('#instruction').style.visibility = "hidden";
                  document.querySelector('#instruction').style.top = "550px";
                  document.querySelector('#avice-points').style.top = "0px";
-                 $('.slick-prev').trigger('click');
                  setTimeout(function(){
                    $(".chevrons").fadeIn('slow');
-                  
+                   $('.slick-prev').trigger('click');
                  },600);
                  $("#secret").val(cod); 
                  
@@ -1918,7 +1911,7 @@ function loginGar(pass){
  $.ajax({ type : "POST", 
            url: "getPersonal.php?pass=" + pass + "&fac_code=" + fac,
            success : function(data){
-           	if(parseInt(data) === 0){
+            if(parseInt(data) === 0){
                 $('#errado').html('Patrón no identificado');
                 $('#errado').css({ color : "#fff"});
             } else {
@@ -1939,12 +1932,12 @@ function loginGar(pass){
 
 function getComensal(codigo, Nombre, email, argument){
 
-		//first get the current date
-	ofa = new Date();
-	sdate = ofa.getFullYear() + "-" + (ofa.getMonth()+1) + "-" + ofa.getDate() + " " + ofa.getHours() + ":" + ofa.getMinutes() + ":" + ofa.getSeconds();
-	 $.ajax({
-		   type:"POST",
-		   url: "semantic.php?codigo=" + codigo + "&nombre=" + Nombre + "&email=" + email + "&fac=" + fac + "&io=" + argument + "&date=" + sdate,
+    //first get the current date
+  ofa = new Date();
+  sdate = ofa.getFullYear() + "-" + (ofa.getMonth()+1) + "-" + ofa.getDate() + " " + ofa.getHours() + ":" + ofa.getMinutes() + ":" + ofa.getSeconds();
+   $.ajax({
+       type:"POST",
+       url: "semantic.php?codigo=" + codigo + "&nombre=" + Nombre + "&email=" + email + "&fac=" + fac + "&io=" + argument + "&date=" + sdate,
            success : function(data){
 switch(parseInt(data)) {
   case 404:
@@ -2044,16 +2037,16 @@ $(object).addClass('slide-pasive-item');
 } else {
 
    swal({ title: "Quieres consumir esta promoción?",   
-	   text: "Se te descontarán " + scorePro + " puntos de tu cuenta",  
-	   type: "warning",   
-	   showCancelButton: true,
-	   confirmButtonColor: "#91D280",   
-	   confirmButtonText: "Sí!",  
-	   cancelButtonText: "No, Gracias...",
-	   closeOnConfirm: false,
-	   closeOnCancel: true
-	    },
-	   function (){
+     text: "Se te descontarán " + scorePro + " puntos de tu cuenta",  
+     type: "warning",   
+     showCancelButton: true,
+     confirmButtonColor: "#91D280",   
+     confirmButtonText: "Sí!",  
+     cancelButtonText: "No, Gracias...",
+     closeOnConfirm: false,
+     closeOnCancel: true
+      },
+     function (){
 
            upDownScoreStr($("#secret").val(), parseInt(scorePro)*-1 , promoCode, "", "", "", $("#mesa").val());
             $(object).removeClass('slide-active-item');
@@ -2202,7 +2195,6 @@ function resetBeta(){
   $('.vari').css({ display : "none"});
   $(".patternlockcontainer").fadeIn('fast');
   $('#errado').html('Favor llame al garzón');
-  $('#errado').fadeIn('fast');
   $('#errado').css({ color : "white"});
   $("#garID").val('');
 
