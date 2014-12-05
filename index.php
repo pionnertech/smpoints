@@ -1,10 +1,9 @@
 <?php
 
+session_start();
 $situ = $_GET['t'];
 
-session_start();
-
-if(isset($_SESSION['TxtUser']) ){
+if(isset($_SESSION['TxtUser'])){
 
 echo "<script language='javascript'>window.location='system.php'</script>";
 
