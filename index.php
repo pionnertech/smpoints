@@ -9,8 +9,6 @@ echo "<script language='javascript'>window.location='system.php'</script>";
 
 } else {
 
-
-
 ?>
 
 
@@ -58,7 +56,9 @@ echo "<script language='javascript'>window.location='system.php'</script>";
               <div align="center" class="error_shock"><span><? echo "Credenciales invalidas, intenta nuevamente"; ?></span></div>
 
 <?
+
 }
+
 ?>
                 
             </form>
