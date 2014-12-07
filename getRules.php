@@ -2,7 +2,7 @@
 
 $codigo = $_GET['fac'];
 
-$datos = mysqli_connect('mysql.nixiweb.com', "u440137862_eqr", "PlEyAdEs", "u440137862_qr");
+$datos = mysqli_connect('localhost', "root", "D1sjjDlvD0", "SM_usr10000");
 
 $query = "SELECT RULE_CANT_SCORE, RULE_SCORE_VISITOR FROM RULES WHERE RULE_FAC_CODE = " . $codigo . ";";
 

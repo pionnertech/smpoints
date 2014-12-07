@@ -5,7 +5,8 @@ $fac = $_GET['fac'];
 $issubaux = "";
 
 $ids = explode("|", $id , -1);
- $datos = mysqli_connect('mysql.nixiweb.com', "u440137862_eqr", "PlEyAdEs", "u440137862_qr");
+
+$datos = mysqli_connect('localhost', "root", "D1sjjDlvD0", "SM_usr10000");
 
 $outcome_pre = mysqli_query($datos, "SELECT FAC_AUX_USER FROM FAC WHERE FAC = " . $fac);
 

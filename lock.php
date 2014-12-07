@@ -4,16 +4,16 @@ session_start();
 
 if (!isset($_SESSION['TxtCode'])) {
 
-echo "<script>window.location = 'blank-page.php'</script>";
+echo "<script>window.location = 'system.php'</script>";
 
 } else {
  
-$datos = mysqli_connect('mysql.nixiweb.com', "u440137862_eqr", "PlEyAdEs", "u440137862_qr");
+$datos = mysqli_connect('localhost', "root", "D1sjjDlvD0", "SM_usr10000");
 $query_personal = mysqli_query($datos, "SELECT * FROM PERSONAL WHERE ((PER_PASS = '' OR PER_PASS = NULL) AND PER_FAC_CODE = " . $_SESSION["TxtCode"] . ");");
 
 if(mysqli_num_rows($query_personal) === 0){
 
-    echo "<script>window.location = 'blank-page.php'</script>";
+    echo "<script>window.location = 'system.php'</script>";
 }
 
 ?>
@@ -54,7 +54,7 @@ display: inline-block !important;
 </head>
 
 <body>
-<button id="back" onclick="document.referrer"><i class="fa fa-home fa-4x" onclick="window.location = 'blank-page.php'"></i></button>
+<button id="back" onclick="document.referrer"><i class="fa fa-home fa-4x" onclick="window.location = 'system.php'"></i></button>
     <form method="post" onsubmit="" >
         <h2>Establece tu contraseña</h2>
         <h4>Dibuja un patr&oacute;n de logeo, con velocidad moderada, y luego presiona el espacio con tu nombre</h4>
@@ -93,7 +93,7 @@ function submitform(value, argument){
 
            }   else {
                
-                 swal("Password ya inscrito", "Empieza desde un punto distinto ó diseña un patrón distinto", "warning");
+                 swal("Password ya inscrito", "Empieza desde un punto diferente ó diseña un patrón distinto", "warning");
                 
             }
 

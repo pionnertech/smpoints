@@ -1,10 +1,18 @@
 <?php header('Content-Type: text/html; charset=utf-8');
 
-$datos = mysqli_connect('mysql.nixiweb.com', "u440137862_eqr", "PlEyAdEs", "u440137862_qr");
+$datos = mysqli_connect('localhost', "root", "D1sjjDlvD0", "SM_usr10000");
+
+
+
 $Query = "SELECT FAC_NAME FROM FAC WHERE FAC_CODE = " . $_GET['facility'];
 $result = mysqli_fetch_assoc(mysqli_query($datos,$Query));
+
 $Query_Pro = "SELECT PRO_CODE, PRO_CANT_VAL, PRO_DESCRIP, SUBSTRING(PRO_DATE,1,10), PRO_CODE FROM PRO WHERE PRO_FAC ='" .  $result['FAC_NAME'] . "'";
 $Res_Pro = mysqli_query($datos, $Query_Pro);
+
+$Query_rule = "SELECT RULE_CANT_SCORE FROM RULES WHERE RULE_FAC_CODE = " . $_GET['facility'];
+$res_rules = mysqli_fetch_assoc(mysqli_query($datos, $Query_rule));
+
 
 ?>
 
@@ -1340,7 +1348,7 @@ a:active { color: lime } /* active links */
          <? while($fila4 = mysqli_fetch_row($Res_Pro)){ ?>
     <div class="slide-items"><div class="bkPro bkPro-pasive-item "><? printf($fila4[2])?><span class="bkPro-span"></span></div><input type="hidden" value="<? printf($fila4[0])  ?>" ><p class="puntaje "><? printf($fila4[1])?></p></div>
            <? } ?>   
-    <div id="wrap-shokwave" ><div id="shokwave" >Acumula puntos <small >(Solo con boleta!)</small><span class="bkPro-span"></span></div></div>
+    <div id="wrap-shokwave" ><div id="shokwave" >Acumula puntos <small >(<? printf($res_rules['RULE_CANT_SCORE']) ?> x Punto, Solo con boleta!)</small><span class="bkPro-span"></span></div></div>
 		</div>
     <span class="chevrons cdown "><i class="fa fa-chevron-down "></i></span>
 </div>
@@ -1453,6 +1461,8 @@ var visit = 0;
 var IR_SWITCH = 0;
 var fac_name = getQueryVariable("name");
 var fac = getQueryVariable('facility');
+var autoserv = getQueryVariable("f");
+
 var rule = 0;
 var code = $("#secret").val();
 var univ_timer;
@@ -1461,7 +1471,7 @@ var univ_timer;
 // checkeado;
 
 $(document).on('ready', function(){
-
+console.info('autoserve is ' + autoserv);
 $('#cant').on('keyup change input paste', function (e){
     var $this = $(this);
     var val = $this.val();
@@ -1471,6 +1481,13 @@ $('#cant').on('keyup change input paste', function (e){
         $this.val($this.val().substring(0,maxCount));
     }
 }); 
+
+
+if(autoserv != 1){
+  $("#mesa").attr('type', 'text');
+   $("#mesa").val('A');
+}
+
 
 
 getRules();
@@ -1886,14 +1903,11 @@ switch(parseInt(data)){
                  document.querySelector('#contenedor-promos').style.right= "-3.9%"; 
                  document.querySelector('.wrap-icon-facility').style.top = "10px";
                  document.querySelector('.catego').style.top = "270px";
-                 document.querySelector('#instruction').style.visibility = "hidden";
                  document.querySelector('#instruction').style.top = "550px";
+                 document.querySelector('#instruction').style.visibility = "hidden";
                  document.querySelector('#avice-points').style.top = "0px";
+                 $(".chevrons").fadeIn('slow');
                  $('.slick-prev').trigger('click');
-                 setTimeout(function(){
-                   $(".chevrons").fadeIn('slow');
-                  
-                 },600);
                  $("#secret").val(cod); 
                  
            });
@@ -1992,10 +2006,9 @@ $('#item4').fadeTo('slow', 0.3, function(){
                  document.querySelector('#instruction').style.visibility = "hidden";
                  document.querySelector('#instruction').style.top = "550px";
                  document.querySelector('#avice-points').style.top = "0px";
-                  setTimeout(function(){
-                   $(".chevrons").fadeIn('slow');
-                   $('.slick-prev').trigger('click');
-                 },1200);
+                 $(".chevrons").fadeIn('slow');
+                 $('.slick-prev').trigger('click');
+
            })
        }, 5000);
 
@@ -2144,7 +2157,9 @@ function resetAlpha(){
 
 $("#item4").css({display : "none"});
 $("#item1").css({display : "block"});
-$(".dg-wrapper > a").eq(1).trigger('click');
+setTimeout(function(){
+  window.location.reload(false);
+},20);
 
 
 }
@@ -2188,10 +2203,14 @@ $.event.special.tripleclick = {
     
 };
 
-$("#mesa").bind("tripleclick", function () {
+if(autoserv != 2){
+   $("#mesa").bind("tripleclick", function () {
   $(this).css({ opacity: '1'});
-
 });
+}
+
+
+
 
 
 function resetBeta(){
@@ -2205,7 +2224,8 @@ function resetBeta(){
   $('#errado').fadeIn('fast');
   $('#errado').css({ color : "white"});
   $("#garID").val('');
-
+  document.querySelector('#contenedor-promos').style.right= "1px"; 
+  document.querySelector('#contenedor-promos').style.left= "1px";
 }
 
 

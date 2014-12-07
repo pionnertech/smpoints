@@ -15,7 +15,7 @@ if (strlen($codigo) < 14){
 //variables
 $current_result = 0;
 
-$datos = mysqli_connect('mysql.nixiweb.com', "u440137862_eqr", "PlEyAdEs", "u440137862_qr");
+$datos = mysqli_connect('localhost', "root", "D1sjjDlvD0", "SM_usr10000");
 
 //check if QR exist in Database
 

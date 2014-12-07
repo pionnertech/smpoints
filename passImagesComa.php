@@ -7,7 +7,7 @@ $ftp_user_name = "u440137862";
 $ftp_user_pass = "pionner256";
 
 
-$datos = mysqli_connect('mysql.nixiweb.com', "u440137862_eqr", "PlEyAdEs", "u440137862_qr");
+$datos = mysqli_connect('localhost', "root", "D1sjjDlvD0", "SM_usr10000");
 $result = mysqli_fetch_assoc(mysqli_query($datos, "SELECT FAC_NAME FROM FAC WHERE FAC_CODE = ". $code));
 
 $fac = $result['FAC_NAME'];

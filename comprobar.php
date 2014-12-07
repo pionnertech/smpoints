@@ -3,9 +3,9 @@ $codigo = $_GET['codigo'];
 $nombre = $_GET['nombre']; 
 $email = $_GET['email'];
 $fac = $_GET['fac'];
-$current = $_GET['current']
+$current = $_GET['current'];
 
-$datos = mysqli_connect('mysql.nixiweb.com', "u440137862_eqr", "PlEyAdEs", "u440137862_qr");
+$datos = mysqli_connect('localhost', "root", "D1sjjDlvD0", "SM_usr10000");
 
 echo diference_hours($datos, $codigo, $fac);
 

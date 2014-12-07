@@ -4,7 +4,7 @@
 $pass = $_GET['pass'];
 $fac = $_GET['fac_code'];
 
-$datos = mysqli_connect('mysql.nixiweb.com', "u440137862_eqr", "PlEyAdEs", "u440137862_qr");
+$datos = mysqli_connect('localhost', "root", "D1sjjDlvD0", "SM_usr10000");
 
 $result =  mysqli_query($datos, "SELECT PER_ID FROM PERSONAL WHERE (PER_PASS= '"  . $pass . "' AND PER_FAC_CODE= " . $fac . ")");
 

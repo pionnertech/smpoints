@@ -1,6 +1,7 @@
 <?php header('Content-Type: text/html; charset=utf-8');
 
-$datos = mysqli_connect('mysql.nixiweb.com', "u440137862_eqr", "PlEyAdEs", "u440137862_qr");
+$datos = mysqli_connect('localhost', "root", "D1sjjDlvD0", "SM_usr10000");
+
 $Query = "SELECT FAC_NAME FROM FAC WHERE FAC_CODE = " . $_GET['facility'];
 $result = mysqli_fetch_assoc(mysqli_query($datos,$Query));
 $Query_Pro = "SELECT PRO_CODE, PRO_CANT_VAL, PRO_DESCRIP, SUBSTRING(PRO_DATE,1,10), PRO_CODE FROM PRO WHERE PRO_FAC ='" .  $result['FAC_NAME'] . "'";
@@ -24,6 +25,7 @@ $Res_Pro = mysqli_query($datos, $Query_Pro);
 <script type="text/javascript" src="js/jquery.easings.min.js"></script>
 <script type="text/javascript" src="js/jquery.slimscroll.min.js"></script>
 <script type="text/javascript" src="js/jquery.fullPage.min.js"></script>
+
 
 <style type="text/css">
   
@@ -567,7 +569,7 @@ box-shadow:         0px 0px 20px 0px rgba(255, 7, 7, 0.75);
   padding:5em 2em;
   overflow:hidden;
   position:relative;
-  left: -50%;
+  left: 65%;
   border: 1em solid red;
   top:2em;
 }
@@ -579,7 +581,7 @@ box-shadow:         0px 0px 20px 0px rgba(255, 7, 7, 0.75);
   width:26%;
   max-height:3em !important;
   float:right;
-  right:-160px;
+  right:-100px;
     -webkit-transition: all 2500ms ease-in-out;
     -moz-transition: all 2500ms ease-in-out;
     transition: all 2500ms ease-in-out;
@@ -653,7 +655,7 @@ background-color:#ff3019;
 text-align: center;
 position: relative;
 float: right;
-right: -360px;
+right: -250px;
 top:1600px;
 z-index:30;
 
@@ -663,22 +665,7 @@ transition: all 2500ms ease-in-out;
 }
 
 
-#user-icon-trophy{
 
-  background-color: #4A4A4A;
-  -webkit-box-shadow: 0px 5px 6px 0px rgba(12, 12, 12, 0.75);
-    -moz-box-shadow:    0px 5px 6px 0px rgba(12, 12, 12, 0.75);
-    box-shadow:         0px 5px 6px 0px rgba(12, 12, 12, 0.75);
-    border-radius: 50%;
-    font-size: 5em;
-    padding:.5em;
-    text-align: center;
-}
-
-.titulo-cat , .metadatos, .metadatos p, .metados div{
-  display:inline-block;
-  vertical-align: top;
-}
 
 .sum-user{
 font-size:3em;
@@ -694,11 +681,7 @@ text-align: center;
   transition: all 500ms ease-in-out;
 }
 
-.metadatos{
-position: relative;
-float: right;
-top:-15px;
-}
+
 
 .slide-items{
 margin: .5em 1em .5em  0;
@@ -746,9 +729,9 @@ cursor: pointer;
 
 
 #contenedor-promos{
-  width:52%;
+  width:55%;
   position: relative;
-  top:20px;
+  top:1px;
   right: 1500px;
   display:inline-block;
   -webkit-transition: all 1s ease-in-out;
@@ -774,6 +757,7 @@ cursor: pointer;
   text-align: center;
   border-radius: 50%;
   position: relative;
+right:-25px;
 background: #ff3019; /* Old browsers */
 background: -moz-linear-gradient(top,  #ff3019 0%, #cf0404 100%); /* FF3.6+ */
 background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ff3019), color-stop(100%,#cf0404)); /* Chrome,Safari4+ */
@@ -949,12 +933,12 @@ border-radius: 15px;
   padding: .7em 1.2em;
   font-size:1.2em;
   top:500px;
+  right: 8.2%;
 
   -webkit-transition: all 1s ease-in-out;
   -moz-transition: all 1s ease-in-out;
   transition: all 1s ease-in-out;
 }
-
 
 .vari{
 display: none;
@@ -962,7 +946,6 @@ display: none;
   -moz-transition: all 1s ease-in-out;
   transition: all 1s ease-in-out;
 }
-
 
 .bkPro-span{
 width: 0;
@@ -975,9 +958,7 @@ border-right-width: 1em;
 border-top-width: 1em;
 border-bottom-width: 1em;
 float: right;
-right: -9%;
-
-
+right: -2.5em;
 }
 
 #shokwave , .bkPro-span{
@@ -1043,7 +1024,7 @@ width:7%;
 font-size:1.3em;
 font-style:italic;
 color:white;
-padding:.5em 1em ;
+padding:.5em 1.5em .5em 1em;
 border-radius: 15px;
   -webkit-transition: all 1s ease-in-out;
   -moz-transition: all 1s ease-in-out;
@@ -1060,7 +1041,7 @@ border-radius: 15px;
  height:5em;
  position: relative;
  top:2em;
- right:.6em;
+ right:1.2em;
  transform: rotate(90deg);
  z-index:-2;
 }
@@ -1208,7 +1189,7 @@ font-size:3em;
 }
 .cup {
 top:-1em;
-left:3em;
+left:2.5em;
 }
 
 .cdown{
@@ -1324,8 +1305,8 @@ a:active { color: lime } /* active links */
 
 <div id="item4" class="section" >
     <div class="logout"><i class="fa fa-home fa-2x " class="logout"></i></div>
-  <div class="wrap-camera" class="scrollabe" style="margin-top: 1.5em;">
-     <div id="camera" class="scrollabe"></div>
+  <div class="wrap-camera" style="margin-top: 1.5em;">
+     <div id="camera" ></div>
       <div style="width:100%;" align="center"><p id="led"></p></div>
   </div>
   <div id="instruction">Acerca el código de tu tarjeta a la camara</div>
@@ -1451,13 +1432,16 @@ $(".logout").on('click', function(){
 
  $("#item1").css({display : "block"});
  $("#item4").css({display : "none"});
- resetAlpha();
-
+ console.info('llega');
+  resetAlpha();
+ 
 });
 
 
-
-
+$(".logout").on('click', function (){
+   $('.dg-wrapper a').eq(0).click();
+   return false;
+});
 
 
 var visit = 0; 
@@ -1619,12 +1603,12 @@ $("#to4").on('click', function(){
   $("#item2").css({display : "none"});
 
   IR_SWITCH = 2;
-  $('.wrap-camera').animate({ left: '30%' }, 1300, 'easeInOutCubic');
+  $('.wrap-camera').animate({ left: '20%' }, 1300, 'easeInOutCubic');
   document.querySelector('#instruction').style.top = "50px";
 
         univ_timer = setTimeout(function(){
             resetAlpha();
-                  }, 60000);
+                  }, 120000);
   
 });
 
@@ -1644,10 +1628,10 @@ $("#inscrip").on('click', function(){
   $("#item4").css({display : "block"});
   $("#item3").css({display : "none"});
 
-    $('.wrap-camera').animate({ left: '30%' }, 1300, 'easeInOutCubic');
+    $('.wrap-camera').animate({ left: '20%' }, 1300, 'easeInOutCubic');
       document.querySelector('#instruction').style.top = "50px"; 
   }
-
+ 
 });
 
 

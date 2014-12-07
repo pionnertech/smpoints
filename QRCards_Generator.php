@@ -236,7 +236,7 @@ footer{
 
 
 <?
-   $datos = mysqli_connect('mysql.nixiweb.com', "u440137862_eqr", "PlEyAdEs", "u440137862_qr");
+  $datos = mysqli_connect('localhost', "root", "D1sjjDlvD0", "SM_usr10000");
 
    if (mysqli_connect_errno())
 {
