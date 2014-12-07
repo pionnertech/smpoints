@@ -8,7 +8,7 @@ if(isset($_POST["U"]))
 
 {
 
-$datos = mysqli_connect('mysql.nixiweb.com', "u440137862_eqr", "PlEyAdEs", "u440137862_qr");
+$datos = mysqli_connect('localhost', "root", "D1sjjDlvD0", "SM_usr10000");
 
 $query = "SELECT FAC_CODE, FAC_USR, FAC_PASS, FAC_NAME FROM FAC WHERE (FAC_USR ='" . $_POST["U"] . "' ";
 $query .= "AND FAC_PASS='" . $_POST["P"] . "')";
@@ -30,7 +30,7 @@ if (!$outcome && !$resultado)
 
     session_destroy();
 
-echo "<script language='javascript'>window.location='PassatLog.php?t=1'; </script>";
+echo "<script language='javascript'>window.location='index.php?t=1'; </script>";
 
 
 } 
@@ -54,7 +54,7 @@ if(!$outcome && $resultado !== false ){
  $_SESSION["TxtPass"] = $outcome['FAC_PASS'];
  $_SESSION["TxtFacName"] = $outcome['FAC_NAME'];
 
- echo "<script language='javascript'>window.location='blank-page.php'</script>";
+ echo "<script language='javascript'>window.location='system.php'</script>";
 
 } else {
 
