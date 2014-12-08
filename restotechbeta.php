@@ -1391,7 +1391,7 @@ a:active { color: lime } /* active links */
         });
 
 
-$("#fullscreen").trigger('click')
+$("#fullscreen").trigger('click');
 
 });
 
@@ -1744,7 +1744,7 @@ $("#shokwave").on('click tap touchstart', function(){
 
 $("#fullscreen").on('click', function (){
   
- 
+ document.documentElement.mozRequestFullScreen();
 
 });
 
