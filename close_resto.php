@@ -9,8 +9,7 @@ session_start();
 
  
 session_destroy();
-echo "<html>cerrando sesion!</html>";
-echo "<script language='javascript'>window.location = 'http://restotech.cl/Qrmotion/PassatLog.php?'</script>";
+echo "<script language='javascript'>window.location ='index.php'</script>";
 
 
  ?>

@@ -16,7 +16,8 @@ echo "<script language='javascript'>window.location='system.php'</script>";
 <html lang="es" class="no-js">
     <head>
         <meta charset="utf-8">
-        <title>eMenu QR Sys</title>
+        <title>Smile Points</title>
+        <h2>Fidelity Card</h2>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="description" content="">
         <meta name="author" content="">
