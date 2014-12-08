@@ -11,7 +11,6 @@ echo "<script language='javascript'>window.location='system.php'</script>";
 
 ?>
 
-
 <!DOCTYPE html>
 <html lang="es" class="no-js">
     <head>
