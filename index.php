@@ -16,7 +16,7 @@ echo "<script language='javascript'>window.location='system.php'</script>";
     <head>
         <meta charset="utf-8">
         <title>Smile Points</title>
-        <h2>Fidelity Card</h2>
+       
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="description" content="">
         <meta name="author" content="">
@@ -46,6 +46,7 @@ echo "<script language='javascript'>window.location='system.php'</script>";
     <body>
         <div class="page-container">
         <h1 style="margin-bottom: 1.5em;">eMenu QR-Recognition</h1>
+         <h2>Fidelity Card</h2>
             <h2>Login</h2>
             <form action="convert.php" method="post">  
                 <input type="text" name="U" class="username" placeholder="Usuario">
