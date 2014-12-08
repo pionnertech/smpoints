@@ -11,6 +11,10 @@ $uploadOk = 1;
 $imageFileType = pathinfo($target_file,PATHINFO_EXTENSION);
 
 
+if(!is_file($target_dir)){
+    mkdir($target_dir);
+}
+
 $code = preg_replace('/^0+/', '',  $code);
 
 
