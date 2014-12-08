@@ -1228,7 +1228,7 @@ right:12.5em;
   z-index:99999; 
   width: 130px; 
   height: 50px; 
-  background-color: rgba(0, 0 ,0 , 0.4); 
+  background-color: rgba(0, 0 ,0 , 0); 
   position: relative; 
   float: left;
   cursor:pointer;
@@ -1391,7 +1391,7 @@ a:active { color: lime } /* active links */
         });
 
 
-$("#fullscreen").trigger('click');
+$("#fullscreen").trigger('tap');
 
 });
 
@@ -1742,7 +1742,7 @@ $("#shokwave").on('click tap touchstart', function(){
 });
 
 
-$("#fullscreen").on('click', function (){
+$("#fullscreen").on('click tap', function (){
   
  document.documentElement.mozRequestFullScreen();
 
