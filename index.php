@@ -45,7 +45,7 @@ echo "<script language='javascript'>window.location='system.php'</script>";
     </head>
     <body>
         <div class="page-container">
-        <h1 style="margin-bottom: 1.5em;">eMenu QR-Recognition</h1>
+        <h1 style="margin-bottom: 1.5em;">Smile Points</h1>
          <h2>Fidelity Card</h2>
             <h2>Login</h2>
             <form action="convert.php" method="post">  
