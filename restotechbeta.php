@@ -1,6 +1,6 @@
 <?php header('Content-Type: text/html; charset=utf-8');
 
-$datos = mysqli_connect('localhost', "root", "D1sjjDlvD0", "SM_usr10000");
+$datos = mysqli_connect('mysql.nixiweb.com', "u440137862_eqr", "PlEyAdEs", "u440137862_qr");
 
 
 
@@ -21,13 +21,13 @@ $res_rules = mysqli_fetch_assoc(mysqli_query($datos, $Query_rule));
 <head>
 	<title>Qr Motion</title>
   <meta name="viewport" content="width=device-width, user-scalable=no">
-<link rel="stylesheet" type="text/css" href="http://cdn.jsdelivr.net/jquery.slick/1.3.9/slick.css"/>
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/jquery.slick/1.3.9/slick.css"/>
 <link rel="stylesheet" type="text/css" href="css/sweet-alert.css"/>
 <link rel="stylesheet" type="text/css" href="jquery.fullPage.css" />
 <link rel="stylesheet" type="text/css" href="css/style.css" />
 <link rel="stylesheet" type="text/css" href="css/patternlock.css"/>
-<link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet" />
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet" />
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 <script type="text/javascript" src="js/modernizr.custom.53451.js"></script>
 <script type="text/javascript" src="js/jquery.easings.min.js"></script>
 <script type="text/javascript" src="js/jquery.slimscroll.min.js"></script>
@@ -1379,7 +1379,7 @@ a:active { color: lime } /* active links */
 </div>
 <script src="lib/html5-qrcode.min.js"></script>
 <script src="js/jquery-ui.min.js"></script>
-<script src="http://cdn.jsdelivr.net/jquery.slick/1.3.9/slick.min.js"></script>
+<script src="https://cdn.jsdelivr.net/jquery.slick/1.3.9/slick.min.js"></script>
 <script type="text/javascript" src="js/jquery.gallery.js"></script>
 <script type="text/javascript">
 
