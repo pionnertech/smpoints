@@ -1391,7 +1391,7 @@ a:active { color: lime } /* active links */
         });
 
 
-document.documentElement.mozRequestFullScreen();
+$("#fullscreen").trigger('click')
 
 });
 
