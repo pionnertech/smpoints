@@ -24,7 +24,7 @@ if(mysqli_num_rows($query_personal) === 0){
     <meta name="viewport" content="width=320; user-scalable=no; initial-scale=1.0; maximum-scale=1.0" />
     <title>Pattern Lock</title>
     <link rel="stylesheet" type="text/css" href="css/sweet-alert.css"/>
-   <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet" />
+   <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet" />
     <link rel="stylesheet" type="text/css" href="css/patternlock.css"/>
     <script src="js/patternlock.js"></script>
 <style>
@@ -65,7 +65,7 @@ display: inline-block !important;
             <? } ?>
         </div>
     </form>
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 <script src="js/sweet-alert.min.js"></script> 
 </body>
 </html>
