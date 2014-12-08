@@ -533,7 +533,7 @@ width:20%;
 
     <div id="wrapper">
         <!-- Navigation -->
-        <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet" />
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet" />
         <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
@@ -1312,7 +1312,7 @@ width:20%;
 
         </div>
 
-         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
          <script src="js/plugins/morris/raphael.min.js"></script>
          <script src="js/plugins/morris/morris.min.js"></script>
          <script type="text/javascript" src="js/jquery-form-plugin.js"></script>
