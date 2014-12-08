@@ -22,22 +22,26 @@ $code = preg_replace('/^0+/', '',  $code);
 if(isset($_POST["submit"])) {
     $check = getimagesize($_FILES["fileToUpload"]["tmp_name"]);
     if($check !== false) {
-        echo "File is an image - " . $check["mime"] . ".";
+        //echo "File is an image - " . $check["mime"] . ".";
         $uploadOk = 1;
+
     } else {
         echo "File is not an image.";
         $uploadOk = 0;
+        exit;
     }
 }
 // Check if file already exists
 if (file_exists($target_file)) {
     echo "Sorry, file already exists.";
     $uploadOk = 0;
+    exit;
 }
 // Check file size
 if ($_FILES["fileToUpload"]["size"] > 9000000) {
     echo "Sorry, your file is too large.";
     $uploadOk = 0;
+    exit;
 }
 // Allow certain file formats
 if($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg"
