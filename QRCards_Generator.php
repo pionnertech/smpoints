@@ -201,7 +201,7 @@ html, body {
 
 footer{
 
-    margin-bottom: 285px ;
+    margin-bottom: 19.5em;
 }
 
 .keynumber{
