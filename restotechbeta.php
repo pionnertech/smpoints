@@ -757,7 +757,7 @@ cursor: pointer;
 
 	width:52%;
   position: relative;
-  top: -80px;
+  top: -90px;
   right: 1500px;
   display:inline-block;
   -webkit-transition: all 1s ease-in-out;
@@ -1223,7 +1223,7 @@ left:3em;
 
 .cdown{
 top:7em;
-right:14.5em;
+right:13em;
 }
 
 #fullscreen{
@@ -1902,12 +1902,12 @@ switch(parseInt(data)){
       var nom = document.getElementById('nUs').value = "";
       var em = document.getElementById('eUs').value ="";
                  document.querySelector('#score-user').innerHTML = '1';
-                 document.querySelector('#contenedor-promos').style.right= "-4.9%"; 
+                 document.querySelector('#contenedor-promos').style.right= "-5.9%"; 
                  document.querySelector('.wrap-icon-facility').style.top = "10px";
                  document.querySelector('.catego').style.top = "270px";
                  document.querySelector('#instruction').style.top = "550px";
                  document.querySelector('#instruction').style.visibility = "hidden";
-                 document.querySelector('#avice-points').style.top = "10px";
+                 document.querySelector('#avice-points').style.top = "20px";
                  $(".chevrons").fadeIn('slow');
                  $('.slick-prev').trigger('click');
                  $("#secret").val(cod); 
@@ -2003,11 +2003,11 @@ $('#item4').fadeTo('slow', 0.3, function(){
         document.querySelector('#led').style.boxShadow = "0px 0px 20px 0px rgba(114, 255, 114, 0.75)";
         setTimeout(function(){$('.wrap-camera').fadeOut(300, function(){
                  document.querySelector('.wrap-icon-facility').style.top = "10px";
-                 document.querySelector('#contenedor-promos').style.right= "-4.9%"; 
+                 document.querySelector('#contenedor-promos').style.right= "-5.9%"; 
                  document.querySelector('.catego').style.top = "270px";
                  document.querySelector('#instruction').style.visibility = "hidden";
                  document.querySelector('#instruction').style.top = "550px";
-                 document.querySelector('#avice-points').style.top = "10px";
+                 document.querySelector('#avice-points').style.top = "20px";
                  $(".chevrons").fadeIn('slow');
                  $('.slick-prev').trigger('click');
 
