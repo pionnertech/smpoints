@@ -1393,7 +1393,12 @@ a:active { color: lime } /* active links */
         });
 
 
-$("#fullscreen").trigger('tap');
+
+var evt = document.createElement('MouseEvent');
+evt.initMouseEvent('click', true, true, window, 0,0,0,0,0, false, false , false, false, 0, null)
+var my_link = document.querySelectorAll(".dg-wrapper a.dg-transition")[0];
+my_link.dispatchEvent(evt);
+
 
 });
 
