@@ -754,14 +754,16 @@ cursor: pointer;
 
 
 #contenedor-promos{
+
 	width:52%;
   position: relative;
-  top:20px;
+  top:1px;
   right: 1500px;
   display:inline-block;
   -webkit-transition: all 1s ease-in-out;
   -moz-transition: all 1s ease-in-out;
   transition: all 1s ease-in-out;
+
 }
 
 .wrap-image, #contenedor-promos{
@@ -1216,12 +1218,12 @@ font-size:3em;
 }
 .cup {
 top:-1em;
-left:3em;
+left:2.5em;
 }
 
 .cdown{
 top:9em;
-right:12.5em;
+right:10.5em;
 }
 
 #fullscreen{
