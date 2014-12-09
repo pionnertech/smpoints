@@ -1386,6 +1386,9 @@ a:active { color: lime } /* active links */
 <script type="text/javascript">
 
 
+
+
+
         $(document).on('ready', function() {
           $('#dg-container').gallery({
           autoplay : true,
@@ -1394,10 +1397,7 @@ a:active { color: lime } /* active links */
 
 
 
-var evt = document.createElement('MouseEvent');
-evt.initMouseEvent('click', true, true, window, 0,0,0,0,0, false, false , false, false, 0, null)
-var my_link = document.querySelectorAll(".dg-wrapper a.dg-transition")[0];
-my_link.dispatchEvent(evt);
+
 
 
 });
@@ -1415,7 +1415,17 @@ $(".chevrons").fadeOut('fast');
 <script type="text/javascript">
 
 
+/*
+var event = document.createElement('MouseEvent');
+event.initMouseEvent('click', true, true, 
+  window, 0,0,0,0,0,
+  false, false , false, false, 
+  0, null);
 
+var my_link = document.querySelectorAll(".dg-wrapper a.dg-transition")[0];
+my_link.dispatchEvent(event);
+*/
+ 
 var mem = "";
 var gB1 = "#item1";
 var gB2 = "#item2";
