@@ -187,6 +187,7 @@ right: 4px;
 @media print {
 
 body{background-color:#FFF;}
+
 input, button {
     display: none;
 }
@@ -195,30 +196,30 @@ html, body {
     padding:0;
 }
 
+
+}
+
 footer{
 
-    margin-bottom: 36.8em ;
+    margin-bottom: 240px ;
 }
-
-
-
-}
-
 
 .keynumber{
 
-  color:white;
+  color:black;
   font-style: italic;
   font-size: .8em;
   display:inline-block;
-  vertical-align: top;
   width:auto;
   padding:0 .6em;
-  background-color: rgb(88, 173, 88);
-  border-radius: 15px;
   letter-spacing: 2px;
+  transform: rotate(90deg);
+  position: relative;
+  top: -87px;
+  left: -81px;
 }
 
+@page { margin: 0cm }
 </style>
 
 </head>
@@ -236,7 +237,8 @@ footer{
 
 
 <?
-  $datos = mysqli_connect('localhost', "root", "D1sjjDlvD0", "SM_usr10000");
+
+   $datos = mysqli_connect('localhost', "root", "D1sjjDlvD0", "SM_usr10000");
 
    if (mysqli_connect_errno())
 {
@@ -249,7 +251,7 @@ $number_query = mysqli_query($datos, "SELECT QR_KEY FROM QR ORDER BY QR_ID");
 
 $number_array = mysqli_fetch_array($number_query);
 
-for($i=0; $i < $variable; $i++){
+for($i=1; $i < $variable; $i++){
 
   $bytes = openssl_random_pseudo_bytes(14, $cstrong);
     $hex   = bin2hex($bytes);
@@ -277,10 +279,16 @@ for($i=0; $i < $variable; $i++){
                 <div class="logo_opt"><p class="web">www.emenu.cl</p><img src="images/LOGO_EMENU_opt.png"></div>
             </div>
 	    </div>
-    <footer>&spen;</footer>
 <?
+
+if($i %6 == 0 ) {
+   
+   echo "<footer>&spen;</footer>";
+
 }
 
+
+}
 ?>
   </div>
  </div>
@@ -321,5 +329,7 @@ function generate(){
 	
 }
 </script>
+
+
 
 
