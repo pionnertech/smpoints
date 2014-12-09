@@ -194,14 +194,14 @@ input, button {
 html, body {
     margin:0;
     padding:0;
-}s
+}
 
 
 }
 
 footer{
 
-    margin-bottom: 19.15em;
+    margin-bottom: 17em;
 }
 
 .keynumber{
