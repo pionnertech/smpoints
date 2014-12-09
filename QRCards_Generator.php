@@ -201,7 +201,7 @@ html, body {
 
 footer{
 
-    margin-bottom: 240px ;
+    margin-bottom: 260px ;
 }
 
 .keynumber{
@@ -251,7 +251,7 @@ $number_query = mysqli_query($datos, "SELECT QR_KEY FROM QR ORDER BY QR_ID");
 
 $number_array = mysqli_fetch_array($number_query);
 
-for($i=1; $i < $variable; $i++){
+for($i=1; $i < $variable + 1; $i++){
 
   $bytes = openssl_random_pseudo_bytes(14, $cstrong);
     $hex   = bin2hex($bytes);
