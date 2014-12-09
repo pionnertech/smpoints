@@ -9,7 +9,7 @@ $variable = $_GET['cantidad'];
 <html>
 <head>
 	<title>QR Generator</title>
-<link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet" />
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet" />
 <meta charset="utf-8">
 <style type="text/css">
     @page {size: portrait;}
