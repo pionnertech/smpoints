@@ -1223,7 +1223,7 @@ left:3em;
 
 .cdown{
 top:7em;
-right:13em;
+right:12em;
 }
 
 #fullscreen{
@@ -1523,7 +1523,7 @@ getRules();
 
 $('#contenedor-promos').slick({
     vertical: true,
-    slidesToShow: 4,
+    slidesToShow: 5,
     slidesToScroll: 1,
     focusOnSelect: true,
     infinite: false,
@@ -2160,7 +2160,7 @@ function resetAlpha(){
 $("#item4").css({display : "none"});
 $("#item1").css({display : "block"});
 setTimeout(function(){
-  window.location.reload(false);
+  window.location.reload(true);
 },20);
 
 
