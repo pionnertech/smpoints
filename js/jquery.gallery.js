@@ -8,7 +8,8 @@
  * Date: Mon Jan 30 2012
  */
 
-_interval = 2000;
+var _interval = 3000;
+var global_timer;
 
 (function( $, undefined ) {
 	
@@ -197,7 +198,7 @@ _interval = 2000;
 				if( _self.options.autoplay ) {
 				
 					clearTimeout( _self.slideshow );
-					_self.options.autoplay	= true;
+					_self.options.autoplay	= false;
 				
 				}
 				
@@ -211,7 +212,7 @@ _interval = 2000;
 				if( _self.options.autoplay ) {
 				
 					clearTimeout( _self.slideshow );
-					_self.options.autoplay	= true;
+					_self.options.autoplay	= false;
 				
 				}
 				
@@ -458,13 +459,16 @@ _interval = 2000;
 				if( _self.options.autoplay ) {
 				
 					_self._startSlideshow();
-				
+
 				}
 			
 			}, _interval);
+
+			global_timer = this.slideshow;
+
 		
 		},
-		destroy				: function() {
+		destroy	             : function() {
 			
 			this.$navPrev.off('.gallery');
 			this.$navNext.off('.gallery');
