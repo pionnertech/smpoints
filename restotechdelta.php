@@ -14,13 +14,13 @@ $Res_Pro = mysqli_query($datos, $Query_Pro);
 <head>
   <title>Qr Motion</title>
   <meta name="viewport" content="width=device-width, user-scalable=no">
-<link rel="stylesheet" type="text/css" href="http://cdn.jsdelivr.net/jquery.slick/1.3.9/slick.css"/>
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/jquery.slick/1.3.9/slick.css"/>
 <link rel="stylesheet" type="text/css" href="css/sweet-alert.css"/>
 <link rel="stylesheet" type="text/css" href="jquery.fullPage.css" />
 <link rel="stylesheet" type="text/css" href="css/style.css" />
 <link rel="stylesheet" type="text/css" href="css/patternlock.css"/>
-<link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet" />
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet" />
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 <script type="text/javascript" src="js/modernizr.custom.53451.js"></script>
 <script type="text/javascript" src="js/jquery.easings.min.js"></script>
 <script type="text/javascript" src="js/jquery.slimscroll.min.js"></script>
@@ -1264,10 +1264,10 @@ a:active { color: lime } /* active links */
  mysqli_data_seek($Res_Pro, 0);
       ?>
         </div>
-        <!--nav>  
+        <nav>  
           <span class="dg-prev">&lt;</span>
           <span class="dg-next">&gt;</span>
-        </nav-->
+        </nav>
       </section>
  </div>
 
@@ -1352,26 +1352,19 @@ a:active { color: lime } /* active links */
 </div>
 <script src="lib/html5-qrcode.min.js"></script>
 <script src="js/jquery-ui.min.js"></script>
-<script src="http://cdn.jsdelivr.net/jquery.slick/1.3.9/slick.min.js"></script>
+<script src="https://cdn.jsdelivr.net/jquery.slick/1.3.9/slick.min.js"></script>
 <script type="text/javascript" src="js/jquery.gallery.js"></script>
 <script type="text/javascript">
 
-
+var gallery_interval;
         $(document).on('ready', function() {
-          $('#dg-container').gallery({
-          autoplay : true,
-          interval : 3000
-        });
+          $('#dg-container').gallery();
 
-$('#cant, #ticketNumber').unbind('keyup change input paste').bind('keyup change input paste',function (e){
-    var $this = $(this);
-    var val = $this.val();
-    var valLength = val.length;
-    var maxCount = $this.attr('maxlength');
-    if(valLength>maxCount){
-        $this.val($this.val().substring(0,maxCount));
-    }
-}); 
+
+
+      gallery_interval =  setInterval( function(){$("span.dg-next").trigger('click')} , 3000);
+
+      $("#fullscreen").trigger('click');
 
 });
 
@@ -1407,7 +1400,8 @@ $("#backmain, #backmaindiv").on('click', function(){
 
     $(gB2).css({ display: "none"});  
     $(gB1).css({ display: "block"});      
-
+    clearInterval(gallery_interval);
+    gallery_interval = setInterval(function(){$("span.dg-next").trigger('click')} ,3000); 
 });
 
 
@@ -1438,10 +1432,6 @@ $(".logout").on('click', function(){
 });
 
 
-$(".logout").on('click', function (){
-   $('.dg-wrapper a').eq(0).click();
-   return false;
-});
 
 
 var visit = 0; 
@@ -1457,6 +1447,15 @@ var univ_timer;
 
 $(document).on('ready', function(){
 
+$('#cant, #ticketNumber').unbind('keyup change input paste').bind('keyup change input paste',function (e){
+    var $this = $(this);
+    var val = $this.val();
+    var valLength = val.length;
+    var maxCount = $this.attr('maxlength');
+    if(valLength>maxCount){
+        $this.val($this.val().substring(0,maxCount));
+    }
+}); 
 
 getRules();
 
@@ -1523,13 +1522,19 @@ $("#highBar").on('click' , function () {
   swal({ title : "Necesitas definir la mesa",  text: "para continuar con el proceso", type: "warning", timer: "3000", confirmButtonColor: "#fff" });
 
 } else {
-
+   clearInterval(gallery_interval);
+   clearInterval(gallery_interval);
+                 
+   $("span.dg-next").trigger('click');
+   setTimeout(function(){
    $("#item2").css({display : "block"});
    $("#item1").css({display : "none"});
-
-   }
+   },1200);
+}
 
 });
+
+
 
 $("#no2").on('click', function (){
 $("#item1").css({display : "block"});
@@ -2121,7 +2126,10 @@ function resetAlpha(){
 
 $("#item4").css({display : "none"});
 $("#item1").css({display : "block"});
-$(".dg-wrapper > a").eq(1).trigger('click');
+
+  clearInterval(gallery_interval);
+  gallery_interval = setInterval(function(){$("span.dg-next").trigger('click')},3000);
+
 
 
 }
@@ -2165,11 +2173,11 @@ $.event.special.tripleclick = {
     
 };
 
-$("#mesa").bind("tripleclick", function () {
-  $(this).css({ opacity: '1'});
-
+if(autoserv != 2){
+   $("#mesa").bind("tripleclick", function () {
+    $(this).css({ opacity: '1'});
 });
-
+}
 
 function resetBeta(){
 
