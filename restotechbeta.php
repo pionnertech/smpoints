@@ -1356,10 +1356,10 @@ a:active { color: lime } /* active links */
         	  <input type="password" id="password" name="password" class="patternlock" />
         </div>
         <div class="cal-blocks vari">
-        	<span class="blef"></span><input type="number" class="bloco2" placeholder="ingrese numero de boleta" id="ticketNumber" maxlength="6"><span class="blri"></span>
+        	<span class="blef"></span><input type="number" class="bloco2" placeholder="ingrese numero de boleta" id="ticketNumber" maxlength="7"><span class="blri"></span>
         </div>
         <div align="center" class="cal-blocks vari">
-            <span class="blef"></span><input type="number" id="cant" class="bloco2 " placeholder="Ingrese monto boleta" maxlength="7"><span class="blri"></span>
+            <span class="blef"></span><input type="number" id="cant" class="bloco2 " placeholder="Ingrese monto boleta" maxlength="6"><span class="blri"></span>
         </div>
         <div align="center" class="cal-blocks vari" id="wrap-score">
             <span class="pp vari" id="ppLeft"></span><div id="score-cal" class="vari"></div><span class="pp vari" id="ppRight"></span>
@@ -1470,7 +1470,7 @@ var univ_timer;
 
 $(document).on('ready', function(){
 
-$('#cant').on('keyup change input paste', function (e){
+$('#cant, #ticketNumber').on('keyup change input paste', function (e){
     var $this = $(this);
     var val = $this.val();
     var valLength = val.length;
@@ -1527,9 +1527,6 @@ $('#contenedor-promos').slick({
     speed: 20,
     touchThreshold: 20
   });
-
-
-
 });
 
 //checked;
