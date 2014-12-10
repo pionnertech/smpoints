@@ -1385,15 +1385,10 @@ a:active { color: lime } /* active links */
 <script type="text/javascript" src="js/jquery.gallery.js"></script>
 <script type="text/javascript">
 
-
-
-var holdouts = 6000;
-var galleryobj;
-
         $(document).on('ready', function() {
        galleryobj = $('#dg-container').gallery({
           autoplay : true,
-          interval : holdouts
+          interval : 3000
         });
 
 });
@@ -1430,7 +1425,7 @@ $("#backmain, #backmaindiv").on('click', function(){
 
     $(gB2).css({ display: "none"});  
     $(gB1).css({ display: "block"});      
-     holdouts = 3000;  
+     _interval = 3000;  
 
 });
 
@@ -1562,7 +1557,7 @@ $("#highBar").on('click' , function () {
 
    $("#item2").css({display : "block"});
    $("#item1").css({display : "none"});
-   holdouts = 90000000;
+   _interval = 100900;
    }
 
 });
@@ -1573,7 +1568,6 @@ $("#item5").css({display : "none"});
 $(".dg-wrapper a").trigger('click');
 
 resetAlpha();
-
 
 });
 
@@ -2118,10 +2112,8 @@ function checkTicketNumber(ticket , callback){
       callback(data);
     }
    });
-
    
 }
-
 
 
 function resetAlpha(){
@@ -2155,16 +2147,19 @@ function resetAlpha(){
   document.getElementById('cant').value= "";
   $('#errado').html('Favor llame al garzón');
   $('#errado').css({ color : "white"});
+  _interval = 3000; 
   $('#item4').fadeTo('fast', 0.3, function(){
     $(this).css('background-image', 'url(images/fondo_nuevo.png)');
 }).delay(20).fadeTo('fast', 1);
 
 $("#item4").css({display : "none"});
 $("#item1").css({display : "block"});
+
+/*
 setTimeout(function(){
   window.location.reload(true);
 },20);
-
+*/
 
 }
 
