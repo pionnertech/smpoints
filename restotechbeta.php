@@ -1385,10 +1385,12 @@ a:active { color: lime } /* active links */
 <script type="text/javascript" src="js/jquery.gallery.js"></script>
 <script type="text/javascript">
 
+ var gallery_interval;
+
         $(document).on('ready', function() {
            $('#dg-container').gallery();
 
-       setInterval(function(){
+      gallery_interval =  setInterval(function(){
            $("span.dg-next").trigger('click');
        }, 3000);
 
@@ -1428,7 +1430,9 @@ $("#backmain, #backmaindiv").on('click', function(){
 
     $(gB2).css({ display: "none"});  
     $(gB1).css({ display: "block"});      
-     _interval = 3000;  
+      gallery_interval = setInterval(function(){
+        $("span.dg-next").trigger('click');
+      },3000); 
 
 });
 
@@ -1560,7 +1564,9 @@ $("#highBar").on('click' , function () {
 
    $("#item2").css({display : "block"});
    $("#item1").css({display : "none"});
-   _interval = 104900;
+   
+
+   clearInterval(gallery_interval)
    }
 
 
@@ -2151,7 +2157,11 @@ function resetAlpha(){
   document.getElementById('cant').value= "";
   $('#errado').html('Favor llame al garzón');
   $('#errado').css({ color : "white"});
-  _interval = 3000; 
+
+  gallery_interval = setInterval(function(){
+    $("span.dg-next").trigger('click');
+  },3000);
+
   $('#item4').fadeTo('fast', 0.3, function(){
     $(this).css('background-image', 'url(images/fondo_nuevo.png)');
 }).delay(20).fadeTo('fast', 1);
@@ -2159,10 +2169,11 @@ function resetAlpha(){
 $("#item4").css({display : "none"});
 $("#item1").css({display : "block"});
 
-
+/*
 setTimeout(function(){
   window.location.href = "";
 },10);
+*/
 
 
 }
