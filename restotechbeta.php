@@ -1395,12 +1395,6 @@ a:active { color: lime } /* active links */
           interval : 3000
         });
 
-var my_link = document.querySelectorAll(".dg-wrapper a.dg-transition")[0];
-var e = document.createElement('MouseEvents');
-e.initEvent('click', true, false);
-my_link.dispatchEvent(event);
-
-
 });
 
 $(".chevrons").fadeOut('fast');
