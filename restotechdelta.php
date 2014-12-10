@@ -1438,6 +1438,7 @@ var visit = 0;
 var IR_SWITCH = 0;
 var fac_name = getQueryVariable("name");
 var fac = getQueryVariable('facility');
+var autoserv = getQueryVariable("f");
 var rule = 0;
 var code = $("#secret").val();
 var univ_timer;
