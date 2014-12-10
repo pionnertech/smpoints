@@ -8,10 +8,6 @@
  * Date: Mon Jan 30 2012
  */
 
-var _interval = 3000;
-var global_timer;
-var objself;
-
 (function( $, undefined ) {
 	
 	/*
@@ -27,7 +23,7 @@ var objself;
 	$.Gallery.defaults 		= {
 		current		: 0,	// index of current item
 		autoplay	: false,// slideshow on / off
-		interval	:  _interval // time between transitions
+		interval	: 2000  // time between transitions
     };
 	
 	$.Gallery.prototype 	= {
@@ -453,8 +449,6 @@ var objself;
 		
 			var _self	= this;
 			
-			objself  = _self;
-
 			this.slideshow	= setTimeout( function() {
 				
 				_self._navigate( 'next' );
@@ -462,16 +456,13 @@ var objself;
 				if( _self.options.autoplay ) {
 				
 					_self._startSlideshow();
-
+				
 				}
 			
-			}, _interval);
-
-			global_timer = this.slideshow;
-
+			}, this.options.interval );
 		
 		},
-		destroy	             : function() {
+		destroy				: function() {
 			
 			this.$navPrev.off('.gallery');
 			this.$navNext.off('.gallery');
@@ -485,8 +476,6 @@ var objself;
 			console.error( message );
 		}
 	};
-
-	/////////////////////////////
 	
 	$.fn.gallery			= function( options ) {
 	

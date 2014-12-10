@@ -1385,9 +1385,13 @@ a:active { color: lime } /* active links */
 
         $(document).on('ready', function() {
        galleryobj = $('#dg-container').gallery({
-          autoplay : true,
-          interval : 3000
+          autoplay : false
         });
+
+
+       setInterval(function(){
+           $("span.dg-next").trigger('click');
+       }, 3000)
 
 $("#fullscreen").trigger('click');
 });
