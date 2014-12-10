@@ -1396,10 +1396,6 @@ a:active { color: lime } /* active links */
         });
 
 
-
-
-
-
 });
 
 $(".chevrons").fadeOut('fast');
@@ -1417,11 +1413,7 @@ $(".chevrons").fadeOut('fast');
 
 
 var event = document.createElement('MouseEvents');
-event.initMouseEvent('click', true, true, 
-  window, 0,0,0,0,0,
-  false, false , false, false, 
-  0, null);
-
+event.initMouseEvent('click', true, true, window, 0,0,0,0,0,false, false , false, false, 0, null);
 var my_link = document.querySelectorAll(".dg-wrapper a.dg-transition")[0];
 my_link.dispatchEvent(event);
 
