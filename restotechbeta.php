@@ -1280,7 +1280,7 @@ a:active { color: lime } /* active links */
           while($fila = mysqli_fetch_row($Res_Pro)){
           
       ?>    
-          <a href="#" onclick="javascript;">
+          <a href="#" >
           <img src="images/<? printf($result['FAC_NAME']) ?>/<? printf($fila[4]) ?>.jpg" alt="image<? printf(substr('0' . $i, -2)) ?>">
               <input type="hidden" value="<? printf($fila[0]) ?>" class="promoGet">
               <input type="hidden" value="<? printf($fila[1]) ?>" class="scoreGet">
