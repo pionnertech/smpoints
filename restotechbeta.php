@@ -1293,10 +1293,8 @@ a:active { color: lime } /* active links */
  mysqli_data_seek($Res_Pro, 0);
       ?>
         </div>
-        <!--nav>  
           <span class="dg-prev">&lt;</span>
           <span class="dg-next">&gt;</span>
-        </nav-->
       </section>
  </div>
 
