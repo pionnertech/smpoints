@@ -1048,7 +1048,7 @@ position:relative;
 font-weight:800;
 text-align: center;
 top:-800px;
-right:-50%;
+right:-48%;
 width:7%;
 font-size:1.3em;
 font-style:italic;
@@ -1222,7 +1222,7 @@ left:3em;
 }
 
 .cdown{
-top:7em;
+top:9em;
 right:12em;
 }
 
@@ -1429,7 +1429,7 @@ $("#backmain, #backmaindiv").on('click', function(){
 
     $(gB2).css({ display: "none"});  
     $(gB1).css({ display: "block"});
-    
+
      clearInterval(gallery_interval);
       gallery_interval = setInterval(function(){$("span.dg-next").trigger('click')} ,3000); 
 
@@ -2225,9 +2225,6 @@ if(autoserv != 2){
   $(this).css({ opacity: '1'});
 });
 }
-
-
-
 
 
 function resetBeta(){
