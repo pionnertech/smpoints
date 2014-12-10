@@ -1209,7 +1209,7 @@ left:3em;
 
 .cdown{
 top:9em;
-right:12em;
+right:10.5em;
 }
 
 #fullscreen{
@@ -1340,7 +1340,7 @@ a:active { color: lime } /* active links */
          <? while($fila4 = mysqli_fetch_row($Res_Pro)){ ?>
     <div class="slide-items"><div class="bkPro bkPro-pasive-item "><? printf($fila4[2])?><span class="bkPro-span"></span></div><input type="hidden" value="<? printf($fila4[0])  ?>" ><p class="puntaje "><? printf($fila4[1])?></p></div>
            <? } ?>   
-    <div id="wrap-shokwave" ><div id="shokwave" >Acumula puntos <small >(<? printf($res_rules['RULE_CANT_SCORE']) ?> x Punto, Solo con boleta!)</small><span class="bkPro-span"></span></div></div>
+    <div id="wrap-shokwave" ><div id="shokwave" >Acumula puntos</br> <small>(1 punto cada $<? printf($res_rules['RULE_CANT_SCORE']) ?> , Solo con boleta!)</small><span class="bkPro-span"></span></div></div>
 		</div>
     <span class="chevrons cdown "><i class="fa fa-chevron-down "></i></span>
 </div>
@@ -1520,10 +1520,10 @@ $('#contenedor-promos').slick({
     slidesToScroll: 1,
     focusOnSelect: true,
     infinite: false,
-    touchMove:false,
-    speed: 20,
-    touchThreshold: 20
+    touchMove: false,
+    speed: 1
   });
+
 });
 
 //checked;
@@ -1749,6 +1749,9 @@ $("#fullscreen").on('click tap', function (){
 $("#mesa").on('focus', function (){
 setTimeout(function(){
       $("#mesa").blur();
+      $("#mesa").blur();
+      $("#highBar").focus();
+
         $("#mesa").css({opacity: "0"});
       }, 3500);
 
@@ -2209,13 +2212,15 @@ $.event.special.tripleclick = {
 
 if(autoserv != 2){
    $("#mesa").bind("tripleclick", function () {
-  $(this).css({ opacity: '1'});
+    $(this).css({ opacity: '1'});
 });
 }
 
 
 function resetBeta(){
 
+  $('.slick-next').trigger('click');
+  $('.slick-next').trigger('click');
   $("#cant").val('');
   $("#ticketNumber").val('');
   $("#score-cal").html('');
@@ -2225,6 +2230,7 @@ function resetBeta(){
   $('#errado').fadeIn('fast');
   $('#errado').css({ color : "white"});
   $("#garID").val('');
+
 
 }
 
