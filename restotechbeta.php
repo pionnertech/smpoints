@@ -1010,7 +1010,7 @@ z-index: -2;
 }
 
 #shokwave{
-  width: 74%;
+  width: 85%;
   height: 2.5em;
   padding: 1em 0 0 1em;
   cursor:pointer;
@@ -1246,7 +1246,7 @@ a:active { color: lime } /* active links */
 
 
 .slick-list {
- height:505px;
+ height:505px !important;
 }
 </style>	
 </head>
