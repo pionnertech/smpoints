@@ -1387,12 +1387,12 @@ a:active { color: lime } /* active links */
 
 
 
-
+var holdouts = 3000;
 
         $(document).on('ready', function() {
           $('#dg-container').gallery({
           autoplay : true,
-          interval : 3000
+          interval : holdouts
         });
 
 });
@@ -1429,6 +1429,7 @@ $("#backmain, #backmaindiv").on('click', function(){
 
     $(gB2).css({ display: "none"});  
     $(gB1).css({ display: "block"});      
+     holdouts = 3000;  
 
 });
 
@@ -1436,7 +1437,7 @@ $("#backmain, #backmaindiv").on('click', function(){
 $("#backto2").on('click', function(){
 
     $(gB3).css({ display: "none" });
-    $(gB2).css({ display : "block"});    
+    $(gB2).css({ display : "block"});  
 
 });
 
@@ -1560,7 +1561,7 @@ $("#highBar").on('click' , function () {
 
    $("#item2").css({display : "block"});
    $("#item1").css({display : "none"});
-
+   holdouts = 90000000;
    }
 
 });
