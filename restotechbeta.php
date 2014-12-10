@@ -982,13 +982,14 @@ vertical-align: top;
 
 #shokwave > .bkPro-span{
 border-color: #003366 transparent  #003366 #003366 !important;
-border-left-width: 2em;
-border-right-width: 2em;
-border-top-width: 2em;
-border-bottom-width: 2em;
+border-left-width: 1.75em;
+border-right-width: 1.75em;
+border-top-width: 1.75em;
+border-bottom-width: 1.75em;
 top: -2.2em;
 
 }
+
 .bkPro:after{
 content: "";
 width: 0;
