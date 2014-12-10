@@ -1560,6 +1560,7 @@ $("#highBar").on('click' , function () {
    _interval = 104900;
    }
 
+
 });
 
 $("#no2").on('click', function (){
@@ -2155,11 +2156,11 @@ function resetAlpha(){
 $("#item4").css({display : "none"});
 $("#item1").css({display : "block"});
 
-/*
+
 setTimeout(function(){
-  window.location.reload(true);
-},20);
-*/
+  window.location.href = "";
+},10);
+
 
 }
 
