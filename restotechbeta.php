@@ -1387,10 +1387,11 @@ a:active { color: lime } /* active links */
 
 
 
-var holdouts = 3000;
+var holdouts = 6000;
+var galleryobj;
 
         $(document).on('ready', function() {
-          $('#dg-container').gallery({
+       galleryobj = $('#dg-container').gallery({
           autoplay : true,
           interval : holdouts
         });
