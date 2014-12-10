@@ -10,6 +10,7 @@
 
 var _interval = 3000;
 var global_timer;
+var objself;
 
 (function( $, undefined ) {
 	
@@ -452,6 +453,8 @@ var global_timer;
 		
 			var _self	= this;
 			
+			objself  = _self;
+
 			this.slideshow	= setTimeout( function() {
 				
 				_self._navigate( 'next' );
