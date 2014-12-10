@@ -8,6 +8,8 @@
  * Date: Mon Jan 30 2012
  */
 
+_interval = 2000;
+
 (function( $, undefined ) {
 	
 	/*
@@ -23,7 +25,7 @@
 	$.Gallery.defaults 		= {
 		current		: 0,	// index of current item
 		autoplay	: false,// slideshow on / off
-		interval	: 2000  // time between transitions
+		interval	:  _interval // time between transitions
     };
 	
 	$.Gallery.prototype 	= {
@@ -459,7 +461,7 @@
 				
 				}
 			
-			}, this.options.interval );
+			}, _interval);
 		
 		},
 		destroy				: function() {
@@ -476,6 +478,8 @@
 			console.error( message );
 		}
 	};
+
+	/////////////////////////////
 	
 	$.fn.gallery			= function( options ) {
 	
