@@ -1557,7 +1557,7 @@ $("#highBar").on('click' , function () {
 
    $("#item2").css({display : "block"});
    $("#item1").css({display : "none"});
-   _interval = 100900;
+   _interval = 104900;
    }
 
 });
@@ -1638,7 +1638,7 @@ $("#to4").on('click', function(){
 
         univ_timer = setTimeout(function(){
             resetAlpha();
-                  }, 100000);
+                  }, 90000);
 	
 });
 
@@ -1723,7 +1723,7 @@ $('.slide-items').on('click touchstart', function (){
   clearInterval(univ_timer);
         univ_timer = setTimeout(function(){
             resetAlpha();
-                  }, 100000);
+                  }, 90000);
 });
 
 
@@ -1735,7 +1735,7 @@ $("#shokwave").on('click tap touchstart', function(){
   clearInterval(univ_timer);
         univ_timer = setTimeout(function(){
             resetAlpha();
-                  }, 100000);
+                  }, 90000);
 
 });
 
