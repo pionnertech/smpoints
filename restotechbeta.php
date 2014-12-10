@@ -1475,7 +1475,7 @@ var univ_timer;
 // checkeado;
 
 $(document).on('ready', function(){
-console.info('autoserve is ' + autoserv);
+
 $('#cant').on('keyup change input paste', function (e){
     var $this = $(this);
     var val = $this.val();
@@ -1554,6 +1554,7 @@ $(".slick-prev").trigger('click');
 
 
 $("#highBar").on('click' , function () {
+
   if ($("#mesa").val() === ''){
 
   swal({ title : "Necesitas definir la mesa",  text: "para continuar con el proceso", type: "warning", timer: "3000", confirmButtonColor: "#fff" });
@@ -1567,6 +1568,7 @@ $("#highBar").on('click' , function () {
    $("#item2").css({display : "block"});
    $("#item1").css({display : "none"});
    },1200)
+}
 
 });
 
