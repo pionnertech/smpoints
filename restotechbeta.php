@@ -1280,7 +1280,7 @@ a:active { color: lime } /* active links */
           while($fila = mysqli_fetch_row($Res_Pro)){
           
       ?>    
-          <a href="#">
+          <a href="#" onclick="javascript;">
           <img src="images/<? printf($result['FAC_NAME']) ?>/<? printf($fila[4]) ?>.jpg" alt="image<? printf(substr('0' . $i, -2)) ?>">
               <input type="hidden" value="<? printf($fila[0]) ?>" class="promoGet">
               <input type="hidden" value="<? printf($fila[1]) ?>" class="scoreGet">
@@ -1395,6 +1395,11 @@ a:active { color: lime } /* active links */
           interval : 3000
         });
 
+var my_link = document.querySelectorAll(".dg-wrapper a.dg-transition")[0];
+var e = document.createElement('MouseEvents');
+e.initEvent('click', true, false);
+my_link.dispatchEvent(event);
+
 
 });
 
@@ -1412,12 +1417,6 @@ $(".chevrons").fadeOut('fast');
 
 
 
-var event = document.createElement('MouseEvents');
-event.initMouseEvent('click', true, true, window, 0,0,0,0,0,false, false , false, false, 0, null);
-var my_link = document.querySelectorAll(".dg-wrapper a.dg-transition")[0];
-my_link.dispatchEvent(event);
-
- 
 var mem = "";
 var gB1 = "#item1";
 var gB2 = "#item2";
