@@ -1391,6 +1391,7 @@ a:active { color: lime } /* active links */
           interval : 3000
         });
 
+$("#fullscreen").trigger('click');
 });
 
 $(".chevrons").fadeOut('fast');
