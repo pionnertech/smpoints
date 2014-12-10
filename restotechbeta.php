@@ -1564,17 +1564,12 @@ $("#highBar").on('click' , function () {
 } else {
 
    clearInterval(gallery_interval);
-   
+
    $("span.dg-next").trigger('click');
    setTimeout(function(){
    $("#item2").css({display : "block"});
    $("#item1").css({display : "none"});
-   },900)
-
-
-
-   
-
+   },1200)
 
    }
 
