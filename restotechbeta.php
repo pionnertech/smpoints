@@ -1429,7 +1429,8 @@ var gB5 = "#item5";
 $("#backmain, #backmaindiv").on('click', function(){
 
     $(gB2).css({ display: "none"});  
-    $(gB1).css({ display: "block"});      
+    $(gB1).css({ display: "block"});
+
       gallery_interval = setInterval(function(){
         $("span.dg-next").trigger('click');
       },3000); 
@@ -1562,11 +1563,19 @@ $("#highBar").on('click' , function () {
 
 } else {
 
+   clearInterval(gallery_interval);
+   
+   $("span.dg-next").trigger('click');
+   setTimeout(function(){
    $("#item2").css({display : "block"});
    $("#item1").css({display : "none"});
+   },900)
+
+
+
    
 
-   clearInterval(gallery_interval)
+
    }
 
 
@@ -2158,9 +2167,7 @@ function resetAlpha(){
   $('#errado').html('Favor llame al garzón');
   $('#errado').css({ color : "white"});
 
-  gallery_interval = setInterval(function(){
-    $("span.dg-next").trigger('click');
-  },3000);
+
 
   $('#item4').fadeTo('fast', 0.3, function(){
     $(this).css('background-image', 'url(images/fondo_nuevo.png)');
@@ -2168,6 +2175,10 @@ function resetAlpha(){
 
 $("#item4").css({display : "none"});
 $("#item1").css({display : "block"});
+
+  gallery_interval = setInterval(function(){
+    $("span.dg-next").trigger('click');
+  },3000);
 
 /*
 setTimeout(function(){
