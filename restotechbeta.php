@@ -35,19 +35,12 @@ $res_rules = mysqli_fetch_assoc(mysqli_query($datos, $Query_rule));
 
 <style type="text/css">
 	
-		*{
-	border:0;
-	margin:0;
-	padding:0;
-}
-
-
-
-
+*{border:0;margin:0;padding:0;}
 @media only screen and (orientation:portrait){
-     body{
-      width: 1024px;
-     }
+  body{
+    width: 1024px;
+  }
+
 }
 
 @media screen and (max-width: 1024px){
@@ -1025,8 +1018,8 @@ z-index: -2;
 }
 
 #shokwave{
-  width: 78%;
-  height: 3em;
+  width: 74%;
+  height: 2.5em;
   padding: 1em 0 0 1em;
   cursor:pointer;
   font-size: 2.5em;
@@ -1048,7 +1041,7 @@ position:relative;
 font-weight:800;
 text-align: center;
 top:-800px;
-right:-48%;
+right:-49%;
 width:7%;
 font-size:1.3em;
 font-style:italic;
@@ -2000,7 +1993,7 @@ switch(parseInt(data)) {
 
   var variables = data.split(',');
     $("#score-user").html(variables[1]);
-      swal({ title : "Bienvenido "  + variables[0], text: "Disfruta de tus puntos!",  type: "success", timer : "3000", confirmButtonColor: "#fff"});
+      swal({ title : "Hola "  + variables[0], text: "Disfruta de tus puntos!",  type: "success", timer : "3000", confirmButtonColor: "#fff"});
         IR_SWITCH = 0;
 
 $('#item4').fadeTo('slow', 0.3, function(){
