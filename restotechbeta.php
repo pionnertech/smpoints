@@ -1385,17 +1385,17 @@ a:active { color: lime } /* active links */
 <script type="text/javascript" src="js/jquery.gallery.js"></script>
 <script type="text/javascript">
 
- var gallery_interval;
+
+var gallery_interval ;
 
         $(document).on('ready', function() {
            $('#dg-container').gallery();
 
-      gallery_interval =  setInterval(function(){
-           $("span.dg-next").trigger('click');
-       }, 3000);
+      gallery_interval =  setInterval($("span.dg-next").trigger('click'), 3000);
 
 
 $("#fullscreen").trigger('click');
+
 });
 
 $(".chevrons").fadeOut('fast');
@@ -1409,7 +1409,6 @@ $(".chevrons").fadeOut('fast');
 <script src="js/patternlock.js"></script>
 
 <script type="text/javascript">
-
 
 
 var mem = "";
@@ -1431,9 +1430,7 @@ $("#backmain, #backmaindiv").on('click', function(){
     $(gB2).css({ display: "none"});  
     $(gB1).css({ display: "block"});
 
-      gallery_interval = setInterval(function(){
-        $("span.dg-next").trigger('click');
-      },3000); 
+      gallery_interval = setInterval($("span.dg-next").trigger('click') ,3000); 
 
 });
 
@@ -1570,9 +1567,6 @@ $("#highBar").on('click' , function () {
    $("#item2").css({display : "block"});
    $("#item1").css({display : "none"});
    },1200)
-
-   }
-
 
 });
 
@@ -2171,9 +2165,8 @@ function resetAlpha(){
 $("#item4").css({display : "none"});
 $("#item1").css({display : "block"});
 
-  gallery_interval = setInterval(function(){
-    $("span.dg-next").trigger('click');
-  },3000);
+
+  gallery_interval = setInterval($("span.dg-next").trigger('click'),3000);
 
 /*
 setTimeout(function(){
