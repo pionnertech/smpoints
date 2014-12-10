@@ -197,7 +197,7 @@ _interval = 2000;
 				if( _self.options.autoplay ) {
 				
 					clearTimeout( _self.slideshow );
-					_self.options.autoplay	= false;
+					_self.options.autoplay	= true;
 				
 				}
 				
@@ -211,7 +211,7 @@ _interval = 2000;
 				if( _self.options.autoplay ) {
 				
 					clearTimeout( _self.slideshow );
-					_self.options.autoplay	= false;
+					_self.options.autoplay	= true;
 				
 				}
 				
