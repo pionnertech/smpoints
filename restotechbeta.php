@@ -1415,8 +1415,8 @@ $(".chevrons").fadeOut('fast');
 <script type="text/javascript">
 
 
-/*
-var event = document.createElement('MouseEvent');
+
+var event = document.createElement('MouseEvents');
 event.initMouseEvent('click', true, true, 
   window, 0,0,0,0,0,
   false, false , false, false, 
@@ -1424,7 +1424,7 @@ event.initMouseEvent('click', true, true,
 
 var my_link = document.querySelectorAll(".dg-wrapper a.dg-transition")[0];
 my_link.dispatchEvent(event);
-*/
+
  
 var mem = "";
 var gB1 = "#item1";
