@@ -1293,8 +1293,10 @@ a:active { color: lime } /* active links */
  mysqli_data_seek($Res_Pro, 0);
       ?>
         </div>
+        <nav>
           <span class="dg-prev">&lt;</span>
           <span class="dg-next">&gt;</span>
+        </nav>
       </section>
  </div>
 
@@ -1384,14 +1386,12 @@ a:active { color: lime } /* active links */
 <script type="text/javascript">
 
         $(document).on('ready', function() {
-       galleryobj = $('#dg-container').gallery({
-          autoplay : false
-        });
-
+           $('#dg-container').gallery();
 
        setInterval(function(){
            $("span.dg-next").trigger('click');
-       }, 3000)
+       }, 3000);
+
 
 $("#fullscreen").trigger('click');
 });
