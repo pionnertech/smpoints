@@ -1162,7 +1162,7 @@ font-size:3em;
 }
 
 .chevrons >i{
-  color: red !important;
+  color: blue !important;
 }
 .cup {
 top:-2em;
@@ -1171,8 +1171,9 @@ left: 3em;
 
 .cdown{
 
-top:9.7em;
+top:9em;
 right:10.7em;
+
 
 }
 
