@@ -7,6 +7,10 @@ $result = mysqli_fetch_assoc(mysqli_query($datos,$Query));
 $Query_Pro = "SELECT PRO_CODE, PRO_CANT_VAL, PRO_DESCRIP, SUBSTRING(PRO_DATE,1,10), PRO_CODE FROM PRO WHERE PRO_FAC ='" .  $result['FAC_NAME'] . "'";
 $Res_Pro = mysqli_query($datos, $Query_Pro);
 
+$Query_rule = "SELECT RULE_CANT_SCORE FROM RULES WHERE RULE_FAC_CODE = " . $_GET['facility'];
+$res_rules = mysqli_fetch_assoc(mysqli_query($datos, $Query_rule));
+
+
 ?>
 
 <!DOCTYPE html>
@@ -1167,7 +1171,7 @@ left: 3em;
 
 .cdown{
 
-top:9.5em;
+top:9.7em;
 right:10.7em;
 
 }
@@ -1301,7 +1305,7 @@ a:active { color: lime } /* active links */
          <? while($fila4 = mysqli_fetch_row($Res_Pro)){ ?>
     <div class="slide-items"><div class="bkPro bkPro-pasive-item "><? printf($fila4[2])?><span class="bkPro-span"></span></div><input type="hidden" value="<? printf($fila4[0])  ?>" ><p class="puntaje "><? printf($fila4[1])?></p></div>
            <? } ?>   
-    <div id="wrap-shokwave" ><div id="shokwave" >Acumula puntos <br><small >(Solo con boleta!)</small><span class="bkPro-span"></span></div></div>
+    <div id="wrap-shokwave" ><div id="shokwave" >Acumula puntos <br><small>(1 Punto x cada $<? printf($res_rules['RULE_CANT_SCORE']) ?>Solo con boleta!)</small><span class="bkPro-span"></span></div></div>
     </div>
     <span class="chevrons cdown "><i class="fa fa-chevron-down "></i></span>
 </div>
