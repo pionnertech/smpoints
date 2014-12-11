@@ -707,7 +707,7 @@ cursor: pointer;
 #contenedor-promos{
   width:55%;
   position: relative;
-  top:-150px;
+  top:-5px;
   right: 1500px;
   display:inline-block;
   -webkit-transition: all 1s ease-in-out;
