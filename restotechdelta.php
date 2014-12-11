@@ -1166,8 +1166,8 @@ left: 3em;
 }
 
 .cdown{
-top:10.5em;
-right:10em;
+top:9.8em;
+right:10.7em;
 }
 
 #fullscreen{
