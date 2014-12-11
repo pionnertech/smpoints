@@ -707,7 +707,7 @@ cursor: pointer;
 #contenedor-promos{
   width:55%;
   position: relative;
-  top:-5px;
+  top:-150px;
   right: 1500px;
   display:inline-block;
   -webkit-transition: all 1s ease-in-out;
@@ -1171,9 +1171,8 @@ left: 3em;
 
 .cdown{
 
-top:8.4em;
+top:8.2em;
 right:10.7em;
-
 
 }
 
@@ -1850,6 +1849,7 @@ switch(parseInt(data)){
                  document.querySelector('#instruction').style.visibility = "hidden";
                  document.querySelector('#instruction').style.top = "550px";
                  document.querySelector('#avice-points').style.top = "-10px";
+                 $(window).resize();
                  setTimeout(function(){
                    $(".chevrons").fadeIn('slow');
                    $('.slick-prev').trigger('click');
@@ -1952,6 +1952,7 @@ $('#item4').fadeTo('slow', 0.3, function(){
                  document.querySelector('#instruction').style.visibility = "hidden";
                  document.querySelector('#instruction').style.top = "550px";
                  document.querySelector('#avice-points').style.top = "-10px";
+                 $(window).resize();
                   setTimeout(function(){
                    $(".chevrons").fadeIn('slow');
                    $('.slick-prev').trigger('click');
