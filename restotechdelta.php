@@ -703,7 +703,7 @@ cursor: pointer;
 #contenedor-promos{
   width:55%;
   position: relative;
-  top:10px;
+  top:1px;
   right: 1500px;
   display:inline-block;
   -webkit-transition: all 1s ease-in-out;
@@ -1161,12 +1161,12 @@ font-size:3em;
   color: red !important;
 }
 .cup {
-top:-2em;
+top:-2.5em;
 left: 3em;
 }
 
 .cdown{
-top:8.5em;
+top:8.9em;
 right:11em;
 }
 
