@@ -641,6 +641,7 @@ border: 10px solid red;
   font-size:24px;
   top:6px;
   top:-87px;
+  right:10px;
   text-shadow: 0px 0px 5px rgba(150, 150, 150, 1);
   font-family: "eth_serifregular";
 }
@@ -731,7 +732,7 @@ cursor: pointer;
 #contenedor-promos{
   width:55%;
   position: relative;
-  top:1px;
+  top:30px;
   right: 1500px;
   display:inline-block;
   -webkit-transition: all 1s ease-in-out;
@@ -958,7 +959,8 @@ border-right-width: 1em;
 border-top-width: 1em;
 border-bottom-width: 1em;
 float: right;
-right: -2.5em;
+right:-2em;
+margin-right: .3em;
 }
 
 #shokwave , .bkPro-span{
@@ -1019,7 +1021,7 @@ position:relative;
 font-weight:800;
 text-align: center;
 top:-800px;
-right:-50%;
+right:-52%;
 width:7%;
 font-size:1.3em;
 font-style:italic;
@@ -1041,7 +1043,7 @@ border-radius: 15px;
  height:5em;
  position: relative;
  top:2em;
- right:1.2em;
+ right:1.1em;
  transform: rotate(90deg);
  z-index:-2;
 }
@@ -1188,13 +1190,13 @@ font-size:3em;
   color: red !important;
 }
 .cup {
-top:-1em;
-left:2.5em;
+top:-2em;
+left: 3em;
 }
 
 .cdown{
-top:9em;
-right:10.5em;
+top:8em;
+right:11em;
 }
 
 #fullscreen{
@@ -1229,6 +1231,11 @@ button::-moz-focus-inner {
 }
 
 a:active { color: lime } /* active links */
+
+.slick-list {
+ height:505px !important;
+}
+
 
 </style>  
 </head>
@@ -1321,7 +1328,7 @@ a:active { color: lime } /* active links */
          <? while($fila4 = mysqli_fetch_row($Res_Pro)){ ?>
     <div class="slide-items"><div class="bkPro bkPro-pasive-item "><? printf($fila4[2])?><span class="bkPro-span"></span></div><input type="hidden" value="<? printf($fila4[0])  ?>" ><p class="puntaje "><? printf($fila4[1])?></p></div>
            <? } ?>   
-    <div id="wrap-shokwave" ><div id="shokwave" >Acumula puntos <small >(Solo con boleta!)</small><span class="bkPro-span"></span></div></div>
+    <div id="wrap-shokwave" ><div id="shokwave" >Acumula puntos <br><small >(Solo con boleta!)</small><span class="bkPro-span"></span></div></div>
     </div>
     <span class="chevrons cdown "><i class="fa fa-chevron-down "></i></span>
 </div>
@@ -1359,8 +1366,6 @@ a:active { color: lime } /* active links */
 var gallery_interval;
         $(document).on('ready', function() {
           $('#dg-container').gallery();
-
-
 
       gallery_interval =  setInterval( function(){$("span.dg-next").trigger('click')} , 3000);
 
@@ -1494,8 +1499,7 @@ $('#contenedor-promos').slick({
     focusOnSelect: true,
     infinite: false,
     touchMove:false,
-    speed: 20,
-    touchThreshold: 20
+    speed: 1,
   });
 
 
@@ -1872,7 +1876,7 @@ switch(parseInt(data)){
                  document.querySelector('.catego').style.top = "270px";
                  document.querySelector('#instruction').style.visibility = "hidden";
                  document.querySelector('#instruction').style.top = "550px";
-                 document.querySelector('#avice-points').style.top = "0px";
+                 document.querySelector('#avice-points').style.top = "-10px";
                  setTimeout(function(){
                    $(".chevrons").fadeIn('slow');
                    $('.slick-prev').trigger('click');
@@ -1974,7 +1978,7 @@ $('#item4').fadeTo('slow', 0.3, function(){
                  document.querySelector('.catego').style.top = "270px";
                  document.querySelector('#instruction').style.visibility = "hidden";
                  document.querySelector('#instruction').style.top = "550px";
-                 document.querySelector('#avice-points').style.top = "0px";
+                 document.querySelector('#avice-points').style.top = "-10px";
                   setTimeout(function(){
                    $(".chevrons").fadeIn('slow');
                    $('.slick-prev').trigger('click');
