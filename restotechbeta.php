@@ -2223,12 +2223,6 @@ if(autoserv != 2){
 function resetBeta(){
 
 
-for(i=0; i< 10 ; i++){
-
-    $('.slick-next').trigger('click');
-}
-
-setTimeout(function(){
   $("#cant").val('');
   $("#ticketNumber").val('');
   $("#score-cal").html('');
@@ -2240,7 +2234,15 @@ setTimeout(function(){
   $("#garID").val('');
    document.querySelector("#contenedor-promos").style.top ="-130px";
    document.querySelector(".cdown").style.top ="8.4em";
- },500);
+
+for(i=0; i< 5 ; i++){
+setTimeout(function(){
+   $('.slick-next').trigger('click');
+},100)
+    
+}
+
+
 
 
 }
