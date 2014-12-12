@@ -2172,8 +2172,8 @@ function resetBeta(){
   $('#errado').css({ color : "white"});
   $("#garID").val('');
 
-   document.querySelector("#contenedor-promos").style.top:"-150px";
-   document.querySelector(".cdwon").style.top:"8em";
+   document.querySelector("#contenedor-promos").style.top ="-150px";
+   document.querySelector(".cdwon").style.top ="8em";
 
 
 }
