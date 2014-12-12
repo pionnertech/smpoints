@@ -745,7 +745,7 @@ cursor: pointer;
 
 	width:52%;
   position: relative;
-  top: -120px;
+  top: -105px;
   right: 1500px;
   display:inline-block;
   -webkit-transition: all 1s ease-in-out;
@@ -923,11 +923,12 @@ border-radius: 15px;
 
 }
 
-#instruction{
+#instruction {
+  
   color: white; 
   font-weight: 800;
   width: 30em;
-  margin:  0 33% 0 28%;
+  margin:  0 90% 0 10%;
   background: #ff3019; /* Old browsers */
   background: -moz-linear-gradient(top,  #ff3019 0%, #cf0404 100%); /* FF3.6+ */
   background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ff3019), color-stop(100%,#cf0404)); /* Chrome,Safari4+ */
@@ -944,6 +945,7 @@ border-radius: 15px;
   padding: .7em 1.2em;
   font-size:1.2em;
   top:500px;
+
 
   -webkit-transition: all 1s ease-in-out;
   -moz-transition: all 1s ease-in-out;
@@ -1340,7 +1342,7 @@ a:active { color: lime } /* active links */
          <? while($fila4 = mysqli_fetch_row($Res_Pro)){ ?>
     <div class="slide-items"><div class="bkPro bkPro-pasive-item "><? printf($fila4[2])?><span class="bkPro-span"></span></div><input type="hidden" value="<? printf($fila4[0])  ?>" ><p class="puntaje "><? printf($fila4[1])?></p></div>
            <? } ?>   
-    <div id="wrap-shokwave" ><div id="shokwave" >Acumula puntos</br> <small>(1 punto cada $<? printf($res_rules['RULE_CANT_SCORE']) ?> , Solo con boleta!)</small><span class="bkPro-span"></span></div></div>
+    <div id="wrap-shokwave" ><div id="shokwave" >Acumula puntos</br> (1 punto cada $ <? printf(substr_replace($res_rules['RULE_CANT_SCORE'], ".", 2, 0)) ?> , Solo con boleta!)<span class="bkPro-span"></span></div></div>
 		</div>
     <span class="chevrons cdown "><i class="fa fa-chevron-down "></i></span>
 </div>
@@ -1631,8 +1633,9 @@ $("#to4").on('click', function(){
 	$("#item4").css({display : "block"});
   $("#item2").css({display : "none"});
 
+
 	IR_SWITCH = 2;
-	$('.wrap-camera').animate({ left: '30%' }, 1300, 'easeInOutCubic');
+	$('.wrap-camera').animate({ left: '2%' }, 1300, 'easeInOutCubic');
   document.querySelector('#instruction').style.top = "50px";
 
         univ_timer = setTimeout(function(){
@@ -1657,7 +1660,7 @@ $("#inscrip").on('click', function(){
   $("#item4").css({display : "block"});
   $("#item3").css({display : "none"});
 
-    $('.wrap-camera').animate({ left: '30%' }, 1300, 'easeInOutCubic');
+    $('.wrap-camera').animate({ left: '2%' }, 1300, 'easeInOutCubic');
       document.querySelector('#instruction').style.top = "50px"; 
   }
 
@@ -1900,7 +1903,7 @@ switch(parseInt(data)){
       var nom = document.getElementById('nUs').value = "";
       var em = document.getElementById('eUs').value ="";
                  document.querySelector('#score-user').innerHTML = '1';
-                 document.querySelector('#contenedor-promos').style.right= "-7.9%"; 
+                 document.querySelector('#contenedor-promos').style.right= "-8.2%"; 
                  document.querySelector('.wrap-icon-facility').style.top = "10px";
                  document.querySelector('.catego').style.top = "270px";
                  document.querySelector('#instruction').style.top = "550px";
@@ -1999,9 +2002,9 @@ $('#item4').fadeTo('slow', 0.3, function(){
 
         document.querySelector('#led').style.backgroundColor = "#2DDB84";
         document.querySelector('#led').style.boxShadow = "0px 0px 20px 0px rgba(114, 255, 114, 0.75)";
-        setTimeout(function(){$('.wrap-camera').fadeOut(300, function(){
+        setTimeout(function(){$('.wrap-camera').fadeOut(300, function () {
                  document.querySelector('.wrap-icon-facility').style.top = "10px";
-                 document.querySelector('#contenedor-promos').style.right= "-7.9%"; 
+                 document.querySelector('#contenedor-promos').style.right= "-8.2%"; 
                  document.querySelector('.catego').style.top = "270px";
                  document.querySelector('#instruction').style.visibility = "hidden";
                  document.querySelector('#instruction').style.top = "550px";
@@ -2219,8 +2222,11 @@ if(autoserv != 2){
 
 function resetBeta(){
 
-  $('.slick-next').trigger('click');
-  $('.slick-next').trigger('click');
+for(i=0; i< 10 ; i++){
+    $('.slick-next').trigger('click');
+}
+
+
   $("#cant").val('');
   $("#ticketNumber").val('');
   $("#score-cal").html('');
@@ -2230,7 +2236,8 @@ function resetBeta(){
   $('#errado').fadeIn('fast');
   $('#errado').css({ color : "white"});
   $("#garID").val('');
-
+   document.querySelector("#contenedor-promos").style.top ="-150px";
+   document.querySelector(".cdown").style.top ="8em";
 
 }
 
