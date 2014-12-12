@@ -912,7 +912,7 @@ border-radius: 15px;
   padding: .7em 1.2em;
   font-size:1.2em;
   top:500px;
-  right: 8.2%;
+  right: 18.2%;
 
   -webkit-transition: all 1s ease-in-out;
   -moz-transition: all 1s ease-in-out;
@@ -1588,7 +1588,7 @@ $("#to4").on('click', function(){
   $("#item2").css({display : "none"});
 
   IR_SWITCH = 2;
-  $('.wrap-camera').animate({ left: '20%' }, 1300, 'easeInOutCubic');
+  $('.wrap-camera').animate({ left: '-1%' }, 1300, 'easeInOutCubic');
   document.querySelector('#instruction').style.top = "50px";
 
         univ_timer = setTimeout(function(){
@@ -1613,7 +1613,7 @@ $("#inscrip").on('click', function(){
   $("#item4").css({display : "block"});
   $("#item3").css({display : "none"});
 
-    $('.wrap-camera').animate({ left: '20%' }, 1300, 'easeInOutCubic');
+    $('.wrap-camera').animate({ left: '-1%' }, 1300, 'easeInOutCubic');
       document.querySelector('#instruction').style.top = "50px"; 
   }
  
