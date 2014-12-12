@@ -51,7 +51,8 @@ $res_rules = mysqli_fetch_assoc(mysqli_query($datos, $Query_rule));
 
 @media screen and (max-width: 1024px){
   body{
-    max-width:1020px;
+   position: relative;
+    max-width:1024px;
   }
 
   html, body {
@@ -99,6 +100,7 @@ body, html{
 }
 
 body {
+  position:relative;
   font-family: arial, helvetica;
   background-size:cover;
   background-image: url(images/fondo_nuevo.png);
