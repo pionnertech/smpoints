@@ -1952,7 +1952,7 @@ $('#item4').fadeTo('slow', 0.3, function(){
                  document.querySelector('.wrap-icon-facility').style.top = "10px";
                  document.querySelector('#contenedor-promos').style.right= "-3.9%"; 
                  document.querySelector('.catego').style.top = "270px";
-                 document.querySelector('#instruction').style.display = "none";
+                 document.querySelector('#instruction').style.visibility = "hidden";
                  document.querySelector('#instruction').style.top = "550px";
                  document.querySelector('#avice-points').style.top = "-10px";
                  $(window).resize();
@@ -2072,7 +2072,6 @@ function checkTicketNumber(ticket , callback){
 
 
 function resetAlpha(){
-  
   IR_SWITCH = 0;
   resetBeta();
   $("#garID").val('');
@@ -2084,7 +2083,7 @@ function resetAlpha(){
   $("#mesa").val('');
   $(".chevrons").fadeOut('fast');
   document.querySelector('#highBar > a').href = "#";
-  document.querySelector('#instruction').style.display = "table";
+  document.querySelector('#instruction').style.visibility = "visible";
   document.querySelector('#instruction').style.top = "500px";
   document.querySelector('#led').style.backgroundColor = "#ff0000";
   document.querySelector('#led').style.boxShadow = "0px 0px 20px 0px rgba(255, 7, 7, 0.75);";
