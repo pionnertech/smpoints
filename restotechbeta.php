@@ -2236,7 +2236,7 @@ for(i=0; i< 10 ; i++){
   $('#errado').fadeIn('fast');
   $('#errado').css({ color : "white"});
   $("#garID").val('');
-   document.querySelector("#contenedor-promos").style.top ="145px";
+   document.querySelector("#contenedor-promos").style.top ="-140px";
    document.querySelector(".cdown").style.top ="8em";
 
 }
