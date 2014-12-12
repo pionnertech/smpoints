@@ -945,7 +945,7 @@ border-radius: 15px;
   padding: .7em 1.2em;
   font-size:1.2em;
   top:500px;
-  right:2em;
+  right:6em;
 
   -webkit-transition: all 1s ease-in-out;
   -moz-transition: all 1s ease-in-out;
@@ -1211,7 +1211,7 @@ left:3em;
 
 .cdown{
 top:9em;
-right:10.9em;
+right:11.5em;
 }
 
 #fullscreen{
@@ -2236,7 +2236,7 @@ for(i=0; i< 10 ; i++){
   $('#errado').fadeIn('fast');
   $('#errado').css({ color : "white"});
   $("#garID").val('');
-   document.querySelector("#contenedor-promos").style.top ="105px";
+   document.querySelector("#contenedor-promos").style.top ="145px";
    document.querySelector(".cdown").style.top ="8em";
 
 }
