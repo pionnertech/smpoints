@@ -13,8 +13,7 @@ $imageFileType = pathinfo($target_file,PATHINFO_EXTENSION);
  //   mkdir($target_dir);
 //}
 
-echo  $imageFileType . " ---/--- " . $target_file;
-exit;
+
 
 $code = preg_replace('/^0+/', '',  $code);
 
@@ -45,8 +44,8 @@ if ($_FILES["upload"]["size"] > 9000000) {
     exit;
 }
 // Allow certain file formats
-if($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg"
-&& $imageFileType != "gif" ) {
+if($imageFileType != "JPG" && $imageFileType != "PNG" && $imageFileType != "JPEG"
+&& $imageFileType != "GIF" ) {
     echo "Sorry, only JPG, JPEG, PNG & GIF files are allowed.";
     $uploadOk = 0;
 }
@@ -60,7 +59,7 @@ $temp = explode(".",$_FILES["upload"]["name"]);
 $newfilename = $code . '.' . end($temp);
 
     if (move_uploaded_file($_FILES["upload"]["tmp_name"], $target_dir . $newfilename)) {
-        echo "The file " . basename( $_FILES["upload"]["name"]) . " has been uploaded.";
+        echo "The file " . basename($_FILES["upload"]["tmp_name"]) . " has been uploaded.";
     } else {
         echo "Sorry, there was an error uploading your file.";
     }
