@@ -1057,7 +1057,7 @@ width:20%;
                          </tr>
                      </thead>
                      </table>
-             <table class="table table-bordered table-hover table-striped" style="overflow-y: auto; max-height: 15em;">
+             <table class="table table-bordered table-hover table-striped" style="max-height: 15em;">
                      <tbody id="traffic-table">
 
   <?
