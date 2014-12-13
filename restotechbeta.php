@@ -1903,7 +1903,7 @@ switch(parseInt(data)){
       var nom = document.getElementById('nUs').value = "";
       var em = document.getElementById('eUs').value ="";
                  document.querySelector('#score-user').innerHTML = '1';
-                 document.querySelector('#contenedor-promos').style.right= "-8.2%"; 
+                 document.querySelector('#contenedor-promos').style.right= "-8.3%"; 
                  document.querySelector('.wrap-icon-facility').style.top = "10px";
                  document.querySelector('.catego').style.top = "270px";
                  document.querySelector('#instruction').style.top = "550px";
@@ -2004,7 +2004,7 @@ $('#item4').fadeTo('slow', 0.3, function(){
         document.querySelector('#led').style.boxShadow = "0px 0px 20px 0px rgba(114, 255, 114, 0.75)";
         setTimeout(function(){$('.wrap-camera').fadeOut(300, function () {
                  document.querySelector('.wrap-icon-facility').style.top = "10px";
-                 document.querySelector('#contenedor-promos').style.right= "-8.2%"; 
+                 document.querySelector('#contenedor-promos').style.right= "-8.3%"; 
                  document.querySelector('.catego').style.top = "270px";
                  document.querySelector('#instruction').style.visibility = "hidden";
                  document.querySelector('#instruction').style.top = "550px";
