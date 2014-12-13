@@ -1045,7 +1045,7 @@ width:20%;
 
          <div class="row over-personal hidden">
             <div class="col-lg-12" id="traffic-col">
-    <div class="wrap-per-list" >
+   
                     <table id="head-traffic-table" >
                      <thead>
                          <tr>
@@ -1058,6 +1058,7 @@ width:20%;
                          </tr>
                      </thead>
                      </table>
+         <div class="wrap-per-list" >
              <table class="table table-bordered table-hover table-striped" style="max-height: 15em;">
                      <tbody id="traffic-table">
 
