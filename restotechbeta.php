@@ -988,7 +988,7 @@ border-left-width: 1.75em;
 border-right-width: 1.75em;
 border-top-width: 1.75em;
 border-bottom-width: 1.75em;
-top: -3.42em;
+top: -2.2em;
 
 }
 
