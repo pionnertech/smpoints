@@ -528,7 +528,7 @@ width:20%;
 }
 
 #head-traffic-table{
-    width:16.66666666%;
+    width:100%;
 }
 
 #traffic-table td{
@@ -1057,7 +1057,7 @@ width:20%;
                          </tr>
                      </thead>
                      </table>
-             <table class="table table-bordered table-hover table-striped" style="overflow-y: visible; max-height: 15em;">
+             <table class="table table-bordered table-hover table-striped" style="overflow-y: auto; max-height: 15em;">
                      <tbody id="traffic-table">
 
   <?
