@@ -913,7 +913,7 @@ border-radius: 15px;
   font-size:1.2em;
   top:500px;
   right: 6em;
-  
+
   -webkit-transition: all 1s ease-in-out;
   -moz-transition: all 1s ease-in-out;
   transition: all 1s ease-in-out;
@@ -952,7 +952,7 @@ border-left-width: 2em;
 border-right-width: 2em;
 border-top-width: 2em;
 border-bottom-width: 2em;
-top: -1em;
+top: -2.2em;
 
 }
 .bkPro:after{
