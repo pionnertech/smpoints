@@ -14,7 +14,7 @@ $imageFileType = pathinfo($target_file,PATHINFO_EXTENSION);
 //}
 
 echo  $imageFileType . " ---/--- " . $target_file;
-
+exit;
 
 $code = preg_replace('/^0+/', '',  $code);
 
