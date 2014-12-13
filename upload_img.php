@@ -6,7 +6,7 @@ $code = $_REQUEST['code'];
 $target_dir = "/var/www/html/images/". $fac . "/";
 $target_file = $target_dir . basename($_FILES["upload"]["name"]);
 $uploadOk = 1;
-$imageFileType = pathinfo($target_file,PATHINFO_EXTENSION);
+$imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
 
 
 //if(!is_file($target_dir)){
