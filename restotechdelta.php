@@ -1584,6 +1584,12 @@ $('#cant').keydown(function(){
 });
 
 $("#to4").on('click', function(){
+
+  clearInterval(univ_timer);
+clearInterval(univ_timer);
+        univ_timer = setTimeout(function(){
+            resetAlpha();
+                  }, 90000);
   $("#item4").css({display : "block"});
   $("#item2").css({display : "none"});
 
@@ -1599,6 +1605,12 @@ $("#to4").on('click', function(){
 
 
 $("#to3").on('click', function(){
+
+  clearInterval(univ_timer);
+clearInterval(univ_timer);
+        univ_timer = setTimeout(function(){
+            resetAlpha();
+                  }, 90000);
   $("#item3").css({display : "block"});
   $("#item2").css({display : "none"});
   IR_SWITCH = 1;
