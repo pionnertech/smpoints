@@ -988,7 +988,7 @@ border-left-width: 1.75em;
 border-right-width: 1.75em;
 border-top-width: 1.75em;
 border-bottom-width: 1.75em;
-top: -2.2em;
+top: -3.42em;
 
 }
 
@@ -1211,7 +1211,7 @@ left:3em;
 
 .cdown{
 top:9em;
-right:11.5em;
+right:11em;
 }
 
 #fullscreen{
@@ -1342,7 +1342,7 @@ a:active { color: lime } /* active links */
          <? while($fila4 = mysqli_fetch_row($Res_Pro)){ ?>
     <div class="slide-items"><div class="bkPro bkPro-pasive-item "><? printf($fila4[2])?><span class="bkPro-span"></span></div><input type="hidden" value="<? printf($fila4[0])  ?>" ><p class="puntaje "><? printf($fila4[1])?></p></div>
            <? } ?>   
-    <div id="wrap-shokwave" ><div id="shokwave" >Acumula puntos</br> (1 punto cada $ <? printf(substr_replace($res_rules['RULE_CANT_SCORE'], ".", 2, 0)) ?> , Solo con boleta!)<span class="bkPro-span"></span></div></div>
+    <div id="wrap-shokwave" ><div id="shokwave" >Acumula puntos</br> <small>(1 punto cada $ <? printf(substr_replace($res_rules['RULE_CANT_SCORE'], ".", 2, 0)) ?> , Solo con boleta!)</small><span class="bkPro-span"></span></div></div>
 		</div>
     <span class="chevrons cdown "><i class="fa fa-chevron-down "></i></span>
 </div>
@@ -1908,7 +1908,7 @@ switch(parseInt(data)){
                  document.querySelector('.catego').style.top = "270px";
                  document.querySelector('#instruction').style.top = "550px";
                  document.querySelector('#instruction').style.visibility = "hidden";
-                 document.querySelector('#avice-points').style.top = "20px";
+                 document.querySelector('#avice-points').style.top = "10px";
                  $(".chevrons").fadeIn('slow');
                  $('.slick-prev').trigger('click');
                  $("#secret").val(cod); 
@@ -2008,7 +2008,7 @@ $('#item4').fadeTo('slow', 0.3, function(){
                  document.querySelector('.catego').style.top = "270px";
                  document.querySelector('#instruction').style.visibility = "hidden";
                  document.querySelector('#instruction').style.top = "550px";
-                 document.querySelector('#avice-points').style.top = "20px";
+                 document.querySelector('#avice-points').style.top = "10px";
                  $(".chevrons").fadeIn('slow');
                  $('.slick-prev').trigger('click');
 

@@ -13,6 +13,9 @@ $imageFileType = pathinfo($target_file,PATHINFO_EXTENSION);
  //   mkdir($target_dir);
 //}
 
+echo  $imageFileType . " ---/--- " . $target_file;
+
+
 $code = preg_replace('/^0+/', '',  $code);
 
 
