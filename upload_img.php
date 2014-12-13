@@ -56,7 +56,7 @@ if ($uploadOk == 0) {
 } else {
 
 $temp = explode(".",$_FILES["upload"]["name"]);
-$newfilename = $code . '.' . end($temp);
+$newfilename = $code . '.' . $imageFileType;
 
     if (move_uploaded_file($_FILES["upload"]["tmp_name"], $target_dir . $newfilename)) {
         echo "The file " . basename($_FILES["upload"]["tmp_name"]) . " has been uploaded.";
