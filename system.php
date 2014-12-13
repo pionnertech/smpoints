@@ -529,6 +529,7 @@ width:20%;
 
 #head-traffic-table{
     width:100%;
+    overflow-y: auto;
 }
 
 #traffic-table td{
@@ -537,7 +538,7 @@ width:20%;
 
 #head-traffic-table th span{
     width:100%;
-     font-weight: bolder;
+    font-weight: bolder;
 }
 
 
@@ -1044,8 +1045,8 @@ width:20%;
 
          <div class="row over-personal hidden">
             <div class="col-lg-12" id="traffic-col">
-    <div class="wrap-per-list" style="max-height: 20em !important;">
-                    <table id="head-traffic-table" style="overflow-y: auto; width:100%;">
+    <div class="wrap-per-list" >
+                    <table id="head-traffic-table" >
                      <thead>
                          <tr>
                             <th class="th-fix"><span>Nombre Garzon</span></th>
