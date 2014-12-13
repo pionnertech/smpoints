@@ -522,9 +522,20 @@ table{
     width:100%;
     font-weight: bolder;
 }
+
 #head-minus td{
 width:20%;
 }
+
+#head-traffic-table{
+    width:16.66666666%;
+}
+
+#head-traffic-table th span{
+    width:100%;
+     font-weight: bolder;
+}
+
 
 
 </style>
@@ -1030,17 +1041,19 @@ width:20%;
          <div class="row over-personal hidden">
             <div class="col-lg-12" id="traffic-col">
     <div class="wrap-per-list" style="max-height: 20em !important;">
-                     <table class="table table-bordered table-hover table-striped" style="overflow-y: visible; max-height: 15em;">
+                    <table id="head-traffic-table" style="overflow-y: auto; max-height: 15em;">
                      <thead>
                          <tr>
-                            <th class="th-fix"><strong>Nombre Garzon</strong></th>
-                            <th class="th-fix"><strong>Numero de boleta</strong></th>
-                            <th class="th-fix"><strong>Cliente Atendido</strong></th>
-                            <th class="th-fix"><strong>Puntos Otorgados</strong></th>
-                            <th class="th-fix"><strong>Fecha/Hora Atención</strong></th>
-                            <th class="th-fix"><strong>Monto Compra</strong></th>
+                            <th class="th-fix"><span>Nombre Garzon</span></th>
+                            <th class="th-fix"><span>Numero de boleta</span></th>
+                            <th class="th-fix"><span>Cliente Atendido</span></th>
+                            <th class="th-fix"><span>Puntos Otorgados</span></th>
+                            <th class="th-fix"><span>Fecha/Hora Atención</span></th>
+                            <th class="th-fix"><span>Monto Compra</span></th>
                          </tr>
                      </thead>
+                     </table>
+             <table class="table table-bordered table-hover table-striped" style="overflow-y: visible; max-height: 15em;">
                      <tbody id="traffic-table">
 
   <?
