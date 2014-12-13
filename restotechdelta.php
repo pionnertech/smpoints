@@ -16,7 +16,7 @@ $res_rules = mysqli_fetch_assoc(mysqli_query($datos, $Query_rule));
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Qr Motion</title>
+  <title>SmilePoints</title>
 
   <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0">
 <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/jquery.slick/1.3.9/slick.css"/>
@@ -895,7 +895,7 @@ border-radius: 15px;
   color: white; 
   font-weight: 800;
   width: 30em;
-  margin:  0 33% 0 28%;
+  margin:  0 35% 0 65%;
   background: #ff3019; /* Old browsers */
   background: -moz-linear-gradient(top,  #ff3019 0%, #cf0404 100%); /* FF3.6+ */
   background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ff3019), color-stop(100%,#cf0404)); /* Chrome,Safari4+ */
@@ -912,8 +912,8 @@ border-radius: 15px;
   padding: .7em 1.2em;
   font-size:1.2em;
   top:500px;
-  right: 24.2%;
-
+  right: 6em;
+  
   -webkit-transition: all 1s ease-in-out;
   -moz-transition: all 1s ease-in-out;
   transition: all 1s ease-in-out;
@@ -1165,7 +1165,7 @@ font-size:3em;
 }
 
 .chevrons >i{
-  color: blue !important;
+  color: red !important;
 }
 .cup {
 top:-2em;
@@ -1175,7 +1175,7 @@ left: 3em;
 .cdown{
 
 top:10.5em;
-right:10.7em;
+right:10.3em;
 
 }
 
@@ -1588,7 +1588,7 @@ $("#to4").on('click', function(){
   $("#item2").css({display : "none"});
 
   IR_SWITCH = 2;
-  $('.wrap-camera').animate({ left: '3%' }, 1300, 'easeInOutCubic');
+  $('.wrap-camera').animate({ left: '55%' }, 1300, 'easeInOutCubic');
   document.querySelector('#instruction').style.top = "50px";
 
         univ_timer = setTimeout(function(){
@@ -1613,7 +1613,7 @@ $("#inscrip").on('click', function(){
   $("#item4").css({display : "block"});
   $("#item3").css({display : "none"});
 
-    $('.wrap-camera').animate({ left: '3%' }, 1300, 'easeInOutCubic');
+    $('.wrap-camera').animate({ left: '55%' }, 1300, 'easeInOutCubic');
       document.querySelector('#instruction').style.top = "50px"; 
   }
  
