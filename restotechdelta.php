@@ -547,7 +547,7 @@ box-shadow:         0px 0px 20px 0px rgba(255, 7, 7, 0.75);
   padding:5em 2em;
   overflow:hidden;
   position:relative;
-  left: 65%;
+  left:-50%;
   border: 1em solid red;
   top:2em;
 }
@@ -2167,11 +2167,13 @@ $.event.special.tripleclick = {
     
 };
 
-if(autoserv != 2){
+
    $("#mesa").bind("tripleclick", function () {
+       if(autoserv != 2){
     $(this).css({ opacity: '1'});
+  }
 });
-}
+
 
 function resetBeta(){
 
@@ -2184,8 +2186,8 @@ function resetBeta(){
   $('#errado').css({ color : "white"});
   $("#garID").val('');
 
-   document.querySelector("#contenedor-promos").style.top ="-150px";
-   document.querySelector(".cdown").style.top ="8em";
+   document.querySelector("#contenedor-promos").style.top ="-105px";
+  // document.querySelector(".cdown").style.top ="8em";
 
 
 }

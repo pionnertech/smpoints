@@ -1772,9 +1772,11 @@ setTimeout(function(){
 });
 
 $("#backto4, #backto4 *").on('click', function(){
-
  resetBeta();
-
+  clearInterval(univ_timer);
+        univ_timer = setTimeout(function(){
+            resetAlpha();
+                  }, 90000);
 });
 
 
@@ -2158,6 +2160,7 @@ function resetAlpha(){
   $('.wrap-camera').fadeIn('slow');
   $('.wrap-camera').animate({ left: '-38%' }, 1300, 'easeInOutCubic');
   var univ_timer ="";
+
   document.getElementById('password').value= "";
   document.getElementById('ticketNumber').value= "";
   document.getElementById('cant').value= "";
