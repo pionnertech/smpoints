@@ -702,7 +702,7 @@ cursor: pointer;
 #contenedor-promos{
   width:55%;
   position: relative;
-  top:-5px;
+  top:-1px;
   right: 1500px;
   display:inline-block;
   -webkit-transition: all 1s ease-in-out;
@@ -2178,7 +2178,7 @@ function resetBeta(){
   $('#errado').css({ color : "white"});
   $("#garID").val('');
 
-   document.querySelector("#contenedor-promos").style.top ="-5px";
+   document.querySelector("#contenedor-promos").style.top ="-1px";
   // document.querySelector(".cdown").style.top ="8em";
 
 
