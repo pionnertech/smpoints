@@ -2252,7 +2252,7 @@ function resetBeta(){
 
 for(i=0; i< 5 ; i++){
 setTimeout(function(){
-   $('.slick-next').trigger('click');
+   $('.slick-prev').trigger('click');
 },100)
     
 }
