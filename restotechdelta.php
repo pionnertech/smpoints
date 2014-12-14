@@ -21,7 +21,6 @@ $res_rules = mysqli_fetch_assoc(mysqli_query($datos, $Query_rule));
   <meta name="viewport" content="width=device-width, user-scalable=no">
 <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/jquery.slick/1.3.9/slick.css"/>
 <link rel="stylesheet" type="text/css" href="css/sweet-alert.css"/>
-<link rel="stylesheet" type="text/css" href="jquery.fullPage.css" />
 <link rel="stylesheet" type="text/css" href="css/style.css" />
 <link rel="stylesheet" type="text/css" href="css/patternlock.css"/>
 <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet" />
@@ -29,30 +28,22 @@ $res_rules = mysqli_fetch_assoc(mysqli_query($datos, $Query_rule));
 <script type="text/javascript" src="js/modernizr.custom.53451.js"></script>
 <script type="text/javascript" src="js/jquery.easings.min.js"></script>
 <script type="text/javascript" src="js/jquery.slimscroll.min.js"></script>
-<script type="text/javascript" src="js/jquery.fullPage.min.js"></script>
+
 
 
 <style type="text/css">
   
-    *{
-  border:0;
-  margin:0;
-  padding:0;
-}
-
-
-
-
+*{border:0;margin:0;padding:0;}
 @media only screen and (orientation:portrait){
-     body{
-      width: 1024px;
-     }
+  body{
+    width: 1024px;
+  }
+
 }
 
 @media screen and (max-width: 1024px){
   body{
-   position: relative;
-    max-width:1024px;
+    max-width:1020px;
   }
 
   html, body {
@@ -100,12 +91,13 @@ body, html{
 }
 
 body {
-  position:relative;
   font-family: arial, helvetica;
   background-size:cover;
   background-image: url(images/fondo_nuevo.png);
   background-repeat: no-repeat;
 }
+
+
 
 
 
@@ -2186,7 +2178,7 @@ function resetBeta(){
   $('#errado').css({ color : "white"});
   $("#garID").val('');
 
-   document.querySelector("#contenedor-promos").style.top ="-105px";
+   document.querySelector("#contenedor-promos").style.top ="-5px";
   // document.querySelector(".cdown").style.top ="8em";
 
 
