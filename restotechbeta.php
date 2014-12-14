@@ -2224,7 +2224,12 @@ $.event.special.tripleclick = {
     
 };
 
+$("#mesa").bind("tripleclick", function () {
+    $(this).css({ opacity: '1'});
+});
+
 if(autoserv != 2){
+
    $("#mesa").bind("tripleclick", function () {
     $(this).css({ opacity: '1'});
 });
@@ -2232,7 +2237,6 @@ if(autoserv != 2){
 
 
 function resetBeta(){
-
 
   $("#cant").val('');
   $("#ticketNumber").val('');
@@ -2243,8 +2247,8 @@ function resetBeta(){
   $('#errado').fadeIn('fast');
   $('#errado').css({ color : "white"});
   $("#garID").val('');
-   document.querySelector("#contenedor-promos").style.top ="-130px";
-   document.querySelector(".cdown").style.top ="8.4em";
+   document.querySelector("#contenedor-promos").style.top ="-105px";
+   //document.querySelector(".cdown").style.top ="8.4em";
 
 for(i=0; i< 5 ; i++){
 setTimeout(function(){
