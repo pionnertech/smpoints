@@ -2106,16 +2106,18 @@ function resetAlpha(){
   document.getElementById('cant').value= "";
   $('#errado').html('Favor llame al garzón');
   $('#errado').css({ color : "white"});
+
+   document.querySelector("#contenedor-promos").style.top ="1px";
+   $("#contenedor-promos").slickGoTo(0);
+   document.querySelector(".cdown").style.top ="10.5em";
+
   $('#item4').fadeTo('fast', 0.3, function(){
     $(this).css('background-image', 'url(images/fondo_nuevo.png)');
 }).delay(20).fadeTo('fast', 1);
 
-$("#item4").css({display : "none"});
-$("#item1").css({display : "block"});
+
 
   clearInterval(gallery_interval);
-  gallery_interval = setInterval(function(){$("span.dg-next").trigger('click')},3000);
-
 
 
 }
