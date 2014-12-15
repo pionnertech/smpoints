@@ -1943,7 +1943,7 @@ switch(parseInt(data)) {
 
   var variables = data.split(',');
     $("#score-user").html(variables[1]);
-      swal({ title : "Bienvenido "  + variables[0], text: "Disfruta de tus puntos!",  type: "success", timer : "3000", confirmButtonColor: "#fff"});
+      swal({ title : "Hola "  + variables[0], text: "Disfruta de tus puntos!",  type: "success", timer : "3000", confirmButtonColor: "#fff"});
         IR_SWITCH = 0;
 
 $('#item4').fadeTo('slow', 0.3, function(){
@@ -2186,7 +2186,7 @@ function resetBeta(){
 
    document.querySelector("#contenedor-promos").style.top ="-107px";
    $("#contenedor-promos").slickGoTo(0);
-   document.querySelector(".cdown").style.top ="8em";
+  // document.querySelector(".cdown").style.top ="8em";
    document.querySelector('#contenedor-promos').style.right= "-7.9%"; 
 
 
