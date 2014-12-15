@@ -1300,7 +1300,7 @@ a:active { color: lime } /* active links */
          <? while($fila4 = mysqli_fetch_row($Res_Pro)){ ?>
     <div class="slide-items"><div class="bkPro bkPro-pasive-item "><? printf($fila4[2])?><span class="bkPro-span"></span></div><input type="hidden" value="<? printf($fila4[0])  ?>" ><p class="puntaje "><? printf($fila4[1])?></p></div>
            <? } ?>   
-    <div id="wrap-shokwave" ><div id="shokwave" >Acumula puntos <br><small>(1 Punto cada cada $<? printf(substr_replace($res_rules['RULE_CANT_SCORE'], ".", 2, 0)) ?> Solo con boleta!)</small><span class="bkPro-span"></span></div></div>
+    <div id="wrap-shokwave" ><div id="shokwave" >Acumula puntos <br><small>(1 Punto cada $<? printf(substr_replace($res_rules['RULE_CANT_SCORE'], ".", 2, 0)) ?> Solo con boleta!)</small><span class="bkPro-span"></span></div></div>
     </div>
     <span class="chevrons cdown "><i class="fa fa-chevron-down "></i></span>
 </div>
