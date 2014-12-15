@@ -904,7 +904,7 @@ border-radius: 15px;
   padding: .7em 1.2em;
   font-size:1.2em;
   top:500px;
-  right: 6em;
+  right: 9em;
 
   -webkit-transition: all 1s ease-in-out;
   -moz-transition: all 1s ease-in-out;
@@ -944,9 +944,10 @@ border-left-width: 2em;
 border-right-width: 2em;
 border-top-width: 2em;
 border-bottom-width: 2em;
-top: -2.2em;
+top: -4.2em;
 
 }
+
 .bkPro:after{
 content: "";
 width: 0;
@@ -1577,16 +1578,16 @@ $('#cant').keydown(function(){
 
 $("#to4").on('click', function(){
 
-  clearInterval(univ_timer);
+clearInterval(univ_timer);
 clearInterval(univ_timer);
         univ_timer = setTimeout(function(){
             resetAlpha();
-                  }, 90000);
+                  }, 150000);
   $("#item4").css({display : "block"});
   $("#item2").css({display : "none"});
 
   IR_SWITCH = 2;
-  $('.wrap-camera').animate({ left: '55%' }, 1300, 'easeInOutCubic');
+  $('.wrap-camera').animate({ left: '45%' }, 1300, 'easeInOutCubic');
   document.querySelector('#instruction').style.top = "50px";
 
         univ_timer = setTimeout(function(){
@@ -1602,7 +1603,7 @@ $("#to3").on('click', function(){
 clearInterval(univ_timer);
         univ_timer = setTimeout(function(){
             resetAlpha();
-                  }, 90000);
+                  }, 150000);
   $("#item3").css({display : "block"});
   $("#item2").css({display : "none"});
   IR_SWITCH = 1;
@@ -1617,7 +1618,7 @@ $("#inscrip").on('click', function(){
   $("#item4").css({display : "block"});
   $("#item3").css({display : "none"});
 
-    $('.wrap-camera').animate({ left: '55%' }, 1300, 'easeInOutCubic');
+    $('.wrap-camera').animate({ left: '45%' }, 1300, 'easeInOutCubic');
       document.querySelector('#instruction').style.top = "50px"; 
   }
  
@@ -2105,7 +2106,6 @@ function resetAlpha(){
   document.getElementById('eUs').value = '';
   $('.wrap-camera').fadeIn('slow');
   $('.wrap-camera').animate({ left: '-38%' }, 1300, 'easeInOutCubic');
-  var univ_timer ="";
   document.getElementById('password').value= "";
   document.getElementById('ticketNumber').value= "";
   document.getElementById('cant').value= "";
@@ -2120,8 +2120,10 @@ function resetAlpha(){
     $(this).css('background-image', 'url(images/fondo_nuevo.png)');
 }).delay(20).fadeTo('fast', 1);
 
-
   clearInterval(gallery_interval);
+
+  $("#ticketNumber").blur();
+  $("#cant").blur();
 
 
 }
