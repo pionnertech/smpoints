@@ -1166,7 +1166,7 @@ left: 3em;
 
 .cdown{
 
-top:10.5em;
+top:8em;
 right:10.3em;
 
 }
@@ -2186,7 +2186,7 @@ function resetBeta(){
 
    document.querySelector("#contenedor-promos").style.top ="-107px";
    $("#contenedor-promos").slickGoTo(0);
-  // document.querySelector(".cdown").style.top ="8em";
+   document.querySelector(".cdown").style.top ="8em";
    document.querySelector('#contenedor-promos').style.right= "-7.9%"; 
 
 
