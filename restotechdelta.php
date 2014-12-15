@@ -2114,7 +2114,7 @@ function resetAlpha(){
 
    document.querySelector("#contenedor-promos").style.top ="1px";
    $("#contenedor-promos").slickGoTo(0);
-
+  document.querySelector(".cdown").style.top ="10.5em";
 
   $('#item4').fadeTo('fast', 0.3, function(){
     $(this).css('background-image', 'url(images/fondo_nuevo.png)');
