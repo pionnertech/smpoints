@@ -2134,6 +2134,9 @@ function checkTicketNumber(ticket , callback){
 
 
 function resetAlpha(){
+  $("#item4").css({display : "none"});
+$("#item1").css({display : "block"});
+
   IR_SWITCH = 0;
   resetBeta();
   $("#garID").val('');
@@ -2172,11 +2175,10 @@ function resetAlpha(){
     $(this).css('background-image', 'url(images/fondo_nuevo.png)');
 }).delay(20).fadeTo('fast', 1);
 
-$("#item4").css({display : "none"});
-$("#item1").css({display : "block"});
+
 
   clearInterval(gallery_interval);
-  gallery_interval = setInterval(function(){$("span.dg-next").trigger('click')},3000);
+
 
 /*
 setTimeout(function(){
