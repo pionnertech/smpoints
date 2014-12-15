@@ -2252,7 +2252,7 @@ function resetBeta(){
    document.querySelector("#contenedor-promos").style.top ="-105px";
    //document.querySelector(".cdown").style.top ="8.4em";
 
-$("#contenedor-promos").slickGoTo(1);
+$("#contenedor-promos").slickGoTo(0);
 
 }
 
