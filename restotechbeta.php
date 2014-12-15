@@ -19,11 +19,10 @@ $res_rules = mysqli_fetch_assoc(mysqli_query($datos, $Query_rule));
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Qr Motion</title>
+	<title>SmilePoints</title>
   <meta name="viewport" content="width=device-width, user-scalable=no">
 <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/jquery.slick/1.3.9/slick.css"/>
 <link rel="stylesheet" type="text/css" href="css/sweet-alert.css"/>
-<link rel="stylesheet" type="text/css" href="jquery.fullPage.css" />
 <link rel="stylesheet" type="text/css" href="css/style.css" />
 <link rel="stylesheet" type="text/css" href="css/patternlock.css"/>
 <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet" />
@@ -31,7 +30,7 @@ $res_rules = mysqli_fetch_assoc(mysqli_query($datos, $Query_rule));
 <script type="text/javascript" src="js/modernizr.custom.53451.js"></script>
 <script type="text/javascript" src="js/jquery.easings.min.js"></script>
 <script type="text/javascript" src="js/jquery.slimscroll.min.js"></script>
-<script type="text/javascript" src="js/jquery.fullPage.min.js"></script>
+
 
 <style type="text/css">
 	
@@ -1326,8 +1325,8 @@ a:active { color: lime } /* active links */
 
 <div id="item4" class="section" >
     <div class="logout"><i class="fa fa-home fa-2x " class="logout"></i></div>
-	<div class="wrap-camera" class="scrollabe" style="margin-top: 1.5em;">
-	   <div id="camera" class="scrollabe"></div>
+	<div class="wrap-camera"  style="margin-top: 1.5em;">
+	   <div id="camera"></div>
 	    <div style="width:100%;" align="center"><p id="led"></p></div>
 	</div>
   <div id="instruction">Acerca el código de tu tarjeta a la camara</div>
@@ -2253,17 +2252,11 @@ function resetBeta(){
    document.querySelector("#contenedor-promos").style.top ="-105px";
    //document.querySelector(".cdown").style.top ="8.4em";
 
-for(i=0; i< 5 ; i++){
-setTimeout(function(){
-   $('.slick-prev').trigger('click');
-},100)
-    
-}
-
-
-
+$("#contenedor-promos").slickGoTo(1);
 
 }
+
+
 
 
 
