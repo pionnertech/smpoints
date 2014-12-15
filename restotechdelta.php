@@ -2179,7 +2179,7 @@ function resetBeta(){
   $("#garID").val('');
 
    document.querySelector("#contenedor-promos").style.top ="-107px";
-   $("#contenedor-promos").slickGoTo(1);
+   $("#contenedor-promos").slickGoTo(0);
    document.querySelector(".cdown").style.top ="8em";
    document.querySelector('#contenedor-promos').style.right= "-7.9%"; 
 
