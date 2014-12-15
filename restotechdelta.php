@@ -2076,6 +2076,11 @@ function checkTicketNumber(ticket , callback){
 
 
 function resetAlpha(){
+
+
+  $("#item1").css({display :"block"});
+  $("#item4").css({display :"none"});
+
   IR_SWITCH = 0;
   resetBeta();
   $("#garID").val('');
@@ -2114,7 +2119,6 @@ function resetAlpha(){
   $('#item4').fadeTo('fast', 0.3, function(){
     $(this).css('background-image', 'url(images/fondo_nuevo.png)');
 }).delay(20).fadeTo('fast', 1);
-
 
 
   clearInterval(gallery_interval);
