@@ -884,6 +884,7 @@ border-radius: 15px;
 }
 
 #instruction{
+  
   color: white; 
   font-weight: 800;
   width: 30em;
