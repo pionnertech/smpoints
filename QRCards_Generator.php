@@ -95,14 +95,14 @@ background-color:#6BA446;
 }
 
 .QrBox {
-    border: 4px solid #39B54A;
-    border-radius: 15px;
+    margin: auto;
+left:0; right:0;
+top:0; bottom:0;
     background-color: #fff;
-    display: inline-block;
-    height: 321px;
-    width:207px;
+    display: block;
+    height: 200px;
+    width:200px;
     -webkit-print-color-adjust:exact;
-    margin:3px;
 }
 
 .qrCont{
@@ -271,23 +271,9 @@ for($i=1; $i < $variable + 1; $i++){
 	    <div class="QrBox">
 	    	<div class="qrCont" align="center"><? echo '<img src="https://chart.googleapis.com/chart?chs=170x170&cht=qr&chl=' . $variant .  '&choe=UTF-8" />' ?></div>
             <div class="keynumber"><? printf($number_dif) ?></div>
-            <div class="titles">
-            <p class="st">Smile</p>
-               <p class="nd">P<i class="fa fa-smile-o" style="font-size: .7em; color"></i>ints<small>&reg;</small></p>
-            </div>
-            <div class="logos">
-                <div class="logo_opt"><p class="web">www.emenu.cl</p><img src="images/LOGO_EMENU_opt.png"></div>
-            </div>
 	    </div>
+      <footer>&spen;</footer>
 <?
-
-if($i %6 == 0 ) {
-   
-   echo "<footer>&spen;</footer>";
-
-}
-
-
 }
 ?>
   </div>
