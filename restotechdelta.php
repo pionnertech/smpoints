@@ -1339,6 +1339,7 @@ a:active { color: lime } /* active links */
 <script type="text/javascript">
 
 var gallery_interval;
+
         $(document).on('ready', function() {
           $('#dg-container').gallery();
 
@@ -1379,7 +1380,9 @@ var gB5 = "#item5";
 $("#backmain, #backmaindiv").on('click', function(){
 
     $(gB2).css({ display: "none"});  
-    $(gB1).css({ display: "block"});      
+    $(gB1).css({ display: "block"}); 
+
+    clearInterval(univ_timer);
     clearInterval(gallery_interval);
     gallery_interval = setInterval(function(){$("span.dg-next").trigger('click')} ,3000); 
 });
