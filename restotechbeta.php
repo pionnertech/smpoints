@@ -1760,17 +1760,6 @@ $("#fullscreen").on('click tap', function (){
 });
 
 
-$("#mesa").on('focus', function (){
-
-setTimeout(function(){
-
-      $("#mesa").blur();
-      $("#highBar").focus();
-        $("#mesa").css({opacity: "0"});
-      }, 3500);
-
-});
-
 
 
 $("#backto4, #backto4 *").on('click', function(){
@@ -2217,6 +2206,9 @@ $('#mesa').mousedown(function() {
 
 }).bind('mouseup mouseleave', function() {
   setTimeout(function(){
+      $("#mesa").blur();
+      $("#highBar").focus();
+      $("#mesa").css({opacity: "0"});
      clearTimeout(timeoutId);
    }, 3500);
    
