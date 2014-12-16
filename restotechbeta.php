@@ -2199,9 +2199,7 @@ var timeoutId = 0;
 
 $('#mesa').mousedown(function() {
     timeoutId = setTimeout(function(){
-
       $("#mesa").css({opacity :"1"});
-
     }, 2500);
 
 }).bind('mouseup mouseleave', function() {
@@ -2210,7 +2208,7 @@ $('#mesa').mousedown(function() {
       $("#highBar").focus();
       $("#mesa").css({opacity: "0"});
      clearTimeout(timeoutId);
-   }, 3500);
+   }, 5500);
    
 });
 
