@@ -927,7 +927,7 @@ border-radius: 15px;
   color: white; 
   font-weight: 800;
   width: 30em;
-  margin:  0 40% 0 60%;
+  margin:  0 45% 0 55%;
   background: #ff3019; /* Old browsers */
   background: -moz-linear-gradient(top,  #ff3019 0%, #cf0404 100%); /* FF3.6+ */
   background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ff3019), color-stop(100%,#cf0404)); /* Chrome,Safari4+ */
@@ -1554,6 +1554,7 @@ $("#highBar").on('click' , function () {
    clearInterval(gallery_interval);
                  
    $("span.dg-next").trigger('click');
+
    setTimeout(function(){
    $("#item2").css({display : "block"});
    $("#item1").css({display : "none"});
@@ -1633,7 +1634,7 @@ $("#to4").on('click', function(){
 clearInterval(univ_timer);
         univ_timer = setTimeout(function(){
             resetAlpha();
-                  }, 90000);
+                  }, 150000);
 	$("#item4").css({display : "block"});
   $("#item2").css({display : "none"});
 
@@ -1644,7 +1645,7 @@ clearInterval(univ_timer);
 
         univ_timer = setTimeout(function(){
             resetAlpha();
-                  }, 90000);
+                  }, 150000);
 	
 });
 
@@ -1654,7 +1655,7 @@ clearInterval(univ_timer);
 clearInterval(univ_timer);
         univ_timer = setTimeout(function(){
             resetAlpha();
-                  }, 90000);
+                  }, 150000);
 
   $("#item3").css({display : "block"});
   $("#item2").css({display : "none"});
@@ -1735,7 +1736,7 @@ $('.slide-items').on('click touchstart', function (){
   clearInterval(univ_timer);
         univ_timer = setTimeout(function(){
             resetAlpha();
-                  }, 90000);
+                  }, 150000);
 });
 
 
@@ -1747,7 +1748,7 @@ $("#shokwave").on('click tap touchstart', function(){
   clearInterval(univ_timer);
         univ_timer = setTimeout(function(){
             resetAlpha();
-                  }, 90000);
+                  }, 150000);
 
 });
 
@@ -1761,10 +1762,9 @@ $("#fullscreen").on('click tap', function (){
 
 $("#mesa").on('focus', function (){
 setTimeout(function(){
-      $("#mesa").blur();
+
       $("#mesa").blur();
       $("#highBar").focus();
-
         $("#mesa").css({opacity: "0"});
       }, 3500);
 
@@ -1775,7 +1775,7 @@ $("#backto4, #backto4 *").on('click', function(){
   clearInterval(univ_timer);
         univ_timer = setTimeout(function(){
             resetAlpha();
-                  }, 90000);
+                  }, 150000);
 });
 
 
@@ -2161,8 +2161,7 @@ $("#item1").css({display : "block"});
   document.getElementById('eUs').value = '';
   $('.wrap-camera').fadeIn('slow');
   $('.wrap-camera').animate({ left: '-38%' }, 1300, 'easeInOutCubic');
-  var univ_timer ="";
-
+  clearInterval(univ_timer);
   document.getElementById('password').value= "";
   document.getElementById('ticketNumber').value= "";
   document.getElementById('cant').value= "";
@@ -2175,69 +2174,14 @@ $("#item1").css({display : "block"});
     $(this).css('background-image', 'url(images/fondo_nuevo.png)');
 }).delay(20).fadeTo('fast', 1);
 
-
-
   clearInterval(gallery_interval);
-
-
-/*
-setTimeout(function(){
-  window.location.href = "";
-},10);
-*/
-
-
+  clearInterval(gallery_interval);
+   gallery_interval = setInterval(function(){$("span.dg-next").trigger('click')} ,3000); 
 }
 
 
-$.event.special.tripleclick = {
 
-    setup: function(data, namespaces) {
-        var elem = this, $elem = jQuery(elem);
-        $elem.bind('click', jQuery.event.special.tripleclick.handler);
-    },
 
-    teardown: function(namespaces) {
-        var elem = this, $elem = jQuery(elem);
-        $elem.unbind('click', jQuery.event.special.tripleclick.handler)
-    },
-
-    handler: function(event) {
-        var elem = this, $elem = jQuery(elem), clicks = $elem.data('clicks') || 0, start = $elem.data('startTimeTC') || 0;
-        if ((new Date().getTime() - start)>= 1000) {
-            clicks = 0;
-        }
-        clicks += 1;
-        if(clicks === 1) {
-            start = new Date().getTime();
-        }
-        
-        if ( clicks === 3 ) {
-            clicks = 0;
-
-            // set event type to "tripleclick"
-            event.type = "tripleclick";
-            
-            // let jQuery handle the triggering of "tripleclick" event handlers
-            $elem.trigger('tripleclick');
-        }
-        
-        $elem.data('clicks', clicks);
-        $elem.data('startTimeTC', start);
-    }
-    
-};
-
-$("#mesa").bind("tripleclick", function () {
-    $(this).css({ opacity: '1'});
-});
-
-if(autoserv != 2){
-
-   $("#mesa").bind("tripleclick", function () {
-    $(this).css({ opacity: '1'});
-});
-}
 
 
 function resetBeta(){
@@ -2259,7 +2203,18 @@ $("#contenedor-promos").slickGoTo(0);
 }
 
 
+var timeoutId = 0;
 
+$('#mesa').mousedown(function() {
+    timeoutId = setTimeout(function(){
+
+      $("#mesa").css({opacity :"1"});
+
+    }, 2500)
+
+}).bind('mouseup mouseleave', function() {
+    clearTimeout(timeoutId);
+});
 
 
 </script>
