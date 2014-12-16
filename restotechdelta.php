@@ -838,6 +838,7 @@ height: 4em;
 /* position: relative; */
 /* top: 12px; */
 background-color: #FF3019;
+
 margin: 4em 0 0 0;
 -webkit-box-shadow: 0px 10px 5px 0px rgba(50, 50, 50, 0.75);
 -moz-box-shadow:    0px 10px 5px 0px rgba(50, 50, 50, 0.75);
@@ -888,7 +889,7 @@ border-radius: 15px;
   color: white; 
   font-weight: 800;
   width: 30em;
-  margin:  0 35% 0 65%;
+  margin:  0 25% 0 75%;
   background: #ff3019; /* Old browsers */
   background: -moz-linear-gradient(top,  #ff3019 0%, #cf0404 100%); /* FF3.6+ */
   background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ff3019), color-stop(100%,#cf0404)); /* Chrome,Safari4+ */
@@ -945,7 +946,7 @@ border-left-width: 2em;
 border-right-width: 2em;
 border-top-width: 2em;
 border-bottom-width: 2em;
-top: -4.2em;
+top: -3.2em;
 
 }
 
@@ -1588,7 +1589,7 @@ clearInterval(univ_timer);
   $("#item2").css({display : "none"});
 
   IR_SWITCH = 2;
-  $('.wrap-camera').animate({ left: '45%' }, 1300, 'easeInOutCubic');
+  $('.wrap-camera').animate({ left: '35%' }, 1300, 'easeInOutCubic');
   document.querySelector('#instruction').style.top = "50px";
 
         univ_timer = setTimeout(function(){
@@ -1619,7 +1620,7 @@ $("#inscrip").on('click', function(){
   $("#item4").css({display : "block"});
   $("#item3").css({display : "none"});
 
-    $('.wrap-camera').animate({ left: '45%' }, 1300, 'easeInOutCubic');
+    $('.wrap-camera').animate({ left: '35%' }, 1300, 'easeInOutCubic');
       document.querySelector('#instruction').style.top = "50px"; 
   }
  
