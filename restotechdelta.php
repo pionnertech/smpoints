@@ -947,7 +947,7 @@ border-right-width: 2em;
 border-top-width: 2em;
 border-bottom-width: 2em;
 top: -3.3em;
-right: -5px;
+right: -30px;
 
 }
 
