@@ -2206,8 +2206,9 @@ $.event.special.tripleclick = {
 
 
 $("#locker").bind("tripleclick", function(){
-       $("#mesa").focus();
-       $("#mesa").css({visibility : "visible"});
+    $("#mesa").focus(function(){
+         $("#mesa").css({visibility : "visible"});
+    });
 });
 
 function resetBeta(){
