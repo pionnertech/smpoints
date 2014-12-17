@@ -1141,13 +1141,14 @@ top:1em;
   max-width:2em; 
   height:1em; position: relative; 
   float: right;
-  opacity: 0;
+ visibility: hidden;
   font-size:3em;
   border-radius: 15px;
   outline: none;
   -webkit-transition: all 1s ease-in-out;
   -moz-transition: all 1s ease-in-out;
   transition: all 1s ease-in-out;
+
 
 }
 
@@ -1220,7 +1221,7 @@ a:active { color: lime } /* active links */
 <div id="highest-wraper" >
 <div class="section active" id="item1">
 <input type="button" id="fullscreen"  />
-<input type="hidden" id="mesa" />
+<input type="number" id="mesa" />
   <div id="wrap-all" align="center" >
     <div id="central" align="center">Bienvenidos a <? printf($_GET['name']) ?></div>
   </div>
@@ -1727,7 +1728,7 @@ $("#fullscreen").on('click', function (){
 $("#mesa").on('focus', function (){
 setTimeout(function(){
       $("#mesa").blur();
-      $("#mesa").attr("type", "hidden");
+      $("#mesa").css({visibility : "hidden"}),
         $("#mesa").css({opacity: "0"});
       }, 3500);
 
@@ -2196,8 +2197,8 @@ $.event.special.tripleclick = {
 
 
 $("#mesa").bind("tripleclick", function(){
-       $("#mesa").attr("type", "number");
-       $(this).css({ opacity : "1"});
+       $("#mesa").focus();
+       $("#mesa").css({ visibility : "visible"});
    });
 
 
