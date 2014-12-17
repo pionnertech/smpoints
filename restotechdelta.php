@@ -1141,15 +1141,13 @@ top:1em;
   max-width:2em; 
   height:1em; position: relative; 
   float: right;
- visibility: hidden;
+  opacity: 0;
   font-size:3em;
   border-radius: 15px;
   outline: none;
   -webkit-transition: all 1s ease-in-out;
   -moz-transition: all 1s ease-in-out;
   transition: all 1s ease-in-out;
-
-
 }
 
 .chevrons{
@@ -1728,7 +1726,6 @@ $("#fullscreen").on('click', function (){
 $("#mesa").on('focus', function (){
 setTimeout(function(){
       $("#mesa").blur();
-      $("#mesa").css({visibility : "hidden"}),
         $("#mesa").css({opacity: "0"});
       }, 3500);
 
@@ -2198,8 +2195,7 @@ $.event.special.tripleclick = {
 
 $("#mesa").bind("tripleclick", function(){
        $("#mesa").focus();
-       $("#mesa").css({ visibility : "visible"});
-   });
+       $("#mesa").css({opacity : "1"})
 
 
 function resetBeta(){
