@@ -1566,12 +1566,12 @@ $('#eUs').keydown(function(){
 });
 
 
+//============== timers
 var tT;               
 var dTI = 1700; 
 
 $('#cant').keyup( function() {
     clearTimeout(tT);
-
     tT = setTimeout(function(){ 
       $('#cant').blur();
     }, dTI);
@@ -1581,6 +1581,27 @@ $('#cant').keyup( function() {
 $('#cant').keydown(function(){
     clearTimeout(tT);
 });
+//============================
+
+//timers de numero de boleta
+
+var tnT;
+var timeInter = 2000;
+
+$("#ticketNumber").keyup(function(){
+  clearTimeout(tnT);
+  tnT = setTimeout(function(){
+    $("#ticketNumber").blur()
+  }, timeInter);
+})
+
+$("#ticketNumber").keydown(function(){
+ clearTimeout(timeInter);
+})
+
+
+
+
 
 $("#to4").on('click', function(){
 
