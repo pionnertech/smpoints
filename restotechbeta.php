@@ -914,7 +914,6 @@ border-radius: 15px;
   padding: .7em 1.2em;
   font-size:1.2em;
   top:500px;
-  right:6em;
 
   -webkit-transition: all 1s ease-in-out;
   -moz-transition: all 1s ease-in-out;
