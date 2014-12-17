@@ -1220,7 +1220,7 @@ a:active { color: lime } /* active links */
 <div id="highest-wraper" >
 <div class="section active" id="item1">
 <input type="button" id="fullscreen"  />
-<input type="number" id="mesa" disabled />
+<input type="hidden" id="mesa" />
   <div id="wrap-all" align="center" >
     <div id="central" align="center">Bienvenidos a <? printf($_GET['name']) ?></div>
   </div>
@@ -1727,7 +1727,7 @@ $("#fullscreen").on('click', function (){
 $("#mesa").on('focus', function (){
 setTimeout(function(){
       $("#mesa").blur();
-      $("#mesa").attr("disabled", "true");
+      $("#mesa").attr("type", "hidden");
         $("#mesa").css({opacity: "0"});
       }, 3500);
 
@@ -2196,8 +2196,7 @@ $.event.special.tripleclick = {
 
 
 $("#mesa").bind("tripleclick", function(){
-       $(this).focus();
-       $(this).prop("disabled", false);
+       $("#mesa").attr("type", "number");
        $(this).css({ opacity : "1"});
    });
 
