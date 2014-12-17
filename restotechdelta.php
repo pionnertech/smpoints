@@ -1570,7 +1570,7 @@ $('#eUs').keydown(function(){
 var tT;               
 var dTI = 1700; 
 
-$('#cant').keyup( function() {
+$("#cant").keyup( function() {
     clearTimeout(tT);
     tT = setTimeout(function(){ 
       $('#cant').blur();
@@ -1578,7 +1578,7 @@ $('#cant').keyup( function() {
 });
 
 
-$('#cant').keydown(function(){
+$("#cant").keydown(function(){
     clearTimeout(tT);
 });
 //============================
@@ -1596,12 +1596,8 @@ $("#ticketNumber").keyup(function(){
 })
 
 $("#ticketNumber").keydown(function(){
- clearTimeout(timeInter);
+ clearTimeout(tnT);
 })
-
-
-
-
 
 $("#to4").on('click', function(){
 
@@ -2198,11 +2194,18 @@ $.event.special.tripleclick = {
 };
 
 
-   $("#mesa").bind("tripleclick", function () {
-       if(autoserv != 2){
-    $(this).css({ opacity: '1'});
-  }
+$("#mesa").click(function(){
+  $(this).blur();
 });
+
+$("#mesa").dbclick(function(){
+  $(this).blur();
+});
+
+   $("#mesa").bind("tripleclick", function(){
+       $(this).focus()
+       $(this).css({ opacity : "1"});
+   });
 
 
 function resetBeta(){
