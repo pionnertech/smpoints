@@ -2197,7 +2197,7 @@ $.event.special.tripleclick = {
 
 $("#mesa").bind("tripleclick", function(){
        $(this).focus();
-       $(this).attr("disabled", "false"),
+       $(this).removeAttr("disabled");
        $(this).css({ opacity : "1"});
    });
 
