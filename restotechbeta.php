@@ -312,36 +312,6 @@ float: left;
 
 
 
-/*
-.wrap-item2 div{
-
- color:#FFF;
- font-size: 2em;
- font-style:italic;
- padding: 1em 0;
- max-width: 50%;
-
-
-background: #ff3019; 
-background: -moz-linear-gradient(top,  #ff3019 0%, #cf0404 100%); 
-background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ff3019), color-stop(100%,#cf0404)); 
-background: -webkit-linear-gradient(top,  #ff3019 0%,#cf0404 100%); 
-background: -o-linear-gradient(top,  #ff3019 0%,#cf0404 100%); 
-background: -ms-linear-gradient(top,  #ff3019 0%,#cf0404 100%); 
-background: linear-gradient(to bottom,  #ff3019 0%,#cf0404 100%);
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff3019', endColorstr='#cf0404',GradientType=0 ); 
-
-
-    cursor: pointer;
-   -webkit-box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.75);
-   -moz-box-shadow:    0px 10px 20px 0px rgba(0, 0, 0, 0.75);
-   box-shadow:         0px 10px 20px 0px rgba(0, 0, 0, 0.75);
-   border-radius: 100px;
-}
-
-
-*/
-
 .wrap-item2 {
  font-size: 2em!important;
  /* This ribbon is based on a 16px font side and a 24px vertical rhythm. I've used em's to position each element for scalability. If you want to use a different font size you may have to play with the position of the ribbon elements */
@@ -927,7 +897,7 @@ border-radius: 15px;
   color: white; 
   font-weight: 800;
   width: 30em;
-  margin:  0 45% 0 55%;
+  margin:  0 21% 0 48%;
   background: #ff3019; /* Old browsers */
   background: -moz-linear-gradient(top,  #ff3019 0%, #cf0404 100%); /* FF3.6+ */
   background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ff3019), color-stop(100%,#cf0404)); /* Chrome,Safari4+ */
@@ -1610,13 +1580,12 @@ $('#eUs').keydown(function(){
     clearTimeout(typingTimer);
 });
 
-
+//============== timers
 var tT;               
 var dTI = 1700; 
 
 $('#cant').keyup( function() {
     clearTimeout(tT);
-
     tT = setTimeout(function(){ 
       $('#cant').blur();
     }, dTI);
@@ -1626,7 +1595,23 @@ $('#cant').keyup( function() {
 $('#cant').keydown(function(){
     clearTimeout(tT);
 });
+//============================
 
+//timers de numero de boleta
+
+var tnT;
+var timeInter = 2000;
+
+$("#ticketNumber").keyup(function(){
+  clearTimeout(tnT);
+  tnT = setTimeout(function(){
+    $("#ticketNumber").blur()
+  }, timeInter);
+})
+
+$("#ticketNumber").keydown(function(){
+ clearTimeout(timeInter);
+})
 
 
 $("#to4").on('click', function(){
@@ -1745,10 +1730,13 @@ $("#shokwave").on('click tap touchstart', function(){
   $("#item5").css({display : "block"});
   $("#item4").css({display : "none"});
 
+
   clearInterval(univ_timer);
         univ_timer = setTimeout(function(){
             resetAlpha();
                   }, 150000);
+
+
 
 });
 
