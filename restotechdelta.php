@@ -2196,7 +2196,7 @@ $.event.special.tripleclick = {
 $("#mesa").bind("tripleclick", function(){
        $("#mesa").focus();
        $("#mesa").css({opacity : "1"})
-
+});
 
 function resetBeta(){
 
