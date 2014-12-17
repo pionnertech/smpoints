@@ -946,7 +946,8 @@ border-left-width: 2em;
 border-right-width: 2em;
 border-top-width: 2em;
 border-bottom-width: 2em;
-top: -3.2em;
+top: -3.3em;
+right: -5px;
 
 }
 
@@ -2129,7 +2130,7 @@ function resetAlpha(){
 
   $("#ticketNumber").blur();
   $("#cant").blur();
-  
+
  gallery_interval = setInterval(function(){
   $("span.dg-next").trigger('click');
  }, 3000);
@@ -2194,9 +2195,10 @@ function resetBeta(){
   $('#errado').css({ color : "white"});
   $("#garID").val('');
 
-   document.querySelector("#contenedor-promos").style.top ="-107px";
+   document.querySelector("#contenedor-promos").style.top ="-120px";
    $("#contenedor-promos").slickGoTo(0);
    document.querySelector(".cdown").style.top ="8em";
+   document.querySelector(".cdown").style.right ="9.3em";
    document.querySelector('#contenedor-promos').style.right= "-7.9%"; 
 
 
