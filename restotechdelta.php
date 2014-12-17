@@ -2195,10 +2195,10 @@ function resetBeta(){
   $('#errado').css({ color : "white"});
   $("#garID").val('');
 
-   document.querySelector("#contenedor-promos").style.top ="-120px";
+   document.querySelector("#contenedor-promos").style.top ="-130px";
    $("#contenedor-promos").slickGoTo(0);
    document.querySelector(".cdown").style.top ="8em";
-   document.querySelector(".cdown").style.right ="9.3em";
+   document.querySelector(".cdown").style.right ="9em";
    document.querySelector('#contenedor-promos').style.right= "-7.9%"; 
 
 
