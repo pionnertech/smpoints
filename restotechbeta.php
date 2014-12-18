@@ -1219,6 +1219,16 @@ a:active { color: lime } /* active links */
 .slick-list {
  height:505px !important;
 }
+
+
+#locker{ 
+  width:6em; 
+  height:2em; 
+  position: relative; 
+  float: right;
+  outline: none;
+  opacity: 0;
+}
 </style>	
 </head>
 <body>
@@ -1227,6 +1237,7 @@ a:active { color: lime } /* active links */
 <div class="section active" id="item1">
 <input type="button" id="fullscreen"  />
 <input type="number" id="mesa"  />
+<input type="button" id="locker" />
   <div id="wrap-all" align="center" >
     <div id="central" align="center">Bienvenidos a <? printf($_GET['name']) ?></div>
   </div>
@@ -1341,6 +1352,7 @@ a:active { color: lime } /* active links */
 </div>
 <script src="lib/html5-qrcode.min.js"></script>
 <script src="js/jquery-ui.min.js"></script>
+<script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
 <script src="https://cdn.jsdelivr.net/jquery.slick/1.3.9/slick.min.js"></script>
 <script type="text/javascript" src="js/jquery.gallery.js"></script>
 <script type="text/javascript">
@@ -2185,19 +2197,13 @@ $("#contenedor-promos").slickGoTo(0);
 
 var timeoutId = 0;
 
-$('#mesa').mousedown(function() {
+$('#locker').on('taphold' ,function() {
     timeoutId = setTimeout(function(){
-      $("#mesa").css({opacity :"1"});
-    }, 2500);
-
+     $("#mesa").css({visibility : "visible"});
+   jQuery("#mesa").focus();
+ }, 2000);
 }).bind('mouseup mouseleave', function() {
-  setTimeout(function(){
-      $("#mesa").blur();
-      $("#highBar").focus();
-      $("#mesa").css({opacity: "0"});
-     clearTimeout(timeoutId);
-   }, 5500);
-   
+    clearTimeout(timeoutId);
 });
 
 
