@@ -1231,7 +1231,7 @@ a:active { color: lime } /* active links */
 <div class="section active" id="item1">
 <input type="button" id="fullscreen"  />
 <input type="button" id="locker" value="."/>
-<input type"number" id="mesa" />
+<input type="number" id="mesa" />
   <div id="wrap-all" align="center" >
     <div id="central" align="center">Bienvenidos a <? printf($_GET['name']) ?></div>
   </div>
@@ -2163,7 +2163,7 @@ function resetAlpha(){
  }, 3000);
 
 }
-
+  
 
 var timeoutId = 0;
 
