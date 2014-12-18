@@ -1625,7 +1625,7 @@ clearInterval(univ_timer);
 
         univ_timer = setTimeout(function(){
             resetAlpha();
-                  }, 150000);
+                  }, 250000);
   
 });
 
@@ -1636,7 +1636,7 @@ $("#to3").on('click', function(){
 clearInterval(univ_timer);
         univ_timer = setTimeout(function(){
             resetAlpha();
-                  }, 150000);
+                  }, 250000);
   $("#item3").css({display : "block"});
   $("#item2").css({display : "none"});
   IR_SWITCH = 1;
@@ -2161,6 +2161,7 @@ function resetAlpha(){
  gallery_interval = setInterval(function(){
   $("span.dg-next").trigger('click');
  }, 3000);
+ clearTimeout(univ_timer);
 
 }
   

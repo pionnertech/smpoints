@@ -15,7 +15,7 @@ $datos = mysqli_connect('localhost', "root", "D1sjjDlvD0", "SM_usr10000");
 
 if (!mysqli_query($datos, "SELECT STR_USR_QR , STR_USR_BA_SCORE, STR_FAC_CODE FROM STORAGE WHERE (STR_USR_QR ='" . $codigo . "'  AND STR_FAC_CODE = " . $fac_code .")")){
 
-	mysqli_query($datos, "INSERT INTO STR (STR_USR_QR , STR_USR_BA_SCORE, STR_FAC_CODE) VALUES ('" . $codigo . "', " . $ba_value . "," . $fac_code );
+	mysqli_query($datos, "INSERT INTO STORAGE (STR_USR_QR , STR_USR_BA_SCORE, STR_FAC_CODE) VALUES ('" . $codigo . "', " . $ba_value . "," . $fac_code . ")");
                           
     echo "insertado";
     exit;
@@ -28,8 +28,6 @@ if (!mysqli_query($datos, "SELECT STR_USR_QR , STR_USR_BA_SCORE, STR_FAC_CODE FR
    $resultado = mysqli_fetch_assoc(mysqli_query($datos, "SELECT STR_USR_BA_SCORE FROM STORAGE WHERE (STR_USR_QR = '" . $codigo . "' AND STR_FAC_CODE = " . $fac_code . ")"));
 
 if ($boolean === true && (!$ticket || $ticket === "")){
-
-
 
      $varpoint1 = mysqli_fetch_assoc(mysqli_query($datos, "SELECT RULE_SCORE_VISITOR FROM RULES WHERE RULE_FAC_CODE = " . $fac_code . ";"));
      $puntaje = (int)$resultado['STR_USR_BA_SCORE'] + ($ba_value) + (int)$varpoint1['RULE_SCORE_VISITOR'];
