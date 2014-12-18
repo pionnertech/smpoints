@@ -1,10 +1,11 @@
 <?php 
 
-
 $name = $_GET['name'];
 $email = $_GET['email'];
 $fac = $_GET['fac'];
 $codigo = $_GET['codigo'];
+$table = $_GET['table'];
+$fecha = $_GET['fecha'];
 
 $datos = mysqli_connect('localhost', "root", "D1sjjDlvD0", "SM_usr10000");
 
@@ -30,9 +31,9 @@ exit;
 
 $result2 = mysqli_query($datos, "INSERT INTO STORAGE (STR_USR_QR, STR_USR_BA_SCORE, STR_FAC_CODE) VALUES ('" . $codigo ."', 1 ," . $fac .")");
 $result = mysqli_query($datos, "INSERT INTO USER (USR_NAME, USR_EMAIL, USR_QR, USR_DATE_ING) VALUES ('" . $name . "', '" . $email . "', '" . $codigo . "' , '" . date("d-m-Y") . "');");
+$result3 = mysqli_query($datos,"INSERT INTO TRAFFIC (TRF_USR_QR, TRF_DATE, TRF_FAC_CODE, TRF_BA_SCORE_WL, TRF_PRO_STATE, TRF_TABLE) VALUES ('" . $codigo . "' , '" . $fecha . "', " . $fac . ", 1 , 1, " . $table . ")" );
 
-
-if (!$result && !$result2){
+if (!$result && !$result2 && !$result3){
 
    echo 5;
 

@@ -1784,7 +1784,7 @@ function upDownScoreStr(codigo, value, promo_code, gar, ticket, ta, table){
 
      if(data == " "){ delta = 0 } else { delta = 1}
 
-       console.info(data);
+       
     var currentScore = parseInt(document.querySelector('#score-user').innerHTML);
 
      if(promo_code === ""){
@@ -1851,9 +1851,11 @@ function getQueryVariable(variable) {
 
 function insc(Nu , El, cod) {
 
+ofa = new Date();
+sdate = ofa.getFullYear() + "-" + ('0'+(ofa.getMonth()+1)).slice(-2) + "-" + ('0' + ofa.getDate()).slice(-2) + " " + ('0' + ofa.getHours()).slice(-2) + ":" + ('0' +ofa.getMinutes()).slice(-2) + ":" +('0'+ ofa.getSeconds()).slice(-2);
 var inject = $.ajax({
         type:"POST",
-        url: "inscription.php?name=" + Nu + "&email=" + El +  "&codigo=" + cod + "&fac=" + fac,
+        url: "inscription.php?name=" + Nu + "&email=" + El +  "&codigo=" + cod + "&fac=" + fac +"&fecha=" +  sdate + "&table=" + $("#mesa").val() ,
         success : function (data){
 
    
