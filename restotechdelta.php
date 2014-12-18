@@ -1614,9 +1614,7 @@ $("#to4").on('click', function(){
 
 clearInterval(univ_timer);
 clearInterval(univ_timer);
-        univ_timer = setTimeout(function(){
-            resetAlpha();
-                  }, 150000);
+
   $("#item4").css({display : "block"});
   $("#item2").css({display : "none"});
 
@@ -2166,51 +2164,17 @@ function resetAlpha(){
 }
 
 
-$.event.special.tripleclick = {
+var timeoutId = 0;
 
-    setup: function(data, namespaces) {
-        var elem = this, $elem = jQuery(elem);
-        $elem.bind('click', jQuery.event.special.tripleclick.handler);
-    },
-
-    teardown: function(namespaces) {
-        var elem = this, $elem = jQuery(elem);
-        $elem.unbind('click', jQuery.event.special.tripleclick.handler)
-    },
-
-    handler: function(event) {
-        var elem = this, $elem = jQuery(elem), clicks = $elem.data('clicks') || 0, start = $elem.data('startTimeTC') || 0;
-        if ((new Date().getTime() - start)>= 1000) {
-            clicks = 0;
-        }
-        clicks += 1;
-        if(clicks === 1) {
-            start = new Date().getTime();
-        }
-        
-        if ( clicks === 3 ) {
-            clicks = 0;
-
-            // set event type to "tripleclick"
-            event.type = "tripleclick";
-            
-            // let jQuery handle the triggering of "tripleclick" event handlers
-            $elem.trigger('tripleclick');
-        }
-        
-        $elem.data('clicks', clicks);
-        $elem.data('startTimeTC', start);
-    }
-    
-};
-
-
-$("#locker").bind("tripleclick", function(){
-   $("#mesa").css({visibility : "visible"});
-    $("#mesa").focus();
-         
-
+$('#locker').mousedown(function() {
+    timeoutId = setTimeout(function(){
+     $("#mesa").css({visibility : "visible"});
+   jQuery("#mesa").focus();
+ } ,2000);
+}).bind('mouseup mouseleave', function() {
+    clearTimeout(timeoutId);
 });
+
 
 function resetBeta(){
 
