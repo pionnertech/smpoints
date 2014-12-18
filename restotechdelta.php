@@ -1157,8 +1157,8 @@ top:1em;
   opacity:0;
   vertical-align: top;
   outline: none;
-  width:8em; 
-  height:2.5em;
+  width:12em; 
+  height:4.5em;
 }
 
 .chevrons{
