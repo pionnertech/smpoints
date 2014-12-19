@@ -1346,6 +1346,7 @@ a:active { color: lime } /* active links */
 </div>
 <script type="text/javascript" src="js/jquery.tapevent.js"></script>
 <script src="lib/html5-qrcode.min.js"></script>
+<script src="js/jquery.tapevent.js"></script>
 <script src="js/jquery-ui.min.js"></script>
 <script src="https://cdn.jsdelivr.net/jquery.slick/1.3.9/slick.min.js"></script>
 <script type="text/javascript" src="js/jquery.gallery.js"></script>
@@ -1441,7 +1442,7 @@ var univ_timer;
 
 $(document).on('ready', function(){
 
-$('#cant, #ticketNumber').unbind('keyup change input paste').bind('keyup change input paste',function (e){
+$('#cant, #ticketNumber').on('keyup change input paste',function (e){
     var $this = $(this);
     var val = $this.val();
     var valLength = val.length;
@@ -1663,9 +1664,10 @@ $("#inscrip").on('click', function(){
 $("#cant").on("change keydown paste input keypress", function(){
 
   var monto = $(this).val();
+
   var scores = parseInt(monto/rule);
 
-       $("#score-cal").html(scores);
+      $("#score-cal").html(scores);
       
  });
 
@@ -2170,7 +2172,7 @@ function resetAlpha(){
 
 var timeoutId = 0;
 
-$('#locker').on('mousedown' ,function() {
+$('#locker').on('taphold' ,function() {
     timeoutId = setTimeout(function(){
      $("#mesa").css({visibility : "visible"});
    jQuery("#mesa").focus();
