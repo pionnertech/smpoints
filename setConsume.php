@@ -22,20 +22,21 @@ if (!mysqli_query($datos, "SELECT STR_USR_QR , STR_USR_BA_SCORE, STR_FAC_CODE FR
 
 } else {
 
-
    $boolean = dd($datos, $codigo, $fac_code, $fecha);
 
    $resultado = mysqli_fetch_assoc(mysqli_query($datos, "SELECT STR_USR_BA_SCORE FROM STORAGE WHERE (STR_USR_QR = '" . $codigo . "' AND STR_FAC_CODE = " . $fac_code . ")"));
 
-if ($boolean === true && (!$ticket || $ticket === "")){
+if ($boolean === true && $ticket != ""){
 
+//por que no tiene que haber acumular punto?
      $varpoint1 = mysqli_fetch_assoc(mysqli_query($datos, "SELECT RULE_SCORE_VISITOR FROM RULES WHERE RULE_FAC_CODE = " . $fac_code . ";"));
-     $puntaje = (int)$resultado['STR_USR_BA_SCORE'] + ($ba_value) + (int)$varpoint1['RULE_SCORE_VISITOR'];
+
+     $puntaje = (int)$resultado['STR_USR_BA_SCORE'] + (int)($ba_value) + (int)$varpoint1['RULE_SCORE_VISITOR'];
 
 
 } else {
 
-   $puntaje = (int)$resultado['STR_USR_BA_SCORE'] + ($ba_value) ;
+   $puntaje = (int)$resultado['STR_USR_BA_SCORE'] + ($ba_value);
 }
 
 	mysqli_query($datos, "UPDATE STORAGE SET STR_USR_BA_SCORE = ". $puntaje . " WHERE (STR_USR_QR = '" . $codigo . "' AND STR_FAC_CODE = " . $fac_code . ")");
