@@ -1344,6 +1344,7 @@ a:active { color: lime } /* active links */
    </div>
 </div>
 </div>
+<script type="text/javascript" src="js/jquery.tapevent.js"></script>
 <script src="lib/html5-qrcode.min.js"></script>
 <script src="js/jquery-ui.min.js"></script>
 <script src="https://cdn.jsdelivr.net/jquery.slick/1.3.9/slick.min.js"></script>
