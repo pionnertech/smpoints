@@ -1346,7 +1346,6 @@ a:active { color: lime } /* active links */
 </div>
 <script src="lib/html5-qrcode.min.js"></script>
 <script src="js/jquery-ui.min.js"></script>
-<script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
 <script src="https://cdn.jsdelivr.net/jquery.slick/1.3.9/slick.min.js"></script>
 <script type="text/javascript" src="js/jquery.gallery.js"></script>
 <script type="text/javascript">
