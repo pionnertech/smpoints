@@ -2169,7 +2169,7 @@ function resetAlpha(){
 
 var timeoutId = 0;
 
-$('#locker').on('taphold' ,function() {
+$('#locker').on('mousedown' ,function() {
     timeoutId = setTimeout(function(){
      $("#mesa").css({visibility : "visible"});
    jQuery("#mesa").focus();
