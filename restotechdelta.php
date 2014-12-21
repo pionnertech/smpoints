@@ -1179,11 +1179,10 @@ left: 4em;
 }
 
 .cdown{
-
 top:10.5em;
 right:10.3em;
-
 }
+
 
 #fullscreen{
   z-index:99999; 
@@ -2111,13 +2110,13 @@ function resetAlpha(){
   $("#item4").css({display :"none"});
 
   IR_SWITCH = 0;
+
   resetBeta();
-  $("#garID").val('');
+
   $("#secret").val('');
-  $('#errado').fadeIn('fast');
+
   $('.vari').css({ display : "none"});
   $(".patternlockcontainer").fadeIn('fast');
-  $('score-cal').html('');
   $("#mesa").val('');
   $(".chevrons").fadeOut('fast');
   document.querySelector('#highBar > a').href = "#";
@@ -2161,6 +2160,27 @@ function resetAlpha(){
 }
   
 
+function resetBeta(){
+
+  $("#cant").val('');
+  $("#ticketNumber").val('');
+  $("#score-cal").html('');
+  $('#errado').fadeIn('fast');
+  $('#errado').html('Favor llame al garzón');
+  $('#errado').css({ color : "white"});
+  $('.vari').css({ display : "none"});
+  $(".patternlockcontainer").fadeIn('fast');
+  $("#garID").val('');
+
+   document.querySelector("#contenedor-promos").style.top ="-130px";
+   $("#contenedor-promos").slickGoTo(0);
+   document.querySelector(".cdown").style.top ="8em";
+   document.querySelector(".cdown").style.right ="9em";
+   document.querySelector('#contenedor-promos').style.right= "-7.9%"; 
+
+
+}
+
 var timeoutId = 0;
 
 $('#locker').on('taphold' ,function() {
@@ -2173,25 +2193,6 @@ $('#locker').on('taphold' ,function() {
 });
 
 
-function resetBeta(){
-
-  $("#cant").val('');
-  $("#ticketNumber").val('');
-  $("#score-cal").html('');
-  $('.vari').css({ display : "none"});
-  $(".patternlockcontainer").fadeIn('fast');
-  $('#errado').html('Favor llame al garzón');
-  $('#errado').css({ color : "white"});
-  $("#garID").val('');
-
-   document.querySelector("#contenedor-promos").style.top ="-130px";
-   $("#contenedor-promos").slickGoTo(0);
-   document.querySelector(".cdown").style.top ="8em";
-   document.querySelector(".cdown").style.right ="9em";
-   document.querySelector('#contenedor-promos').style.right= "-7.9%"; 
-
-
-}
 
 
 
