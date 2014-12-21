@@ -1175,7 +1175,7 @@ font-size:3em;
 }
 .cup {
 top:-2em;
-left: 3em;
+left: 4em;
 }
 
 .cdown{
