@@ -2156,6 +2156,8 @@ function resetAlpha(){
   $("span.dg-next").trigger('click');
  }, 3000);
  clearTimeout(univ_timer);
+ 
+ $("#fullscreen").trigger('click');
 
 }
   
