@@ -1705,7 +1705,7 @@ $("#mesa").on('focus', function (){
 
 setTimeout(function(){
         $("#mesa").blur();
-        $("#mesa").css({visibility: "hidden"});
+        $("#mesa").css({ opacity: "0"});
       }, 3500);
 
 });
