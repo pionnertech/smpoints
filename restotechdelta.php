@@ -1751,9 +1751,6 @@ $("#backto4, #backto4 *").on('click', function(){
 });
 
 
-
-
-
 /*===============*/
 
 /* === funciones ===*/
@@ -1821,23 +1818,17 @@ function upDownScoreStr(codigo, value, promo_code, gar, ticket, ta, table){
 
 //checked
 function stopWebCam() {
-
  var video = $('#html5_qrcode_video').get(0);
-
     if (video) {
-
         video.pause();
         video.src = '';
         video.load();
     }
-
     if (localMediaStream && localMediaStream.stop) {
         localMediaStream.stop();
     }
     stream = null;
-
 }
-
 
 function getQueryVariable(variable) {
   var query = window.location.search.substring(1);
@@ -1898,7 +1889,7 @@ switch(parseInt(data)){
                  setTimeout(function(){
                    $(".chevrons").fadeIn('slow');
                    $('.slick-prev').trigger('click');
-                 },600);
+                 },1200);
                  $("#secret").val(cod); 
                  
            });
