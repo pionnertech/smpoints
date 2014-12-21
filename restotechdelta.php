@@ -1142,7 +1142,7 @@ top:1em;
   max-width:2em; 
   height:1em; position: relative; 
   float: right;
-  visibility:hidden;
+  opacity: 0;
   font-size:3em;
   border-radius: 15px;
   outline: none;
