@@ -1165,8 +1165,8 @@ font-size:3em;
   color: red !important;
 }
 .cup {
-top:-2em;
-left: 3.5em;
+top:-1.6em;
+left: 3.2em;
 }
 
 .cdown{
@@ -1211,7 +1211,6 @@ a:active { color: lime } /* active links */
 .slick-list {
  height:505px !important;
 }
-
 
 </style>  
 </head>
