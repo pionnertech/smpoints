@@ -1171,7 +1171,7 @@ left: 3.5em;
 
 .cdown{
 top:10.5em;
-right:10.3em;
+right:9.9em;
 }
 
 
@@ -1333,7 +1333,6 @@ a:active { color: lime } /* active links */
    </div>
 </div>
 </div>
-<script type="text/javascript" src="js/jquery.tapevent.js"></script>
 <script src="lib/html5-qrcode.min.js"></script>
 <script src="js/jquery.tapevent.js"></script>
 <script src="js/jquery-ui.min.js"></script>
