@@ -547,18 +547,7 @@ width:20%;
   white-space: nowrap;
 }
 
-#custom-custom td {
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
 
-.row{
-    width:10%;
-}
-.row-link{
-   width:20%;
-}
 </style>
 </head>
 <body>
