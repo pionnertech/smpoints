@@ -547,9 +547,18 @@ width:20%;
   white-space: nowrap;
 }
 
+#custom-custom td {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
 
-
-
+.row{
+    width:10%;
+}
+.row-link{
+   width:20%;
+}
 </style>
 </head>
 <body>
@@ -1162,26 +1171,26 @@ width:20%;
      <table class="table table-bordered table-hover table-striped" id="custom-custom">
          <thead>
             <tr>
-                 <th><strong>Nombre</strong></th>
-                 <th><strong>Apellido</strong></th>
-                 <th><strong>Establecimiento</strong></th>
-                 <th><strong>Usuario</strong></th>
-                 <th><strong>Password</strong></th>
-                 <th><strong>Link interfaz comensal</strong></th>
-                 <th style="min-width:130px;"><strong>Borrar</strong></th>
+                 <th class="row-1 row"><strong>Nombre</strong></th>
+                 <th class="row-2 row"><strong>Apellido</strong></th>
+                 <th class="row-3 row"><strong>Establecimiento</strong></th>
+                 <th class="row-4 row"><strong>Usuario</strong></th>
+                 <th class="row-5 row"><strong>Password</strong></th>
+                 <th class="row-6 row-link"><strong>Link interfaz comensal</strong></th>
+                 <th class="row-7 row"><strong>Borrar</strong></th>
             </tr>
          </thead>
          <tbody id="list-client">
   <? while ($fila8 = mysqli_fetch_row($client_side)){ ?>
             <tr>
                  <input type="hidden" value="<? printf($fila8[0]) ?>" id="client-side-id">
-                 <td class="row-1 row"><span class="client-side-list"><? printf($fila8[7]) ?></span></td>
-                 <td class="row-2 row"><span class="client-side-list"><? printf($fila8[8]) ?></span></td>
-                 <td class="row-3 row"><span class="client-side-list"><? printf($fila8[2]) ?></span></td>
-                 <td class="row-4 row"><span class="client-side-list"><? printf($fila8[4]) ?></span></td>
-                 <td class="row-5 row"><span class="client-side-list"><? printf($fila8[3]) ?></span></td>
-                 <td class="row-6 row-link"><span>https://smilepoints.cl/restotechbeta.php?f=1&facility=<? printf($fila8[1]) ?>&name=<? printf(urlencode($fila8[2])) ?></td>
-                 <td class="row-7 row"><span class="borrar"><i class="fa fa-eraser fa-2x"></i></span></td>
+                 <td><span class="client-side-list"><? printf($fila8[7]) ?></span></td>
+                 <td><span class="client-side-list"><? printf($fila8[8]) ?></span></td>
+                 <td><span class="client-side-list"><? printf($fila8[2]) ?></span></td>
+                 <td><span class="client-side-list"><? printf($fila8[4]) ?></span></td>
+                 <td><span class="client-side-list"><? printf($fila8[3]) ?></span></td>
+                 <td><span>https://smilepoints.cl/restotechbeta.php?f=1&facility=<? printf($fila8[1]) ?>&name=<? printf(urlencode($fila8[2])) ?></td>
+                 <td><span class="borrar"><i class="fa fa-eraser fa-2x"></i></span></td>
             </tr>
 
             <? } ?>
