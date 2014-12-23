@@ -542,7 +542,7 @@ width:20%;
 }
 
 #custom-custom{
-      table-layout: fixed;
+      table-layout: auto;
   width: 100%;
   white-space: nowrap;
 }
