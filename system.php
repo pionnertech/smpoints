@@ -541,8 +541,24 @@ width:20%;
     font-weight: bolder;
 }
 
+#custom-custom{
+      table-layout: fixed;
+  width: 100%;
+  white-space: nowrap;
+}
 
+#custom-custom td {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
 
+.row{
+    width:10%;
+}
+.row-link{
+   width:20%;
+}
 </style>
 </head>
 <body>
@@ -1152,7 +1168,7 @@ width:20%;
 
 <div class="row over-cliente" id="clientes">
     <div class="col-lg-12" align="center" id="main-customers">
-     <table class="table table-bordered table-hover table-striped">
+     <table class="table table-bordered table-hover table-striped" id="custom-custom">
          <thead>
             <tr>
                  <th><strong>Nombre</strong></th>
@@ -1168,13 +1184,13 @@ width:20%;
   <? while ($fila8 = mysqli_fetch_row($client_side)){ ?>
             <tr>
                  <input type="hidden" value="<? printf($fila8[0]) ?>" id="client-side-id">
-                 <td><span class="client-side-list"><? printf($fila8[7]) ?></span></td>
-                 <td><span class="client-side-list"><? printf($fila8[8]) ?></span></td>
-                 <td><span class="client-side-list"><? printf($fila8[2]) ?></span></td>
-                 <td><span class="client-side-list"><? printf($fila8[4]) ?></span></td>
-                 <td><span class="client-side-list"><? printf($fila8[3]) ?></span></td>
-                 <td><span>https://smilepoints.cl/restotechbeta.php?f=1&facility=<? printf($fila8[1]) ?>&name=<? printf(urlencode($fila8[2])) ?></td>
-                 <td style="min-width:40px;"><span class="borrar"><i class="fa fa-eraser fa-2x"></i></span></td>
+                 <td class="row-1 row"><span class="client-side-list"><? printf($fila8[7]) ?></span></td>
+                 <td class="row-2 row"><span class="client-side-list"><? printf($fila8[8]) ?></span></td>
+                 <td class="row-3 row"><span class="client-side-list"><? printf($fila8[2]) ?></span></td>
+                 <td class="row-4 row"><span class="client-side-list"><? printf($fila8[4]) ?></span></td>
+                 <td class="row-5 row"><span class="client-side-list"><? printf($fila8[3]) ?></span></td>
+                 <td class="row-6 row-link"><span>https://smilepoints.cl/restotechbeta.php?f=1&facility=<? printf($fila8[1]) ?>&name=<? printf(urlencode($fila8[2])) ?></td>
+                 <td class="row-7 row"><span class="borrar"><i class="fa fa-eraser fa-2x"></i></span></td>
             </tr>
 
             <? } ?>
