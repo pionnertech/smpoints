@@ -1173,7 +1173,7 @@ width:20%;
                  <td><span class="client-side-list"><? printf($fila8[2]) ?></span></td>
                  <td><span class="client-side-list"><? printf($fila8[4]) ?></span></td>
                  <td><span class="client-side-list"><? printf($fila8[3]) ?></span></td>
-                 <td><span>restotech.cl/Qrmotion/restotechbeta.php?f=1&facility=<? printf($fila8[1]) ?>&name=<? printf(urlencode($fila8[2])) ?></td>
+                 <td><span>https://smilepoints.cl/restotechbeta.php?f=1&facility=<? printf($fila8[1]) ?>&name=<? printf(urlencode($fila8[2])) ?></td>
                  <td style="min-width:130px;"><span class="borrar"><i class="fa fa-eraser fa-2x"></i></span></td>
             </tr>
 
