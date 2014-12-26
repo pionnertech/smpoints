@@ -28,7 +28,7 @@ if(isset($_POST["submit"])) {
 //check if directory exist 
 
 if(!is_dir($target_dir)){
-    chmod("/var/www/html/images/",  0775);
+    chmod("/var/www/html/images/" . $fac . "/",  0775);
   mkdir($target_dir, 0775);
 } 
 
@@ -57,7 +57,7 @@ if ($uploadOk == 0) {
 } else {
 
 
-$newfilename = $code . '.jpg';
+$newfilename = "background-client.jpg";
 
     if (move_uploaded_file($_FILES["background-client"]["tmp_name"], $target_dir . $newfilename)) {
         echo "The file " . basename($_FILES["background-client"]["tmp_name"]) . " has been uploaded.";

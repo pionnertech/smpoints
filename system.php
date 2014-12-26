@@ -50,11 +50,13 @@ $res_ponderate = "";
 
 if(!is_null($checkit['FAC_AUX_USER'])){
     $res_ponderate = $checkit;
-    $cards = mysqli_fetch_assoc(mysqli_query($datos, "SELECT  PER_NAME, PER_SURNAME, PER_ID FROM PERSONAL WHERE (PER_AUX_USER = 1 AND PER_FAC_CODE = " . $_SESSION['TxtCode'] .")"));
+    $cards = mysqli_fetch_assoc(mysqli_query($datos, "SELECT PER_NAME, PER_SURNAME, PER_ID FROM PERSONAL WHERE (PER_AUX_USER = 1 AND PER_FAC_CODE = " . $_SESSION['TxtCode'] .")"));
     $checkit = 'disabled="true"';
   
 } else {
+
     $checkit = '';
+
 }
 
 
@@ -985,6 +987,7 @@ width:20%;
 
                     while($fila1 = mysqli_fetch_row($Res_Per)){
 
+
                  if($fila1[6] != 1){
                 ?>
                 <tr>
@@ -1021,8 +1024,20 @@ width:20%;
                             <input type="hidden" value="<? printf($cards['PER_ID']) ?>" />
                             <td><? printf($cards['PER_NAME']) ?></td>
                             <td><? printf($cards['PER_SURNAME']) ?></td>
-                            <td><? printf($res_ponderate['FAC_AUX_USER']) ?></td>
-                            <td><? printf($res_ponderate['FAC_AUX_PASS'])?></td>
+                            <td><? if($res_ponderate !== "" ) { 
+
+                                printf($res_ponderate['FAC_AUX_USER']);
+
+                           }
+                                ?>
+                                </td>
+                            <td><?
+                            if($res_ponderate !== ""){
+
+                             printf($res_ponderate['FAC_AUX_PASS']);
+
+                              }
+                             ?></td>
                       </tr>
 
                   </tbody>
