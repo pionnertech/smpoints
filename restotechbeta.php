@@ -1679,7 +1679,12 @@ $("#item1").css({display : "block"});
   $('.vari').css({ display : "none"});
   $(".patternlockcontainer").fadeIn('fast');
   $('score-cal').html('');
-  $("#mesa").val('');
+  if(autoserv !=1){
+
+  } else {
+     $("#mesa").val('');
+  }
+ 
   $(".chevrons").fadeOut('fast');
   document.querySelector('#highBar > a').href = "#";
   document.querySelector('#instruction').style.visibility = "visible";
@@ -1707,6 +1712,8 @@ $("#item1").css({display : "block"});
   clearInterval(gallery_interval);
   clearInterval(gallery_interval);
    gallery_interval = setInterval(function(){$("span.dg-next").trigger('click')} ,3000); 
+
+
 }
 function resetBeta(){
   $("#cant").val('');
