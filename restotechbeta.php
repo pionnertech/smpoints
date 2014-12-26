@@ -957,11 +957,12 @@ right:11em;
 #fullscreen{
   z-index:99999; 
   width: 130px; 
-  height: 50px; 
+  height: 1px; 
   background-color: rgba(0, 0 ,0 , 0); 
   position: relative; 
   float: left;
   cursor:pointer;
+  outline:none;
 }
 #errado{
   color:#fff; 
@@ -1162,6 +1163,7 @@ var code = $("#secret").val();
 var univ_timer;
 // checkeado;
 $(document).on('ready', function(){
+
 $('#cant, #ticketNumber').on('keyup change input paste', function (e){
     var $this = $(this);
     var val = $this.val();
@@ -1171,10 +1173,12 @@ $('#cant, #ticketNumber').on('keyup change input paste', function (e){
         $this.val($this.val().substring(0,maxCount));
     }
 }); 
+
 if(autoserv != 1){
   $("#mesa").attr('type', 'text');
-   $("#mesa").val('A');
+   $("#mesa").val('Auto');
 }
+
 getRules();
   $('#camera').html5_qrcode( function (data){
     if(IR_SWITCH === 1){
@@ -1277,7 +1281,7 @@ var timeInter = 2000;
 $("#ticketNumber").keyup(function(){
   clearTimeout(tnT);
   tnT = setTimeout(function(){
-    $("#ticketNumber").blur()
+    $("#ticketNumber").blur();
   }, timeInter);
 })
 $("#ticketNumber").keydown(function(){
@@ -1318,12 +1322,14 @@ $("#inscrip").on('click', function(){
       document.querySelector('#instruction').style.top = "50px"; 
   }
 });
+
 $("#cant").on("change keydown paste input keypress", function(){
   var monto = $(this).val();
   var scores = parseInt(monto/rule);
        $("#score-cal").html(scores);
       
  });
+
 $("#nonoYes > div:first").on('click', function(){
 if($("#ticketNumber").val() == 0 || $("#ticketNumber").val() =='' ){
 swal({ title : "Deber Ingresar un numero de boleta" , text: "", type: "warning", timer: "3000", confirmButtonColor: "#fff"});
@@ -1490,6 +1496,7 @@ switch(parseInt(data)){
                  $(".chevrons").fadeIn('slow');
                  $('.slick-prev').trigger('click');
                  $("#secret").val(cod); 
+                 $("#contenedor-promos").slickGoTo(0);
                  
            });
     }, 3000);
@@ -1574,6 +1581,7 @@ $('#item4').fadeTo('slow', 0.3, function(){
                  document.querySelector('#avice-points').style.top = "10px";
                  $(".chevrons").fadeIn('slow');
                  $('.slick-prev').trigger('click');
+                 $("#contenedor-promos").slickGoTo(0);
            })
        }, 5000);
                }
