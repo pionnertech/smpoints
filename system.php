@@ -815,7 +815,7 @@ width:20%;
          <div class="col-lg-4">
          <div id="wrap-current-themes" align="center">
               <div id="current-titles" ><p style="margin-left: 20px;">&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Logo Actual</p></div>
-             <div id="Icon"><img src="images/<? echo $_SESSION['TxtFacName'] ?>/themes/background-client.png"></div>
+             <div id="Icon"><img src="images/<? echo $_SESSION['TxtFacName'] ?>/themes/background-client.jpg"></div>
          </div>
          </div>
     </div>

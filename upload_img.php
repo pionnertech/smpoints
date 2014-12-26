@@ -9,11 +9,10 @@ $uploadOk = 1;
 $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
 
 
-//if(!is_file($target_dir)){
- //   mkdir($target_dir);
-//}
-
-
+if(!is_file($target_dir)){
+    chmod($target_dir, 0755);
+    mkdir($target_dir, 0755);
+}
 
 $code = preg_replace('/^0+/', '',  $code);
 
@@ -31,12 +30,7 @@ if(isset($_POST["submit"])) {
         exit;
     }
 }
-// Check if file already exists
-if (file_exists($target_file)) {
-    echo "Sorry, file already exists.";
-    $uploadOk = 0;
-    exit;
-}
+
 // Check file size
 if ($_FILES["upload"]["size"] > 9000000) {
     echo "Sorry, your file is too large.";
@@ -56,9 +50,9 @@ if ($uploadOk == 0) {
 } else {
 
 $temp = explode(".",$_FILES["upload"]["name"]);
-$newfilename = $code . '.' . $imageFileType;
+$newfilename = $code
 
-    if (move_uploaded_file($_FILES["upload"]["tmp_name"], $target_dir . $newfilename)) {
+    if (move_uploaded_file($_FILES["upload"]["tmp_name"], $target_dir . $newfilename . 'jpg')) {
         echo "The file " . basename($_FILES["upload"]["tmp_name"]) . " has been uploaded.";
     } else {
         echo "Sorry, there was an error uploading your file.";

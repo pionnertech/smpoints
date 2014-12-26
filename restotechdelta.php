@@ -1338,9 +1338,7 @@ a:active { color: lime } /* active links */
 <script src="https://cdn.jsdelivr.net/jquery.slick/1.3.9/slick.min.js"></script>
 <script type="text/javascript" src="js/jquery.gallery.js"></script>
 <script type="text/javascript">
-
 var gallery_interval;
-
         $(document).on('ready', function() {
           $('#dg-container').gallery();
 
