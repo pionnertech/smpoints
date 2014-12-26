@@ -954,6 +954,7 @@ left:3em;
 top:9em;
 right:11em;
 }
+
 #fullscreen{
   z-index:99999; 
   width: 130px; 
@@ -1177,6 +1178,7 @@ $('#cant, #ticketNumber').on('keyup change input paste', function (e){
 if(autoserv != 1){
   $("#mesa").attr('type', 'text');
    $("#mesa").val('Auto');
+    $("#mesa").attr('type', 'hidden');
 }
 
 getRules();
