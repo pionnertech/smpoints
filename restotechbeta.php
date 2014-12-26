@@ -957,7 +957,7 @@ right:11em;
 #fullscreen{
   z-index:99999; 
   width: 130px; 
-  height: 1px; 
+  height: 1px !important; 
   background-color: rgba(0, 0 ,0 , 0); 
   position: relative; 
   float: left;
