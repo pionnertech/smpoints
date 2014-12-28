@@ -370,6 +370,8 @@ float: left;
   color: #fff !important;
   font-weight: 800;
 }
+
+#eUs
 .wrap {
     margin:2.5em 0;
 }
@@ -993,9 +995,12 @@ a:active { color: lime } /* active links */
 background: red;
 display: inline-block;
 vertical-align: top;
-width:2em;
+width:4em;
 border-radius: 50%;
+position: relative;
+left:5em;
 }
+
 
 </style>  
 </head>
@@ -1060,12 +1065,11 @@ border-radius: 50%;
             </div>
            </div>
 <div class="wrap" align="center">
-  <div style="display: inline-block; vertical-align: top;" class="credentials">
-      <input type="text" id="eUs"  placeholder="Ingresa tu E-mail"><div id="inscrip"><i class="fa fa-angle-right" style="color:white;"></i></div>
+  <div style="display: inline-block; vertical-align: top; position: relative; left: 2em;" class="credentials">
+      <input type="text" id="eUs"  placeholder="Ingresa tu E-mail">
   </div> 
-
+ <div id="inscrip"><i class="fa fa-angle-right fa-4x" style="color:white;"></i></div>
 </div>
-
 </div>
 </div>
 
