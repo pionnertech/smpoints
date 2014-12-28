@@ -1268,10 +1268,10 @@ $("#eUs").keydown(function(){
  var check =  IsEmail($(this).val());
  if(check){
      $(this).parent().css({ left: "2em"});
-    $("#entrar").fadeIn(500);
+    $("#inscrip").fadeIn(500);
  } else {
   $(this).parent().css({ left: "0"});
-    $("#entrar").fadeOut(500);
+    $("#inscrip").fadeOut(500);
  }
 })     
 
