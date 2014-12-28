@@ -1070,7 +1070,7 @@ visibility: hidden;
             </div>
            </div>
 <div class="wrap" align="center" style="margin-top: 2em">
-  <div style="display: inline-block; vertical-align: top; position: relative;" class="credentials">
+  <div style="display: inline-block; vertical-align: top; position: relative; left: 2em" class="credentials">
       <input type="text" id="eUs"  placeholder="Ingresa tu E-mail">
   </div> 
  <div id="inscrip"><i class="fa fa-angle-right fa-4x" style="color:white;"></i></div>
