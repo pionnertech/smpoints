@@ -948,10 +948,12 @@ font-size:3em;
 .chevrons >i{
   color: red !important;
 }
+
 .cup {
 top:-1em;
 left:3em;
 }
+
 .cdown{
 top:9em;
 right:11em;
@@ -999,6 +1001,7 @@ width:4em;
 border-radius: 50%;
 position: relative;
 left:5em;
+display: none;
 }
 
 
@@ -1064,7 +1067,7 @@ left:5em;
                   <input type="text" id="nUs"  placeholder="Ingresa tu nombre y apellido">
             </div>
            </div>
-<div class="wrap" align="center">
+<div class="wrap" align="center" style="margin-top: 2em">
   <div style="display: inline-block; vertical-align: top; position: relative; left: 2em;" class="credentials">
       <input type="text" id="eUs"  placeholder="Ingresa tu E-mail">
   </div> 
