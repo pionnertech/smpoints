@@ -1675,8 +1675,11 @@ function checkTicketNumber(ticket , callback){
    
 }
 function resetAlpha(){
+  $("#item2").css({display : "none"});
+  $("#item3").css({display : "none"});
   $("#item4").css({display : "none"});
-$("#item1").css({display : "block"});
+  $("#item5").css({display : "none"});
+  $("#item1").css({display : "block"});
   IR_SWITCH = 0;
   resetBeta();
   $("#garID").val('');
@@ -1718,8 +1721,6 @@ $("#item1").css({display : "block"});
   clearInterval(gallery_interval);
   clearInterval(gallery_interval);
    gallery_interval = setInterval(function(){$("span.dg-next").trigger('click')} ,3000); 
-
-
 }
 function resetBeta(){
   $("#cant").val('');
@@ -1736,18 +1737,5 @@ function resetBeta(){
 $("#contenedor-promos").slickGoTo(0);
 }
 
-var timeoutId = 0;
-$('#mesa').mousedown(function() {
-    timeoutId = setTimeout(function(){
-      $("#mesa").css({opacity :"1"});
-    }, 2500);
-}).bind('mouseup mouseleave', function() {
-  setTimeout(function(){
-      $("#mesa").blur();
-      $("#highBar").focus();
-      $("#mesa").css({opacity: "0"});
-     clearTimeout(timeoutId);
-   }, 5500);
-   
-});
+
 </script>
