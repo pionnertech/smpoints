@@ -1263,10 +1263,10 @@ resetAlpha();
 });
 
 $("#inscrip").on('click' , function(){
-    checkEmail(("#eUs").val());
+    checkEmail($("#eUs").val());
 });
      
-$("#eUs").keydown(function(){
+$("#eUs").on('keypress keydown paste', function(){
  var check =  IsEmail($(this).val());
  if(check){
     $("#inscrip").css({ visibility: "visible"});
