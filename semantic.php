@@ -12,6 +12,7 @@ if (strlen($codigo) < 14){
  exit;
 };
 
+
 //variables
 $current_result = 0;
 

@@ -10,7 +10,7 @@ $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
 
 
 if(!is_file($target_dir)){
-    mkdir($target_dir, 0775);
+    mkdir($target_dir, 0777);
     }
 
 $code = preg_replace('/^0+/', '',  $code);

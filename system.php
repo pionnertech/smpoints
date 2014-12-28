@@ -770,7 +770,7 @@ width:20%;
                <? }}?>
                </div>
                   <div class="score_wrap">
-                      1 <img src="image_icons/BA.png">  Puntos /
+                      1   Punto /
                   </div>
                   <div class="Cant-des-wrap">
                        <div style="display: inline-block; vertical-align:top">x Cada</div>

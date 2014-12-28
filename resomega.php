@@ -1167,10 +1167,9 @@ $("#backto4").on('click', function(){
     $('.slick-prev').trigger('click');
 });
 $(".logout").on('click', function(){
- $("#item1").css({display : "block"});
- $("#item4").css({display : "none"});
  resetAlpha();
 });
+
 var visit = 0; 
 var IR_SWITCH = 0;
 var fac_name = getQueryVariable("name");
@@ -1233,10 +1232,11 @@ $(".cup").on('click', function(){
 $(".slick-prev").trigger('click');
    });
    
-   $(".cdown").on('click', function(){
-    console.info('llega after');
-         $(".slick-next").trigger('click');
+$(".cdown").on('click', function(){
+$(".slick-next").trigger('click');
 });
+
+
 $("#highBar").on('click' , function () {
   if ($("#mesa").val() === ''){
   swal({ title : "Necesitas definir la mesa",  text: "para continuar con el proceso", type: "warning", timer: "3000", confirmButtonColor: "#fff" });
@@ -1302,10 +1302,10 @@ $("#ticketNumber").keydown(function(){
 })
 $("#to4").on('click', function(){
   clearInterval(univ_timer);
-clearInterval(univ_timer);
+  clearInterval(univ_timer);
         univ_timer = setTimeout(function(){
             resetAlpha();
-                  }, 150000);
+                  }, 250000);
   $("#item4").css({display : "block"});
   $("#item2").css({display : "none"});
   IR_SWITCH = 2;
@@ -1313,7 +1313,7 @@ clearInterval(univ_timer);
   document.querySelector('#instruction').style.top = "50px";
         univ_timer = setTimeout(function(){
             resetAlpha();
-                  }, 150000);
+                  }, 250000);
   
 });
 $("#to3").on('click', function(){
@@ -1321,7 +1321,7 @@ clearInterval(univ_timer);
 clearInterval(univ_timer);
         univ_timer = setTimeout(function(){
             resetAlpha();
-                  }, 150000);
+                  }, 250000);
   $("#item3").css({display : "block"});
   $("#item2").css({display : "none"});
   IR_SWITCH = 1;
@@ -1371,7 +1371,7 @@ $('.slide-items').on('click touchstart', function (){
   clearInterval(univ_timer);
         univ_timer = setTimeout(function(){
             resetAlpha();
-                  }, 150000);
+                  }, 250000);
 });
 $("#shokwave").on('click tap touchstart', function(){
   $("#item5").css({display : "block"});
@@ -1379,7 +1379,7 @@ $("#shokwave").on('click tap touchstart', function(){
   clearInterval(univ_timer);
         univ_timer = setTimeout(function(){
             resetAlpha();
-                  }, 150000);
+                  }, 250000);
 });
 $("#fullscreen").on('click tap', function (){
   
@@ -1390,7 +1390,7 @@ $("#backto4, #backto4 *").on('click', function(){
   clearInterval(univ_timer);
         univ_timer = setTimeout(function(){
             resetAlpha();
-                  }, 150000);
+                  }, 250000);
 });
 /*===============*/
 /* === funciones ===*/

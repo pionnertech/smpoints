@@ -28,7 +28,7 @@ if(isset($_POST["submit"])) {
 //check if directory exist 
 
 if(!is_dir($target_dir)){
-    chmod("/var/www/html/images/" . $fac . "/",  0775);
+   chmod("/var/www/html/images/" . $fac . "/",  0775);
   mkdir($target_dir, 0775);
 } 
 
