@@ -807,9 +807,7 @@ font-style:italic;
 color:white;
 padding:.5em ;
 border-radius: 15px;
-  -webkit-transition: all 1s ease-in-out;
-  -moz-transition: all 1s ease-in-out;
-  transition: all 1s ease-in-out;
+
 }
 #backto2, #backto2 > i{
   cursor:pointer;
@@ -995,13 +993,17 @@ a:active { color: lime } /* active links */
 
 #inscrip{
 background: red;
-display: inline-block;
 vertical-align: top;
 width:4em;
 border-radius: 50%;
 position: relative;
 left:5em;
-display: none;
+opacity: 0;
+display: inline-block;
+visibility: hidden;
+  -webkit-transition: all 1s ease-in-out;
+  -moz-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
 }
 
 
@@ -1267,11 +1269,11 @@ $("#inscrip").on('click' , function(){
 $("#eUs").keydown(function(){
  var check =  IsEmail($(this).val());
  if(check){
-     $(this).parent().css({ left: "2em"});
-    $("#inscrip").fadeIn(500);
+    $("#inscrip").css({ visibility: "visible"});
+    $("#inscrip").css({ opacity: "1"});
  } else {
-  $(this).parent().css({ left: "0"});
-    $("#inscrip").fadeOut(500);
+    $("#inscrip").css({opacity : "0"});
+    $("#inscrip").css({visibility : "hidden"});
  }
 })     
 
@@ -1683,8 +1685,8 @@ function resetAlpha(){
   $("#item1").css({display : "block"});
   IR_SWITCH = 0;
   resetBeta();
-  $("#eUs").parent().css({ left: "0"});
-  $("#inscrip").fadeOut(1);
+  $("#inscrip").css({opacity:"0"});
+  $("#inscrip").css({visibility:"hidden"});
   $("#garID").val('');
   $("#secret").val('');
   $('#errado').fadeIn('fast');
