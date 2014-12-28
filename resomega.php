@@ -1068,7 +1068,7 @@ display: none;
             </div>
            </div>
 <div class="wrap" align="center" style="margin-top: 2em">
-  <div style="display: inline-block; vertical-align: top; position: relative; left: 2em;" class="credentials">
+  <div style="display: inline-block; vertical-align: top; position: relative;" class="credentials">
       <input type="text" id="eUs"  placeholder="Ingresa tu E-mail">
   </div> 
  <div id="inscrip"><i class="fa fa-angle-right fa-4x" style="color:white;"></i></div>
@@ -1154,6 +1154,8 @@ var gB5 = "#item5";
 $("#backmain, #backmaindiv").on('click', function(){
     $(gB2).css({ display: "none"});  
     $(gB1).css({ display: "block"});
+    $("#eUs").parent().css({ left: "0"});
+    $("#inscrip").fadeOut(1);
      clearInterval(gallery_interval);
       gallery_interval = setInterval(function(){$("span.dg-next").trigger('click')} ,3000); 
 });
@@ -1258,9 +1260,6 @@ $(".dg-wrapper a").trigger('click');
 resetAlpha();
 });
 
-
-
-
 $("#inscrip").on('click' , function(){
     checkEmail(("#eUs").val());
 });
@@ -1268,8 +1267,10 @@ $("#inscrip").on('click' , function(){
 $("#eUs").keydown(function(){
  var check =  IsEmail($(this).val());
  if(check){
+     $(this).parent().css({ left: "2em"});
     $("#entrar").fadeIn(500);
  } else {
+  $(this).parent().css({ left: "0"});
     $("#entrar").fadeOut(500);
  }
 })     
@@ -1682,6 +1683,8 @@ function resetAlpha(){
   $("#item1").css({display : "block"});
   IR_SWITCH = 0;
   resetBeta();
+  $("#eUs").parent().css({ left: "0"});
+  $("#inscrip").fadeOut(1);
   $("#garID").val('');
   $("#secret").val('');
   $('#errado').fadeIn('fast');
