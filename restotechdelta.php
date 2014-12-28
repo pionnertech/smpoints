@@ -1171,14 +1171,14 @@ left: 3.2em;
 
 .cdown{
 top:10.5em;
-right:9.9em;
+right:9.6em;
 }
 
 
 #fullscreen{
   z-index:99999; 
-  width: 130px; 
-  height: 50px; 
+  width: 1px; 
+  height: 1px; 
   background-color: rgba(0, 0 ,0 , 0); 
   position: relative; 
   float: left;
@@ -2122,8 +2122,8 @@ function resetBeta(){
 
    document.querySelector("#contenedor-promos").style.top ="-130px";
    $("#contenedor-promos").slickGoTo(0);
-   document.querySelector(".cdown").style.top ="8em";
-   document.querySelector(".cdown").style.right ="9em";
+   document.querySelector(".cdown").style.top ="9.4em";
+   document.querySelector(".cdown").style.right ="9.4em";
    document.querySelector('#contenedor-promos').style.right= "-7.9%"; 
 }
 
@@ -2163,7 +2163,6 @@ $.event.special.tripleclick = {
 
 if(autoserv != 2){
     $("#mesa").bind("tripleclick", function () {
-    $(this).css({ opacity: '1'});
 });
 }
 
