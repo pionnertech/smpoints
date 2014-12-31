@@ -12,7 +12,7 @@ $manu = mysqli_fetch_row(mysqli_query($datos, "SELECT DISTINCT C.USR_NAME , A.PR
 echo "data:" . $manu[0] . "\n";
 echo "data:" . $manu[1] . "\n";
 echo "data:" . $manu[2] . "\n";
-echo "data:" . $manu[3] . "\n\n";
+echo "data:" . $manu[4] . "\n\n";
 
 ob_end_flush();
 flush();

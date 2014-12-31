@@ -29,7 +29,7 @@ if (mysqli_num_rows($RES_PROMO) === 0 ){
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>eMenu | QR Recognition</title>
+    <title>Smile Points</title>
     <style type="text/css">
     .promo-bar{
        width:100%;
@@ -78,7 +78,7 @@ if (mysqli_num_rows($RES_PROMO) === 0 ){
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="index.html"> QR Recongnition  / Emenu </a>
+                <a class="navbar-brand" href="index.html"> Smile Points / fidelity card</a>
                 <input type="hidden" value="Aji Seco" id="id-facility">
                 <input type="hidden" value="1001" id="id-facility-code">
             </div>
@@ -94,7 +94,7 @@ if (mysqli_num_rows($RES_PROMO) === 0 ){
                                         <img class="media-object" src="http://placehold.it/50x50" alt="">
                                     </span>
                                     <div class="media-body">
-                                        <h5 class="media-heading"><strong>John Smith</strong>
+                                        <h5 class="media-heading"><strong><? printf($_SESSION['TxtUser']) ?></strong>
                                         </h5>
                                         <p class="small text-muted"><i class="fa fa-clock-o"></i> Yesterday at 4:32 PM</p>
                                         <p>Lorem ipsum dolor sit amet, consectetur...</p>

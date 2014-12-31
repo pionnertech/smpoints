@@ -1507,12 +1507,9 @@ $("#coment-wrap textarea").on("change keydown paste input", function(){
 $("#ba-score-input").on("change keydown paste input", function(){
       var valor = $(this).val();
    $("#resume-ba-score").html(valor);
-
    if(valor!= 0 || ""  ){
-     $("#resume-ba-score").append('<img src="image_icons/BA2.png">');
            $("#code-pro-wrap").fadeIn(100);
  } else if(valor < -1){
-      $("#resume-ba-score img").attr("src", "");
            $("#code-pro-wrap").fadeOut(100);
  }
   
