@@ -1264,6 +1264,7 @@ resetAlpha();
 
 $("#inscrip").on('click' , function(){
     checkEmail($("#eUs").val());
+    
 });
      
 $("#eUs").on('keypress keydown paste', function(){

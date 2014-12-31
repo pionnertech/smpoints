@@ -1,16 +1,5 @@
 <?php 
-/*
-header('Content-Type: text/event-stream');
-header('Cache-Control: no-cache');
-
-
-$a = $_GET['pau'];
-
-echo "cliente ingresado con la letra A + " . $a;
-
-flush();
-*/
- $a = $_GET['fac'];
+$a = $_GET['fac'];
 
 header('Content-Type: text/event-stream');
 header('Cache-Control: no-cache');
@@ -24,8 +13,8 @@ echo "data:" . $manu[1] . "\n";
 echo "data:" . $manu[2] . "\n";
 echo "data:" . $manu[3] . "\n\n";
 
+ob_end_flush();
 flush();
-
 
 
 ?>
