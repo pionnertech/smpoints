@@ -1183,7 +1183,7 @@ var rule = 0;
 var code = $("#secret").val();
 var univ = setTimeout(function(){
     resetAlpha();
-  }, 2500000);
+  }, 180000);
 // checkeado;
 $(document).on('ready', function(){
 
@@ -1729,7 +1729,7 @@ if(event.target !== event.currentTarget){
   clearTimeout(univ);
   univ = setTimeout(function(){
     resetAlpha();
-  }, 2500000);
+  }, 180000);
 }
 event.stopPropagation();
 }
