@@ -252,7 +252,7 @@ if(document.querySelector("#parent-overall > button > input") == undefined || do
  
        if (event.data !== previuosData){
         var eventMessage = event.data.split('\n');
-        document.getElementById("parent-overall").innerHTML += '<button class="btn btn-lg btn-success promo-bar" style="color: #FFF;  transition: all 1s ease-in-out;"><i class="fa fa-times" style="color: white; margin-right:2em"></i>' + eventMessage[0] + ' cobró la promoción ' + eventMessage[1] + " en la mesa " + eventMessage[2]+ "<input type='hidden' value=" + eventMessage[2] + "></i></button>";
+        document.getElementById("parent-overall").innerHTML += '<button class="btn btn-lg btn-success promo-bar" style="color: #FFF;  transition: all 1s ease-in-out;"><i class="fa fa-times" style="color: white; margin-right:2em"></i>' + eventMessage[0] + ' cobró la promoción ' + eventMessage[1] + " en la mesa " + eventMessage[3]+ "<input type='hidden' value=" + eventMessage[2] + "></i></button>";
         previuosData = event.data;
     } else {
         
