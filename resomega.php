@@ -1734,23 +1734,14 @@ $("#contenedor-promos").slickGoTo(0);
 }
 
 //special event (IUO, of internal use only)
-addListenerMulti(document, "click tap touchstart touchmove keydown keypress", multiChannelListening());
 
-function multiChannelListening(ev){
 
-if(ev.target !== ev.currentTarget){
-  clearTimeout(univ);
+$("*").on("click tap touchstart touchmove keydown keypress", function(){
+clearTimeout(univ);
   univ = setTimeout(function(){
     resetAlpha();
   }, 180000);
-}
-event.stopPropagation();
-}
+})
 
-function addListenerMulti(el, s, fn) {
-  var evts = s.split(' ');
-  for (var i=0, iLen=evts.length; i<iLen; i++) {
-    el.addEventListener(evts[i], fn, false);
-  }
-}
+
 </script>
