@@ -1171,7 +1171,7 @@ var fac = getQueryVariable('facility');
 var autoserv = getQueryVariable("f");
 var rule = 0;
 var code = $("#secret").val();
-var univ_timer;
+
 // checkeado;
 $(document).on('ready', function(){
 
@@ -1294,27 +1294,15 @@ $("#ticketNumber").keydown(function(){
  clearTimeout(timeInter);
 })
 $("#to4").on('click', function(){
-  clearInterval(univ_timer);
-clearInterval(univ_timer);
-        univ_timer = setTimeout(function(){
-            resetAlpha();
-                  }, 150000);
+
   $("#item4").css({display : "block"});
   $("#item2").css({display : "none"});
   IR_SWITCH = 2;
   $('.wrap-camera').animate({ left: '50%' }, 1300, 'easeInOutCubic');
   document.querySelector('#instruction').style.top = "50px";
-        univ_timer = setTimeout(function(){
-            resetAlpha();
-                  }, 150000);
   
 });
 $("#to3").on('click', function(){
-clearInterval(univ_timer);
-clearInterval(univ_timer);
-        univ_timer = setTimeout(function(){
-            resetAlpha();
-                  }, 150000);
   $("#item3").css({display : "block"});
   $("#item2").css({display : "none"});
   IR_SWITCH = 1;
@@ -1361,18 +1349,10 @@ swal({ title : "Deber Ingresar un numero de boleta" , text: "", type: "warning",
 //checked
 $('.slide-items').on('click touchstart', function (){
   takePromo($(this));
-  clearInterval(univ_timer);
-        univ_timer = setTimeout(function(){
-            resetAlpha();
-                  }, 150000);
 });
 $("#shokwave").on('click tap touchstart', function(){
   $("#item5").css({display : "block"});
   $("#item4").css({display : "none"});
-  clearInterval(univ_timer);
-        univ_timer = setTimeout(function(){
-            resetAlpha();
-                  }, 150000);
 });
 $("#fullscreen").on('click tap', function (){
   

@@ -266,7 +266,6 @@ if(document.querySelector("#parent-overall > button > input") == undefined || do
 
 $(document).on('click', function(){
 
-
 $("button.promo-bar").on('click', function(){
  
    object = $(this);

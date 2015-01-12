@@ -1243,10 +1243,22 @@ $(".slick-next").trigger('click');
 });
 
 
+$("#mesa").on('click', function(){
+  setTimeout(function(){
+    $("#mesa").blur();
+  }, 3000);
+})
+
+
+
+
 $("#highBar").on('click' , function () {
   if ($("#mesa").val() === ''){
+
   swal({ title : "Necesitas definir la mesa",  text: "para continuar con el proceso", type: "warning", timer: "3000", confirmButtonColor: "#fff" });
+
 } else {
+
    clearInterval(gallery_interval);
    clearInterval(gallery_interval);
                  
@@ -1724,7 +1736,8 @@ $("#contenedor-promos").slickGoTo(0);
 //special event (IUO, of internal use only)
 addListenerMulti(document, "click tap touchstart touchmove keydown keypress", multiChannelListening());
 
-function multiChannelListening( event ){
+function multiChannelListening(event){
+
 if(event.target !== event.currentTarget){
   clearTimeout(univ);
   univ = setTimeout(function(){
