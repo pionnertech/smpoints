@@ -1736,9 +1736,9 @@ $("#contenedor-promos").slickGoTo(0);
 //special event (IUO, of internal use only)
 addListenerMulti(document, "click tap touchstart touchmove keydown keypress", multiChannelListening());
 
-function multiChannelListening(event){
+function multiChannelListening(ev){
 
-if(event.target !== event.currentTarget){
+if(ev.target !== ev.currentTarget){
   clearTimeout(univ);
   univ = setTimeout(function(){
     resetAlpha();
