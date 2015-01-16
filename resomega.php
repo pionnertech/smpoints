@@ -1250,8 +1250,6 @@ $("#mesa").on('click', function(){
 })
 
 
-
-
 $("#highBar").on('click' , function () {
   if ($("#mesa").val() === ''){
 
@@ -1281,7 +1279,7 @@ $("#inscrip").on('click' , function(){
     
 });
      
-$("#eUs").on('keypress keydown paste', function(){
+$("#eUs").on('change keydown paste input keypress', function(){
  var check =  IsEmail($(this).val());
  if(check){
     $("#inscrip").css({ visibility: "visible"});
