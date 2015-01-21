@@ -35,7 +35,7 @@ if(mysqli_num_rows($Res_Rules) === 0 ){
 $Query_Traffic = "SELECT DISTINCT C.PER_NAME, A.USR_NAME, B.TRF_BA_SCORE_WL, DATE_FORMAT(B.TRF_DATE, '%d/%m/%Y %H:%i:%s'), B.TRF_TICKET, B.TRF_TOTAL_ASSETS FROM USER A INNER JOIN TRAFFIC B INNER JOIN PERSONAL C ON(B.TRF_USR_QR = A.USR_QR AND C.PER_ID = B.TRF_GAR) WHERE TRF_FAC_CODE = " . $_SESSION['TxtCode'] . " ORDER BY B.TRF_DATE";
 $Res_Traffic  = mysqli_query($datos, $Query_Traffic);
 
-if(mysqli_num_rows($Res_Traffic) === 0 ){
+if(!mysqli_num_rows($Res_Traffic)){
     $Res_Traffic = "";
 }
 
