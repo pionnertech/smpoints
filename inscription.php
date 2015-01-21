@@ -7,7 +7,7 @@ $codigo = $_GET['codigo'];
 $table = $_GET['table'];
 $fecha = $_GET['fecha'];
 
-$datos = mysqli_connect('localhost', "root", "D1sjjDlvD0", "SM_usr10000");
+$datos = mysqli_connect('localhost', "root", "k47tBZp60D", "SM_usr10000");
 
 //comprobación 
 

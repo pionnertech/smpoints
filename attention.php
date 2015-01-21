@@ -5,7 +5,7 @@ session_start();
 
 if (isset($_SESSION['TxtCode'])){
 
-$datos = mysqli_connect('localhost', "root", "D1sjjDlvD0", "SM_usr10000");
+$datos = mysqli_connect('localhost', "root", "k47tBZp60D", "SM_usr10000");
 
 
 $RES_PROMO = mysqli_query($datos, "SELECT DISTINCT C.USR_NAME , A.PRO_DESCRIP, B.TRF_ID FROM PRO A INNER JOIN TRAFFIC B ON(A.PRO_CODE = B.TRF_PROMO) INNER JOIN USER C ON(C.USR_QR = B.TRF_USR_QR) WHERE (B.TRF_FAC_CODE = " . $_SESSION['TxtCode'] . " AND B.TRF_PRO_STATE = 0)");

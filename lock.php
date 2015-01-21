@@ -8,7 +8,7 @@ echo "<script>window.location = 'system.php'</script>";
 
 } else {
  
-$datos = mysqli_connect('localhost', "root", "D1sjjDlvD0", "SM_usr10000");
+$datos = mysqli_connect('localhost', "root", "k47tBZp60D", "SM_usr10000");
 $query_personal = mysqli_query($datos, "SELECT * FROM PERSONAL WHERE ((PER_PASS = '' OR PER_PASS = NULL) AND PER_FAC_CODE = " . $_SESSION["TxtCode"] . ");");
 
 if(mysqli_num_rows($query_personal) === 0){

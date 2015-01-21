@@ -5,7 +5,7 @@ session_start();
 
 if (isset($_SESSION['TxtUser'])) {
 
-$datos = mysqli_connect('localhost', "root", "D1sjjDlvD0", "SM_usr10000");
+$datos = mysqli_connect('localhost', "root", "k47tBZp60D", "SM_usr10000");
 
 //Queries
 $Query_domain = "SELECT FAC_CUSTOM_NAME, FAC_CUSTOM_SURNAME FROM FAC WHERE FAC_CODE = " . $_SESSION["TxtCode"];

@@ -1,5 +1,5 @@
-<?php header('Content-Type: text/html; charset=utf-8');
-$datos = mysqli_connect('localhost', "root", "D1sjjDlvD0", "SM_usr10000");
+<?php //header('Content-Type: text/html; charset=utf-8');
+$datos = mysqli_connect('localhost', "root", "k47tBZp60D", "SM_usr10000");
 $Query = "SELECT FAC_NAME FROM FAC WHERE FAC_CODE = " . $_GET['facility'];
 $result = mysqli_fetch_assoc(mysqli_query($datos,$Query));
 $Query_Pro = "SELECT PRO_CODE, PRO_CANT_VAL, PRO_DESCRIP, SUBSTRING(PRO_DATE,1,10), PRO_CODE FROM PRO WHERE PRO_FAC ='" .  $result['FAC_NAME'] . "'";

@@ -2,7 +2,7 @@
 
 $keybar = $_GET['keyvar'];
 
-$datos = mysqli_connect('localhost', "root", "D1sjjDlvD0", "SM_usr10000");
+$datos = mysqli_connect('localhost', "root", "k47tBZp60D", "SM_usr10000");
 
  $response = mysqli_num_rows(mysqli_query($datos, "SELECT USR_NAME FROM USER WHERE USR_EMAIL= '" . $keybar . "'"));
 

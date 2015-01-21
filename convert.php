@@ -8,7 +8,7 @@ if(isset($_POST["U"]))
 
 {
 
-$datos = mysqli_connect('localhost', "root", "D1sjjDlvD0", "SM_usr10000");
+$datos = mysqli_connect('localhost', "root", "k47tBZp60D", "SM_usr10000");
 
 $query = "SELECT FAC_CODE, FAC_USR, FAC_PASS, FAC_NAME FROM FAC WHERE (FAC_USR ='" . $_POST["U"] . "' ";
 $query .= "AND FAC_PASS='" . $_POST["P"] . "')";

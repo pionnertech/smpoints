@@ -6,7 +6,7 @@ $score = $_GET['score'];
 $descrip = $_GET['descrip'];
 $date = $_GET['dateing'];
 
- $datos = mysqli_connect('localhost', "root", "D1sjjDlvD0", "SM_usr10000");
+ $datos = mysqli_connect('localhost', "root", "k47tBZp60D", "SM_usr10000");
 
 if(mysqli_num_rows(mysqli_query($datos, "SELECT PRO_CODE FROM PRO WHERE (PRO_CODE = '"  . $code . "' AND PRO_FAC = '" . $fac . "' );")) !== 0 ){
 

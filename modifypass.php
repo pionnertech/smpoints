@@ -10,7 +10,7 @@ if(empty($array_nombres)){
 }
 
 else {
-	$datos = mysqli_connect('localhost', "root", "D1sjjDlvD0", "SM_usr10000");
+	$datos = mysqli_connect('localhost', "root", "k47tBZp60D", "SM_usr10000");
 
 for($i = 0 ; $i < count($array_nombres); $i++){
 	mysqli_query($datos, "UPDATE PERSONAL SET PER_PASS = NULL WHERE PER_ID = " . $array_nombres[$i]);

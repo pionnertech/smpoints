@@ -16,7 +16,7 @@ if (strlen($codigo) < 14){
 //variables
 $current_result = 0;
 
-$datos = mysqli_connect('localhost', "root", "D1sjjDlvD0", "SM_usr10000");
+$datos = mysqli_connect('localhost', "root", "k47tBZp60D", "SM_usr10000");
 
 //check if QR exist in Database
 

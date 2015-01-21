@@ -6,7 +6,7 @@ $issubaux = "";
 
 $ids = explode("|", $id , -1);
 
-$datos = mysqli_connect('localhost', "root", "D1sjjDlvD0", "SM_usr10000");
+$datos = mysqli_connect('localhost', "root", "k47tBZp60D", "SM_usr10000");
 
 $outcome_pre = mysqli_query($datos, "SELECT FAC_AUX_USER FROM FAC WHERE FAC = " . $fac);
 

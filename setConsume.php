@@ -11,7 +11,7 @@ $ta = $_GET['ta'];
 $fecha = $_GET['fech'];
 $table = $_GET['tabla'];
 
-$datos = mysqli_connect('localhost', "root", "D1sjjDlvD0", "SM_usr10000");
+$datos = mysqli_connect('localhost', "root", "k47tBZp60D", "SM_usr10000");
 
 if (!mysqli_query($datos, "SELECT STR_USR_QR , STR_USR_BA_SCORE, STR_FAC_CODE FROM STORAGE WHERE (STR_USR_QR ='" . $codigo . "'  AND STR_FAC_CODE = " . $fac_code .")")){
 
