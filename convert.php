@@ -1,8 +1,4 @@
-
-<?php 
-
-session_start();
-
+<?php session_start();
 
 if(isset($_POST["U"]))
 
