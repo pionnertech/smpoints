@@ -49,8 +49,8 @@ if ($uploadOk == 0) {
 $temp = explode("." , $_FILES["upload"]["name"]);
 $newfilename = $code;
 
-    if (move_uploaded_file($_FILES["upload"]["tmp_name"], $target_dir . $newfilename . 'jpg')){
-        echo $target_dir . $newfilename . 'jpg <br />';
+    if (move_uploaded_file($_FILES["upload"]["tmp_name"], $target_dir . $newfilename . '.jpg')){
+        echo $target_dir . $newfilename . '.jpg <br />';
         echo $_FILES["upload"]["tmp_name"];
 
     } else {
