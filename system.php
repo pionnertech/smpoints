@@ -1183,17 +1183,6 @@ width:20%;
          </thead>
          <tbody id="list-client">
 
-FAC_ID
-FAC_CODE
-FAC_AUX_USER
-FAC_AUX_PASS
-FAC_USR
-FAC_PASS
-FAC_NAME
-FAC_CUSTOM_NAME
-FAC_CUSTOM_SURNAME
-FAC_EST
-FAC_NAME
   <? while ($fila8 = mysqli_fetch_row($client_side)){ ?>
             <tr>
                  <input type="hidden" value="<? printf($fila8[0]) ?>" id="client-side-id">
