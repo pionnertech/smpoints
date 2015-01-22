@@ -1182,15 +1182,27 @@ width:20%;
             </tr>
          </thead>
          <tbody id="list-client">
+
+FAC_ID
+FAC_CODE
+FAC_AUX_USER
+FAC_AUX_PASS
+FAC_USR
+FAC_PASS
+FAC_NAME
+FAC_CUSTOM_NAME
+FAC_CUSTOM_SURNAME
+FAC_EST
+FAC_NAME
   <? while ($fila8 = mysqli_fetch_row($client_side)){ ?>
             <tr>
                  <input type="hidden" value="<? printf($fila8[0]) ?>" id="client-side-id">
                  <td><span class="client-side-list"><? printf($fila8[7]) ?></span></td>
                  <td><span class="client-side-list"><? printf($fila8[8]) ?></span></td>
-                 <td><span class="client-side-list"><? printf($fila8[2]) ?></span></td>
+                 <td><span class="client-side-list"><? printf($fila8[6]) ?></span></td>
                  <td><span class="client-side-list"><? printf($fila8[4]) ?></span></td>
-                 <td><span class="client-side-list"><? printf($fila8[3]) ?></span></td>
-                 <td><span>https://smilepoints.cl/restotechbeta.php?f=1&facility=<? printf($fila8[1]) ?>&name=<? printf(urlencode($fila8[2])) ?></td>
+                 <td><span class="client-side-list"><? printf($fila8[5]) ?></span></td>
+                 <td><span>https://smilepoints.cl/resomega.php?f=1&facility=<? printf($fila8[1]) ?>&name=<? printf(urlencode($fila8[6])) ?></td>
                  <td><span class="borrar"><i class="fa fa-eraser fa-2x"></i></span></td>
             </tr>
 

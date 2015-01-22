@@ -5,9 +5,9 @@
 
    //check if exist
 
-   $query = mysqli_fetch_assoc(mysqli_query($datos, "SELECT QR_ID FROM QR WHERE QR_VAL = '" . $val . "'" ));
+   $query = mysqli_fetch_assoc(mysqli_query($datos, "SELECT QR_VAL FROM QR WHERE QR_VAL = '" . $val . "'" ));
 
-   if($query){
+   if($query["QR_VAL"] == $val){
      echo "repetido!";
    } else {
    	mysqli_query($datos, "INSERT INTO QR(QR_VAL) VALUES ('" . $val . "');");
