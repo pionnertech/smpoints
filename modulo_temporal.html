@@ -45,7 +45,12 @@
 	$(document).on('ready', function(){
 		  $('#camera').html5_qrcode( function (data){
              sendToDB(data);
-		  })
+		  },
+  function (error){
+      $('#read_error').html(error);
+    }, function(videoError){
+      $('#vid_error').html(videoError);
+    });
 	});
 
 function sendToDB(key_val){
