@@ -847,8 +847,8 @@ width:20%;
                     <form id="img-loader-wrap" action="upload_img.php" method="post" enctype="multipart/form-data">
                           <input type="file" id="img-loader" class="btn btn-lg btn-primary" accept="image/*" onchange="previewFile('#prev-picture' , '#' + this.id)" name="upload">
                           <input type="submit" value="submit" style="display: none;" id="send">
-                          <input type="hidden" value="" id="code" name="code">
-                          <input type="hidden" value="" class="fac" name="fac">
+                          <input type="hidden" value="<? printf($_SESSION['TxtCode']) ?>" id="code" name="code">
+                          <input type="hidden" value="<? printf($_SESSION['TxtFacName']) ?>" class="fac" name="fac">
                     </form>
                      <div id="numbers-wrap">
                          <div id="coment-wrap">
