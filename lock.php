@@ -24,7 +24,7 @@ if(mysqli_num_rows($query_personal) === 0){
     <link rel="stylesheet" type="text/css" href="css/sweet-alert.css"/>
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet" />
     <link rel="stylesheet" type="text/css" href="css/patternlock.css"/>
-    <script src="js/patternlock.js"></script>
+    <script src="js/patternlock_price.js"></script>
 <style>
     body{
         text-align:center;
@@ -69,10 +69,12 @@ display: inline-block !important;
 </html>
     <script>
 
-    var fac = <? printf($_SESSION['TxtCode']) ?>
+    var fac = <? printf($_SESSION['TxtCode']) ?>;
 
 function submitform(value, argument){
-               
+
+    console.info(value + " / " + argument);
+
         if($("#password").val().length < 5){
 
              swal("Registra un patrón de seguridad mayor a 5 puntos!", "", "warning");
