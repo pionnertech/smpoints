@@ -12,7 +12,8 @@ $res_rules = mysqli_fetch_assoc(mysqli_query($datos, $Query_rule));
 <html>
 <head>
   <title>SmilePoints</title>
-  <meta name="viewport" content="width=device-width, user-scalable=no">
+<meta charset="UTF-8"> 
+<meta name="viewport" content="width=device-width, user-scalable=no">
 <link rel="stylesheet" type="text/css" href="http://cdn.jsdelivr.net/jquery.slick/1.3.9/slick.css"/>
 <link rel="stylesheet" type="text/css" href="css/sweet-alert.css"/>
 <link rel="stylesheet" type="text/css" href="css/style.css" />
