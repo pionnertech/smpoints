@@ -1,6 +1,4 @@
-<?php 
-
-session_start();
+<?php session_start();
 
 if (!isset($_SESSION['TxtCode'])) {
 
@@ -9,7 +7,7 @@ echo "<script>window.location = 'system.php'</script>";
 } else {
  
 $datos = mysqli_connect('localhost', "root", "k47tBZp60D", "SM_usr10000");
-$query_personal = mysqli_query($datos, "SELECT * FROM PERSONAL WHERE ((PER_PASS = '' OR PER_PASS = NULL) AND PER_FAC_CODE = " . $_SESSION["TxtCode"] . ");");
+$query_personal = mysqli_query($datos, "SELECT * FROM PERSONAL WHERE ((PER_PASS = '' OR PER_PASS IS NULL) AND PER_FAC_CODE = " . $_SESSION["TxtCode"] . ");");
 
 if(mysqli_num_rows($query_personal) === 0){
 
@@ -24,7 +22,7 @@ if(mysqli_num_rows($query_personal) === 0){
     <meta name="viewport" content="width=320; user-scalable=no; initial-scale=1.0; maximum-scale=1.0" />
     <title>Pattern Lock</title>
     <link rel="stylesheet" type="text/css" href="css/sweet-alert.css"/>
-   <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet" />
     <link rel="stylesheet" type="text/css" href="css/patternlock.css"/>
     <script src="js/patternlock.js"></script>
 <style>
