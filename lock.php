@@ -59,7 +59,7 @@ display: inline-block !important;
         <div>
             <input type="password" id="password" name="password" class="patternlock" />
             <? while ($fila = mysqli_fetch_row($query_personal)) {?>
-            <input type="button" id="<? printf($fila[5])?>" name="<? printf($fila[1])?>" value="<? printf($fila[1])?> <? printf($fila[5]) ?>" class="names" onclick="submitform(this.name, this.id)" >
+            <input type="button" id="<? printf($fila[2])?>" name="<? printf($fila[1])?>" value="<? printf($fila[1])?> <? printf($fila[5]) ?>" class="names" onclick="submitform(this.name, this.id)" >
             <? } ?>
         </div>
     </form>
